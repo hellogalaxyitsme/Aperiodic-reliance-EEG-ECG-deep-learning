@@ -1,0 +1,75 @@
+\begin{longtable}{p{0.10\linewidth}p{0.10\linewidth}p{0.10\linewidth}p{0.10\linewidth}p{0.10\linewidth}p{0.10\linewidth}}
+\caption{IRASA downstream ridge intervention results.}\label{tab:supp_irasa_ridge}\\
+\toprule
+task & train\_input & test\_input & metric & estimate & formatted\_95ci\\
+\midrule
+\endfirsthead
+\toprule
+task & train\_input & test\_input & metric & estimate & formatted\_95ci\\
+\midrule
+\endhead
+wake\_vs\_sleep & full\_log\_psd & full\_log\_psd & balanced\_accuracy & performance & 0.876 [0.859, 0.893]\\
+wake\_vs\_sleep & full\_log\_psd & full\_log\_psd & macro\_f1 & performance & 0.830 [0.809, 0.849]\\
+wake\_vs\_sleep & full\_log\_psd & full\_log\_psd & accuracy & performance & 0.900 [0.885, 0.913]\\
+wake\_vs\_sleep & full\_log\_psd & aperiodic\_spectrum & balanced\_accuracy & performance & 0.867 [0.845, 0.888]\\
+wake\_vs\_sleep & full\_log\_psd & aperiodic\_spectrum & macro\_f1 & performance & 0.850 [0.828, 0.870]\\
+wake\_vs\_sleep & full\_log\_psd & aperiodic\_spectrum & accuracy & performance & 0.919 [0.905, 0.931]\\
+wake\_vs\_sleep & full\_log\_psd & flattened\_log\_psd & balanced\_accuracy & performance & 0.500 [0.500, 0.500]\\
+wake\_vs\_sleep & full\_log\_psd & flattened\_log\_psd & macro\_f1 & performance & 0.152 [0.134, 0.170]\\
+wake\_vs\_sleep & full\_log\_psd & flattened\_log\_psd & accuracy & performance & 0.190 [0.164, 0.217]\\
+n2\_vs\_n3 & full\_log\_psd & full\_log\_psd & balanced\_accuracy & performance & 0.842 [0.813, 0.868]\\
+n2\_vs\_n3 & full\_log\_psd & full\_log\_psd & macro\_f1 & performance & 0.745 [0.708, 0.781]\\
+n2\_vs\_n3 & full\_log\_psd & full\_log\_psd & accuracy & performance & 0.859 [0.836, 0.880]\\
+n2\_vs\_n3 & full\_log\_psd & aperiodic\_spectrum & balanced\_accuracy & performance & 0.859 [0.832, 0.884]\\
+n2\_vs\_n3 & full\_log\_psd & aperiodic\_spectrum & macro\_f1 & performance & 0.765 [0.725, 0.802]\\
+n2\_vs\_n3 & full\_log\_psd & aperiodic\_spectrum & accuracy & performance & 0.874 [0.852, 0.895]\\
+n2\_vs\_n3 & full\_log\_psd & flattened\_log\_psd & balanced\_accuracy & performance & 0.417 [0.378, 0.455]\\
+n2\_vs\_n3 & full\_log\_psd & flattened\_log\_psd & macro\_f1 & performance & 0.256 [0.221, 0.289]\\
+n2\_vs\_n3 & full\_log\_psd & flattened\_log\_psd & accuracy & performance & 0.399 [0.339, 0.459]\\
+five\_stage & full\_log\_psd & full\_log\_psd & balanced\_accuracy & performance & 0.615 [0.592, 0.637]\\
+five\_stage & full\_log\_psd & full\_log\_psd & macro\_f1 & performance & 0.558 [0.533, 0.582]\\
+five\_stage & full\_log\_psd & full\_log\_psd & accuracy & performance & 0.645 [0.620, 0.670]\\
+five\_stage & full\_log\_psd & aperiodic\_spectrum & balanced\_accuracy & performance & 0.612 [0.589, 0.634]\\
+five\_stage & full\_log\_psd & aperiodic\_spectrum & macro\_f1 & performance & 0.556 [0.530, 0.580]\\
+five\_stage & full\_log\_psd & aperiodic\_spectrum & accuracy & performance & 0.644 [0.617, 0.672]\\
+five\_stage & full\_log\_psd & flattened\_log\_psd & balanced\_accuracy & performance & 0.210 [0.206, 0.215]\\
+five\_stage & full\_log\_psd & flattened\_log\_psd & macro\_f1 & performance & 0.061 [0.054, 0.068]\\
+five\_stage & full\_log\_psd & flattened\_log\_psd & accuracy & performance & 0.190 [0.164, 0.218]\\
+wake\_vs\_sleep & full\_log\_psd & aperiodic\_spectrum & balanced\_accuracy & drop::aperiodic\_spectrum & 0.009 [-0.001, 0.019]\\
+wake\_vs\_sleep & full\_log\_psd & aperiodic\_spectrum & balanced\_accuracy & retention::aperiodic\_spectrum & 0.989 [0.975, 1.000]\\
+wake\_vs\_sleep & full\_log\_psd & aperiodic\_spectrum & macro\_f1 & drop::aperiodic\_spectrum & -0.020 [-0.032, -0.008]\\
+wake\_vs\_sleep & full\_log\_psd & aperiodic\_spectrum & macro\_f1 & retention::aperiodic\_spectrum & 1.026 [1.011, 1.042]\\
+wake\_vs\_sleep & full\_log\_psd & aperiodic\_spectrum & accuracy & drop::aperiodic\_spectrum & -0.019 [-0.026, -0.012]\\
+wake\_vs\_sleep & full\_log\_psd & aperiodic\_spectrum & accuracy & retention::aperiodic\_spectrum & 1.022 [1.014, 1.030]\\
+wake\_vs\_sleep & full\_log\_psd & flattened\_log\_psd & balanced\_accuracy & drop::flattened\_log\_psd & 0.376 [0.359, 0.393]\\
+wake\_vs\_sleep & full\_log\_psd & flattened\_log\_psd & balanced\_accuracy & retention::flattened\_log\_psd & 0.575 [0.564, 0.588]\\
+wake\_vs\_sleep & full\_log\_psd & flattened\_log\_psd & macro\_f1 & drop::flattened\_log\_psd & 0.678 [0.657, 0.699]\\
+wake\_vs\_sleep & full\_log\_psd & flattened\_log\_psd & macro\_f1 & retention::flattened\_log\_psd & 0.181 [0.161, 0.201]\\
+wake\_vs\_sleep & full\_log\_psd & flattened\_log\_psd & accuracy & drop::flattened\_log\_psd & 0.710 [0.678, 0.741]\\
+wake\_vs\_sleep & full\_log\_psd & flattened\_log\_psd & accuracy & retention::flattened\_log\_psd & 0.214 [0.184, 0.245]\\
+n2\_vs\_n3 & full\_log\_psd & aperiodic\_spectrum & balanced\_accuracy & drop::aperiodic\_spectrum & -0.017 [-0.031, -0.005]\\
+n2\_vs\_n3 & full\_log\_psd & aperiodic\_spectrum & balanced\_accuracy & retention::aperiodic\_spectrum & 1.024 [1.008, 1.042]\\
+n2\_vs\_n3 & full\_log\_psd & aperiodic\_spectrum & macro\_f1 & drop::aperiodic\_spectrum & -0.020 [-0.032, -0.007]\\
+n2\_vs\_n3 & full\_log\_psd & aperiodic\_spectrum & macro\_f1 & retention::aperiodic\_spectrum & 1.028 [1.012, 1.046]\\
+n2\_vs\_n3 & full\_log\_psd & aperiodic\_spectrum & accuracy & drop::aperiodic\_spectrum & -0.016 [-0.027, -0.005]\\
+n2\_vs\_n3 & full\_log\_psd & aperiodic\_spectrum & accuracy & retention::aperiodic\_spectrum & 1.021 [1.008, 1.034]\\
+n2\_vs\_n3 & full\_log\_psd & flattened\_log\_psd & balanced\_accuracy & drop::flattened\_log\_psd & 0.425 [0.371, 0.485]\\
+n2\_vs\_n3 & full\_log\_psd & flattened\_log\_psd & balanced\_accuracy & retention::flattened\_log\_psd & 0.522 [0.465, 0.578]\\
+n2\_vs\_n3 & full\_log\_psd & flattened\_log\_psd & macro\_f1 & drop::flattened\_log\_psd & 0.490 [0.462, 0.517]\\
+n2\_vs\_n3 & full\_log\_psd & flattened\_log\_psd & macro\_f1 & retention::flattened\_log\_psd & 0.321 [0.277, 0.364]\\
+n2\_vs\_n3 & full\_log\_psd & flattened\_log\_psd & accuracy & drop::flattened\_log\_psd & 0.459 [0.392, 0.527]\\
+n2\_vs\_n3 & full\_log\_psd & flattened\_log\_psd & accuracy & retention::flattened\_log\_psd & 0.478 [0.406, 0.551]\\
+five\_stage & full\_log\_psd & aperiodic\_spectrum & balanced\_accuracy & drop::aperiodic\_spectrum & 0.002 [-0.010, 0.015]\\
+five\_stage & full\_log\_psd & aperiodic\_spectrum & balanced\_accuracy & retention::aperiodic\_spectrum & 1.002 [0.977, 1.032]\\
+five\_stage & full\_log\_psd & aperiodic\_spectrum & macro\_f1 & drop::aperiodic\_spectrum & 0.002 [-0.011, 0.015]\\
+five\_stage & full\_log\_psd & aperiodic\_spectrum & macro\_f1 & retention::aperiodic\_spectrum & 1.001 [0.976, 1.028]\\
+five\_stage & full\_log\_psd & aperiodic\_spectrum & accuracy & drop::aperiodic\_spectrum & 0.001 [-0.011, 0.012]\\
+five\_stage & full\_log\_psd & aperiodic\_spectrum & accuracy & retention::aperiodic\_spectrum & 0.999 [0.980, 1.019]\\
+five\_stage & full\_log\_psd & flattened\_log\_psd & balanced\_accuracy & drop::flattened\_log\_psd & 0.404 [0.382, 0.428]\\
+five\_stage & full\_log\_psd & flattened\_log\_psd & balanced\_accuracy & retention::flattened\_log\_psd & 0.354 [0.337, 0.373]\\
+five\_stage & full\_log\_psd & flattened\_log\_psd & macro\_f1 & drop::flattened\_log\_psd & 0.497 [0.469, 0.524]\\
+five\_stage & full\_log\_psd & flattened\_log\_psd & macro\_f1 & retention::flattened\_log\_psd & 0.117 [0.101, 0.134]\\
+five\_stage & full\_log\_psd & flattened\_log\_psd & accuracy & drop::flattened\_log\_psd & 0.455 [0.417, 0.493]\\
+five\_stage & full\_log\_psd & flattened\_log\_psd & accuracy & retention::flattened\_log\_psd & 0.307 [0.264, 0.350]\\
+\bottomrule
+\end{longtable}

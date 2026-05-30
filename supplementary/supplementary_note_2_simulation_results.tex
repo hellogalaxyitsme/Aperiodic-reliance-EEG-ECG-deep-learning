@@ -1,0 +1,48 @@
+\begin{longtable}{p{0.10\linewidth}p{0.10\linewidth}p{0.10\linewidth}p{0.10\linewidth}p{0.10\linewidth}p{0.10\linewidth}}
+\caption{Simulation validation results.}\label{tab:supp_simulation_validation}\\
+\toprule
+scenario & train\_input & test\_input & balanced\_accuracy\_mean & balanced\_accuracy\_std & n\_folds\\
+\midrule
+\endfirsthead
+\toprule
+scenario & train\_input & test\_input & balanced\_accuracy\_mean & balanced\_accuracy\_std & n\_folds\\
+\midrule
+\endhead
+aperiodic\_only & full\_log\_psd & full\_log\_psd & 0.993 & 0.006 & 5\\
+aperiodic\_only & full\_log\_psd & aperiodic\_spectrum & 0.994 & 0.006 & 5\\
+aperiodic\_only & full\_log\_psd & flattened\_log\_psd & 0.500 & 0.000 & 5\\
+aperiodic\_only & aperiodic\_spectrum & full\_log\_psd & 0.995 & 0.005 & 5\\
+aperiodic\_only & aperiodic\_spectrum & aperiodic\_spectrum & 0.994 & 0.006 & 5\\
+aperiodic\_only & aperiodic\_spectrum & flattened\_log\_psd & 0.500 & 0.000 & 5\\
+aperiodic\_only & flattened\_log\_psd & full\_log\_psd & 0.500 & 0.000 & 5\\
+aperiodic\_only & flattened\_log\_psd & aperiodic\_spectrum & 0.500 & 0.000 & 5\\
+aperiodic\_only & flattened\_log\_psd & flattened\_log\_psd & 0.497 & 0.015 & 5\\
+oscillatory\_only & full\_log\_psd & full\_log\_psd & 1.000 & 0.000 & 5\\
+oscillatory\_only & full\_log\_psd & aperiodic\_spectrum & 0.497 & 0.021 & 5\\
+oscillatory\_only & full\_log\_psd & flattened\_log\_psd & 1.000 & 0.000 & 5\\
+oscillatory\_only & aperiodic\_spectrum & full\_log\_psd & 0.407 & 0.038 & 5\\
+oscillatory\_only & aperiodic\_spectrum & aperiodic\_spectrum & 0.496 & 0.014 & 5\\
+oscillatory\_only & aperiodic\_spectrum & flattened\_log\_psd & 0.500 & 0.000 & 5\\
+oscillatory\_only & flattened\_log\_psd & full\_log\_psd & 1.000 & 0.000 & 5\\
+oscillatory\_only & flattened\_log\_psd & aperiodic\_spectrum & 0.499 & 0.003 & 5\\
+oscillatory\_only & flattened\_log\_psd & flattened\_log\_psd & 1.000 & 0.000 & 5\\
+mixed & full\_log\_psd & full\_log\_psd & 1.000 & 0.000 & 5\\
+mixed & full\_log\_psd & aperiodic\_spectrum & 0.964 & 0.023 & 5\\
+mixed & full\_log\_psd & flattened\_log\_psd & 1.000 & 0.000 & 5\\
+mixed & aperiodic\_spectrum & full\_log\_psd & 0.988 & 0.008 & 5\\
+mixed & aperiodic\_spectrum & aperiodic\_spectrum & 0.973 & 0.015 & 5\\
+mixed & aperiodic\_spectrum & flattened\_log\_psd & 0.500 & 0.000 & 5\\
+mixed & flattened\_log\_psd & full\_log\_psd & 1.000 & 0.000 & 5\\
+mixed & flattened\_log\_psd & aperiodic\_spectrum & 0.614 & 0.106 & 5\\
+mixed & flattened\_log\_psd & flattened\_log\_psd & 1.000 & 0.000 & 5\\
+train\_confound\_test\_unconfounded & full\_log\_psd & full\_log\_psd & 1.000 & 0.000 & 5\\
+train\_confound\_test\_unconfounded & full\_log\_psd & aperiodic\_spectrum & 0.502 & 0.006 & 5\\
+train\_confound\_test\_unconfounded & full\_log\_psd & flattened\_log\_psd & 1.000 & 0.000 & 5\\
+train\_confound\_test\_unconfounded & aperiodic\_spectrum & full\_log\_psd & 0.616 & 0.032 & 5\\
+train\_confound\_test\_unconfounded & aperiodic\_spectrum & aperiodic\_spectrum & 0.497 & 0.006 & 5\\
+train\_confound\_test\_unconfounded & aperiodic\_spectrum & flattened\_log\_psd & 0.500 & 0.000 & 5\\
+train\_confound\_test\_unconfounded & flattened\_log\_psd & full\_log\_psd & 1.000 & 0.000 & 5\\
+train\_confound\_test\_unconfounded & flattened\_log\_psd & aperiodic\_spectrum & 0.500 & 0.016 & 5\\
+train\_confound\_test\_unconfounded & flattened\_log\_psd & flattened\_log\_psd & 1.000 & 0.000 & 5\\
+\bottomrule
+\end{longtable}

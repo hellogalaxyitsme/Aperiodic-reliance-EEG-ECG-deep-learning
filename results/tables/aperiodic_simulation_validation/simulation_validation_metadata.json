@@ -1,0 +1,8 @@
+{
+  "output_dir": "/mnt/data/aperiodic_confounds/results/simulations/aperiodic_validation",
+  "n_subjects": 40,
+  "epochs_per_subject": 120,
+  "n_channels": 2,
+  "seed": 42,
+  "n_bootstrap": 2000
+}

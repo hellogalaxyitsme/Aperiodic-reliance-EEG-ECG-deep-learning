@@ -1,0 +1,118 @@
+\section*{Supplementary Information}
+
+This Supplementary Information accompanies the manuscript ``Aperiodic spectral structure is a task-dependent confound in EEG deep learning''. All tables below were generated from the result CSV and JSON artifacts in the repository. Subject-level confidence intervals use the bootstrap summaries reported in the corresponding result files.
+
+\subsection*{Supplementary Table 1. Complete numerical results}
+
+Supplementary Table 1 reports all available domain $\times$ task $\times$ model $\times$ condition combinations with confidence intervals. It includes PSD ridge baselines, raw neural interventions, reviewer-resistance controls, full-TUAB foundation-model audits, full-TUAB age/sex-matched analyses and IRASA-derived ridge interventions.
+
+\input{supplementary_table_1_complete_results.tex}
+
+\subsection*{Supplementary Table 2. SpecParam fit quality by dataset}
+
+Supplementary Table 2 reports decomposition quality for the SpecParam fixed-mode fits used to construct aperiodic-shaped and flattened spectra. For PhysioNet MI, fit quality is reported explicitly because short cue-locked trials have coarser Fourier resolution than the 20--30 s epochs used in TUAB and Sleep-EDF.
+
+\input{supplementary_table_2_specparam_fit_quality.tex}
+
+\subsection*{Supplementary Table 3. IRASA downstream ridge intervention}
+
+Supplementary Table 3 repeats the downstream ridge intervention using IRASA-derived aperiodic and flattened spectra for Sleep-EDF. The goal is to test whether the main PSD-ridge conclusion depends on the SpecParam decomposition.
+
+\input{supplementary_table_3_irasa_ridge_intervention.tex}
+
+\subsection*{Supplementary Table 4. TUAB age metadata and matching}
+
+Supplementary Table 4 reports demographic metadata availability and the same-sex, $\pm$5-year age-matching control used for the full-TUAB confound analysis. The age-matched analysis is not a replacement for the main TUAB audit; it is a control that asks whether aperiodic reliance survives after reducing the known age imbalance between abnormal and normal recordings.
+
+\input{supplementary_table_4_tuab_age_matching.tex}
+
+\subsection*{Supplementary Table 5. PhysioNet MI PSD intervention matrix}
+
+Supplementary Table 5 reports the complete train-by-test PSD ridge intervention matrix for PhysioNet Motor Movement/Imagery. This matrix separates aperiodic sufficiency, flattened residual performance and train/test mismatch effects in the short-trial motor-imagery domain.
+
+\input{supplementary_table_5_physionet_mi_psd_matrix.tex}
+
+\subsection*{Supplementary Table 6. Foundation-model audit configurations}
+
+Supplementary Table 6 lists the checkpoint, input channel and preprocessing configuration used for each full-TUAB foundation-model audit. All models were evaluated on the same normal-versus-abnormal target under raw, sham, aperiodic-shaped and flattened conditions. BENDR is listed for completeness, but its intervention result is interpreted as fragility because the sham condition collapsed to chance.
+
+\input{supplementary_table_6_foundation_model_config.tex}
+
+\subsection*{Supplementary Table 7. Dataset preprocessing details}
+
+Supplementary Table 7 provides the concrete preprocessing choices used for each dataset, including epoch or trial definitions, channel handling, filtering, resampling and exclusion rules.
+
+\input{supplementary_table_7_preprocessing_details.tex}
+
+\subsection*{Supplementary Note 1. Mathematical framework}
+
+\paragraph{Theorem 1: aperiodic slope changes induce apparent band-power changes.}
+Assume a pure aperiodic power spectrum
+\[
+S(f)=A f^{-\chi}, \qquad f \in [f_{\min}, f_{\max}].
+\]
+For any frequency band $I=[u,v]$ with $u>0$, the band power is
+\[
+B_I(A,\chi)=A\int_u^v f^{-\chi}\,df.
+\]
+If $\chi\neq1$,
+\[
+B_I(A,\chi)=A\frac{v^{1-\chi}-u^{1-\chi}}{1-\chi},
+\]
+and if $\chi=1$,
+\[
+B_I(A,1)=A\log(v/u).
+\]
+Thus $\partial B_I/\partial A>0$ and $\partial B_I/\partial \chi$ is generally non-zero. Absolute band-power differences can therefore arise from broadband offset or exponent changes even when no periodic oscillatory peak changes. A reported change in theta, alpha or beta power is not automatically an oscillatory effect unless the aperiodic component has been accounted for.
+
+\paragraph{Theorem 2: band ratios can act as aperiodic-exponent detectors.}
+For two bands $I=[u,v]$ and $J=[r,s]$ under a pure aperiodic spectrum,
+\[
+\mathrm{BR}_{I,J}(\chi)=
+\frac{\int_u^v f^{-\chi}\,df}{\int_r^s f^{-\chi}\,df}.
+\]
+The scale parameter $A$ cancels, but the exponent $\chi$ remains. Ratios such as theta/beta or theta/alpha can therefore increase when the aperiodic exponent steepens, even without a theta peak increase or beta peak decrease. Ratio-based EEG biomarkers should therefore be interpreted jointly with aperiodic exponent and periodic peak estimates.
+
+\paragraph{Theorem 3: local classifier sensitivity decomposes into aperiodic and periodic components.}
+Let a differentiable classifier produce a class logit $h_\theta(y)$ for vectorized log-spectrum $y$. Around $y$,
+\[
+h_\theta(y+\delta)-h_\theta(y)=\langle \nabla_y h_\theta(y),\delta\rangle+O(\|\delta\|^2).
+\]
+Define an aperiodic tangent space $\mathcal{A}_i$ spanned by derivatives of the aperiodic model with respect to its parameters. In fixed mode this space is spanned by $\{1,-\log f\}$ across channel-frequency bins; in knee mode it also includes the knee derivative. Let $P_\mathcal{A}$ be the orthogonal projection onto this tangent space and $P_\mathcal{P}=I-P_\mathcal{A}$. The first-order logit gradient decomposes as
+\[
+\nabla_y h_\theta = P_\mathcal{A}\nabla_y h_\theta + P_\mathcal{P}\nabla_y h_\theta.
+\]
+The aperiodic attribution ratio can be written
+\[
+\mathrm{AAR}_i=
+\frac{\|P_\mathcal{A}\nabla_y h_\theta(y_i)\|_2^2}
+{\|\nabla_y h_\theta(y_i)\|_2^2},
+\]
+with $\mathrm{OAR}_i=1-\mathrm{AAR}_i$. This formalizes the distinction between sensitivity aligned with broadband aperiodic structure and sensitivity aligned with residual periodic structure.
+
+\subsection*{Supplementary Note 2. Simulation validation protocol and results}
+
+Synthetic validation is necessary because real EEG does not provide ground-truth labels for aperiodic and periodic spectral generators. We used four simulation families: pure aperiodic classification, pure periodic classification, mixed aperiodic-plus-periodic classification and confound-shift classification. Simulated spectra were evaluated through the same full-spectrum, aperiodic-spectrum and flattened-spectrum ridge intervention matrix used for the empirical PSD analyses.
+
+In the pure aperiodic scenario, full-spectrum and aperiodic-spectrum classifiers performed near ceiling, while flattened spectra collapsed to chance. In the pure periodic scenario, flattened/residual inputs preserved performance and aperiodic-only inputs did not dominate. In the mixed scenario, performance varied monotonically with the injected mixture of broadband and periodic class evidence. In the train-confounded/test-unconfounded scenario, models trained on shortcut aperiodic structure failed when the shortcut was removed at test time. These patterns demonstrate that the audit has the intended sensitivity and specificity: it detects aperiodic reliance when the ground-truth signal is aperiodic, preserves periodic evidence when present and exposes shortcut dependence under distribution shift.
+
+\input{supplementary_note_2_simulation_results.tex}
+
+\subsection*{Supplementary Note 3. Proposed aperiodic reporting checklist}
+
+We propose the following checklist for EEG machine-learning studies that interpret performance or learned features in terms of oscillatory band power.
+
+\begin{enumerate}
+\item Report the PSD estimator, frequency range, epoch/window length, tapering or Welch parameters and any frequency exclusion rules.
+\item Report the aperiodic decomposition method, model mode, parameter settings and fit-quality summary by dataset and class.
+\item Report periodic-adjusted band power or residual spectra whenever making oscillatory claims.
+\item Include aperiodic-only and flattened/residual controls for PSD-based models.
+\item For raw EEG models, include phase-preserving Fourier interventions and a sham reconstruction control.
+\item Aggregate uncertainty at the subject level and report the bootstrap or mixed-effects unit explicitly.
+\item Keep official dataset train/test boundaries intact and prevent subject leakage across splits.
+\item Report demographic and acquisition confounds that can influence aperiodic structure, including age, sex, site and montage when available.
+\item When conclusions depend on spectral decomposition, include a second decomposition method or sensitivity analysis, such as SpecParam--IRASA agreement.
+\item Validate the audit pipeline on simulations with known aperiodic and periodic ground truth.
+\item Distinguish physiological aperiodic biomarkers from oscillatory mechanisms in the interpretation.
+\item Release subject-selection rules, random seeds, model checkpoints or prediction files sufficient to reproduce each reported intervention table.
+\end{enumerate}

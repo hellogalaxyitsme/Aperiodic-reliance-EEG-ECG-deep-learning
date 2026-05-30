@@ -1,0 +1,10 @@
+{
+  "specparam_npz": "results/sleep_edf_full/specparam/specparam_fixed.npz",
+  "irasa_npz": "results/sleep_edf_full/irasa/irasa_aperiodic_stage_balanced_5k_volts.npz",
+  "irasa_index_csv": "results/sleep_edf_full/irasa/irasa_aperiodic_stage_balanced_5k_volts.index.csv",
+  "n_epochs": 5000,
+  "n_channels": 2,
+  "n_freqs": 177,
+  "raw_index_min": 15,
+  "raw_index_max": 195405
+}

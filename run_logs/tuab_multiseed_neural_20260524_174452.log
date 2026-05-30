@@ -1,0 +1,907 @@
+=== seed 42: TUAB deep MLP PSD ===
+TUAB deep MLP: train_epochs=10230 eval_epochs=6228 train_subjects=120 eval_subjects=80
+epoch=0 train_loss=0.50045 val_loss=0.39718
+epoch=1 train_loss=0.38174 val_loss=0.31585
+epoch=2 train_loss=0.31601 val_loss=0.25503
+epoch=3 train_loss=0.25030 val_loss=0.20091
+epoch=4 train_loss=0.19243 val_loss=0.14348
+epoch=5 train_loss=0.14981 val_loss=0.11654
+epoch=6 train_loss=0.12873 val_loss=0.10238
+epoch=7 train_loss=0.11886 val_loss=0.08283
+epoch=8 train_loss=0.09567 val_loss=0.07634
+epoch=9 train_loss=0.08175 val_loss=0.06336
+epoch=10 train_loss=0.08348 val_loss=0.06008
+epoch=11 train_loss=0.07228 val_loss=0.05801
+epoch=12 train_loss=0.07020 val_loss=0.04684
+epoch=13 train_loss=0.05966 val_loss=0.05061
+epoch=14 train_loss=0.05797 val_loss=0.05629
+epoch=15 train_loss=0.05912 val_loss=0.05506
+epoch=16 train_loss=0.05420 val_loss=0.04154
+epoch=17 train_loss=0.05192 val_loss=0.05821
+epoch=18 train_loss=0.04890 val_loss=0.06721
+epoch=19 train_loss=0.05151 val_loss=0.04765
+epoch=20 train_loss=0.04822 val_loss=0.04985
+epoch=21 train_loss=0.04682 val_loss=0.04379
+epoch=22 train_loss=0.03814 val_loss=0.04223
+epoch=23 train_loss=0.03931 val_loss=0.04198
+epoch=24 train_loss=0.04457 val_loss=0.03744
+epoch=25 train_loss=0.03686 val_loss=0.03269
+epoch=26 train_loss=0.03384 val_loss=0.03263
+epoch=27 train_loss=0.03045 val_loss=0.03390
+epoch=28 train_loss=0.02745 val_loss=0.02763
+epoch=29 train_loss=0.02625 val_loss=0.03289
+epoch=30 train_loss=0.03136 val_loss=0.02850
+epoch=31 train_loss=0.03023 val_loss=0.03317
+epoch=32 train_loss=0.03276 val_loss=0.02957
+epoch=33 train_loss=0.02269 val_loss=0.02373
+epoch=34 train_loss=0.02248 val_loss=0.02210
+epoch=35 train_loss=0.02031 val_loss=0.02615
+epoch=36 train_loss=0.02125 val_loss=0.02617
+epoch=37 train_loss=0.02624 val_loss=0.03448
+epoch=38 train_loss=0.01930 val_loss=0.02967
+epoch=39 train_loss=0.01759 val_loss=0.03577
+epoch=40 train_loss=0.01826 val_loss=0.02972
+epoch=41 train_loss=0.01788 val_loss=0.02494
+epoch=42 train_loss=0.01687 val_loss=0.02375
+epoch=43 train_loss=0.02122 val_loss=0.02898
+epoch=44 train_loss=0.02969 val_loss=0.02606
+epoch=45 train_loss=0.02356 val_loss=0.03962
+epoch=46 train_loss=0.02383 val_loss=0.03287
+Early stopping at epoch=46
+        test_input  balanced_accuracy  macro_f1  accuracy
+      full_log_psd           0.725582  0.718891  0.722222
+aperiodic_spectrum           0.553292  0.485628  0.629255
+ flattened_log_psd           0.642556  0.608620  0.610469
+Wrote outputs to: /mnt/data/aperiodic_confounds/results/tuab_subset_200/multiseed_neural/deep_mlp_seed42
+=== seed 42: TUAB raw_cnn raw intervention ===
+TUAB raw neural run: train_epochs=10230 eval_epochs=6228 train_subjects=120 eval_subjects=80 model=raw_cnn classes=['abnormal', 'normal']
+epoch=0 train_loss=0.48191 val_loss=0.47574
+epoch=1 train_loss=0.28042 val_loss=0.79084
+epoch=2 train_loss=0.23001 val_loss=0.27531
+epoch=3 train_loss=0.17580 val_loss=0.17652
+epoch=4 train_loss=0.14903 val_loss=0.58786
+epoch=5 train_loss=0.13966 val_loss=0.36627
+epoch=6 train_loss=0.10791 val_loss=0.19673
+epoch=7 train_loss=0.09182 val_loss=0.64938
+epoch=8 train_loss=0.09400 val_loss=0.20169
+epoch=9 train_loss=0.09241 val_loss=0.23818
+epoch=10 train_loss=0.06294 val_loss=0.21724
+epoch=11 train_loss=0.04760 val_loss=0.11474
+epoch=12 train_loss=0.04523 val_loss=0.17728
+epoch=13 train_loss=0.05030 val_loss=0.45104
+epoch=14 train_loss=0.04931 val_loss=0.17638
+epoch=15 train_loss=0.03508 val_loss=0.33802
+epoch=16 train_loss=0.02898 val_loss=0.31979
+epoch=17 train_loss=0.03785 val_loss=0.27708
+epoch=18 train_loss=0.03389 val_loss=0.12404
+epoch=19 train_loss=0.06026 val_loss=0.64279
+epoch=20 train_loss=0.05036 val_loss=0.70952
+epoch=21 train_loss=0.05116 val_loss=0.38334
+epoch=22 train_loss=0.03596 val_loss=0.64549
+epoch=23 train_loss=0.02344 val_loss=0.35720
+Early stopping at epoch=23
+Predicted raw_eeg: n=6228
+Predicted phase_sham: n=6228
+Predicted phase_aperiodic: n=6228
+Predicted phase_flattened: n=6228
+     test_input  balanced_accuracy  macro_f1  accuracy
+        raw_eeg           0.755127  0.753240  0.759313
+     phase_sham           0.755127  0.753240  0.759313
+phase_aperiodic           0.649108  0.644531  0.696050
+phase_flattened           0.615050  0.555233  0.567116
+Wrote outputs to: /mnt/data/aperiodic_confounds/results/tuab_subset_200/multiseed_neural/raw_cnn_seed42
+=== seed 42: TUAB eegnet raw intervention ===
+TUAB raw neural run: train_epochs=10230 eval_epochs=6228 train_subjects=120 eval_subjects=80 model=eegnet classes=['abnormal', 'normal']
+epoch=0 train_loss=0.64191 val_loss=0.71567
+epoch=1 train_loss=0.53732 val_loss=0.70409
+epoch=2 train_loss=0.44285 val_loss=0.59269
+epoch=3 train_loss=0.41465 val_loss=0.55623
+epoch=4 train_loss=0.39115 val_loss=0.51736
+epoch=5 train_loss=0.36822 val_loss=0.68861
+epoch=6 train_loss=0.36219 val_loss=0.64845
+epoch=7 train_loss=0.34600 val_loss=0.44484
+epoch=8 train_loss=0.33667 val_loss=0.50161
+epoch=9 train_loss=0.32976 val_loss=0.57556
+epoch=10 train_loss=0.32406 val_loss=0.55312
+epoch=11 train_loss=0.31466 val_loss=0.34940
+epoch=12 train_loss=0.32311 val_loss=0.34044
+epoch=13 train_loss=0.30404 val_loss=0.32407
+epoch=14 train_loss=0.30243 val_loss=0.38178
+epoch=15 train_loss=0.29209 val_loss=0.39480
+epoch=16 train_loss=0.29822 val_loss=0.31559
+epoch=17 train_loss=0.28923 val_loss=0.33398
+epoch=18 train_loss=0.28096 val_loss=0.29885
+epoch=19 train_loss=0.28170 val_loss=0.48597
+epoch=20 train_loss=0.28240 val_loss=0.31602
+epoch=21 train_loss=0.26276 val_loss=0.34262
+epoch=22 train_loss=0.26525 val_loss=0.28535
+epoch=23 train_loss=0.27274 val_loss=0.28206
+epoch=24 train_loss=0.26283 val_loss=0.27239
+epoch=25 train_loss=0.25769 val_loss=0.32624
+epoch=26 train_loss=0.25022 val_loss=0.26101
+epoch=27 train_loss=0.25573 val_loss=0.39187
+epoch=28 train_loss=0.24702 val_loss=0.25629
+epoch=29 train_loss=0.23575 val_loss=0.29635
+epoch=30 train_loss=0.24167 val_loss=0.29936
+epoch=31 train_loss=0.23483 val_loss=0.27680
+epoch=32 train_loss=0.25169 val_loss=0.42583
+epoch=33 train_loss=0.23358 val_loss=0.42773
+epoch=34 train_loss=0.23561 val_loss=0.33545
+epoch=35 train_loss=0.24232 val_loss=0.30578
+epoch=36 train_loss=0.22571 val_loss=0.30536
+epoch=37 train_loss=0.24163 val_loss=0.28755
+epoch=38 train_loss=0.23990 val_loss=0.36034
+epoch=39 train_loss=0.23434 val_loss=0.43570
+epoch=40 train_loss=0.23366 val_loss=0.24061
+epoch=41 train_loss=0.21951 val_loss=0.25059
+epoch=42 train_loss=0.22447 val_loss=0.39385
+epoch=43 train_loss=0.22154 val_loss=0.64124
+epoch=44 train_loss=0.22083 val_loss=0.25992
+epoch=45 train_loss=0.21890 val_loss=0.26023
+epoch=46 train_loss=0.22513 val_loss=0.25670
+epoch=47 train_loss=0.23197 val_loss=0.26381
+epoch=48 train_loss=0.23319 val_loss=0.23205
+epoch=49 train_loss=0.21682 val_loss=0.53782
+epoch=50 train_loss=0.21383 val_loss=0.25139
+epoch=51 train_loss=0.21990 val_loss=0.27022
+epoch=52 train_loss=0.21830 val_loss=0.48844
+epoch=53 train_loss=0.21106 val_loss=0.24742
+epoch=54 train_loss=0.21005 val_loss=0.27390
+epoch=55 train_loss=0.20533 val_loss=0.23430
+epoch=56 train_loss=0.20872 val_loss=0.21920
+epoch=57 train_loss=0.21831 val_loss=0.23505
+epoch=58 train_loss=0.20976 val_loss=0.26801
+epoch=59 train_loss=0.20378 val_loss=0.38211
+epoch=60 train_loss=0.20375 val_loss=0.30371
+epoch=61 train_loss=0.21009 val_loss=0.39397
+epoch=62 train_loss=0.20980 val_loss=0.24833
+epoch=63 train_loss=0.22344 val_loss=0.20847
+epoch=64 train_loss=0.21256 val_loss=0.22166
+epoch=65 train_loss=0.20480 val_loss=0.41917
+epoch=66 train_loss=0.20314 val_loss=0.22212
+epoch=67 train_loss=0.20933 val_loss=0.26437
+epoch=68 train_loss=0.21046 val_loss=0.73780
+epoch=69 train_loss=0.20607 val_loss=0.22000
+epoch=70 train_loss=0.20929 val_loss=0.71593
+epoch=71 train_loss=0.19889 val_loss=0.44965
+epoch=72 train_loss=0.20341 val_loss=0.53098
+epoch=73 train_loss=0.19749 val_loss=0.23168
+epoch=74 train_loss=0.19323 val_loss=0.32374
+epoch=75 train_loss=0.22385 val_loss=0.23608
+Early stopping at epoch=75
+Predicted raw_eeg: n=6228
+Predicted phase_sham: n=6228
+Predicted phase_aperiodic: n=6228
+Predicted phase_flattened: n=6228
+     test_input  balanced_accuracy  macro_f1  accuracy
+        raw_eeg           0.755734  0.742251  0.743256
+     phase_sham           0.755734  0.742251  0.743256
+phase_aperiodic           0.714435  0.718481  0.735228
+phase_flattened           0.550979  0.419771  0.478003
+Wrote outputs to: /mnt/data/aperiodic_confounds/results/tuab_subset_200/multiseed_neural/eegnet_seed42
+=== seed 42: TUAB shallow_fbcsp raw intervention ===
+TUAB raw neural run: train_epochs=10230 eval_epochs=6228 train_subjects=120 eval_subjects=80 model=shallow_fbcsp classes=['abnormal', 'normal']
+epoch=0 train_loss=2.27291 val_loss=0.68463
+epoch=1 train_loss=1.17351 val_loss=3.77601
+epoch=2 train_loss=2.42928 val_loss=1.11631
+epoch=3 train_loss=1.52832 val_loss=0.79068
+epoch=4 train_loss=0.88509 val_loss=0.38537
+epoch=5 train_loss=0.83646 val_loss=0.46574
+epoch=6 train_loss=1.18786 val_loss=4.88370
+epoch=7 train_loss=0.91387 val_loss=0.30326
+epoch=8 train_loss=0.73598 val_loss=4.59252
+epoch=9 train_loss=1.19709 val_loss=1.08130
+epoch=10 train_loss=0.96130 val_loss=0.91674
+epoch=11 train_loss=0.79109 val_loss=0.29117
+epoch=12 train_loss=0.60849 val_loss=2.22402
+epoch=13 train_loss=2.23415 val_loss=0.85682
+epoch=14 train_loss=1.08813 val_loss=0.66631
+epoch=15 train_loss=0.82329 val_loss=0.72307
+epoch=16 train_loss=0.65038 val_loss=0.82824
+epoch=17 train_loss=0.80985 val_loss=0.50677
+epoch=18 train_loss=0.85435 val_loss=0.39706
+epoch=19 train_loss=0.57671 val_loss=0.93039
+epoch=20 train_loss=0.45097 val_loss=1.97045
+epoch=21 train_loss=0.68496 val_loss=0.34425
+epoch=22 train_loss=0.92284 val_loss=0.59506
+epoch=23 train_loss=0.90584 val_loss=1.61427
+Early stopping at epoch=23
+Predicted raw_eeg: n=6228
+Predicted phase_sham: n=6228
+Predicted phase_aperiodic: n=6228
+Predicted phase_flattened: n=6228
+     test_input  balanced_accuracy  macro_f1  accuracy
+        raw_eeg           0.744100  0.734804  0.736994
+     phase_sham           0.744100  0.734804  0.736994
+phase_aperiodic           0.733092  0.737628  0.753051
+phase_flattened           0.598605  0.517627  0.541105
+Wrote outputs to: /mnt/data/aperiodic_confounds/results/tuab_subset_200/multiseed_neural/shallow_fbcsp_seed42
+=== seed 42: TUAB deep4 raw intervention ===
+TUAB raw neural run: train_epochs=10230 eval_epochs=6228 train_subjects=120 eval_subjects=80 model=deep4 classes=['abnormal', 'normal']
+epoch=0 train_loss=0.63000 val_loss=0.38760
+epoch=1 train_loss=0.37829 val_loss=0.67442
+epoch=2 train_loss=0.31636 val_loss=0.56404
+epoch=3 train_loss=0.33366 val_loss=0.25028
+epoch=4 train_loss=0.21176 val_loss=0.51036
+epoch=5 train_loss=0.17513 val_loss=0.69100
+epoch=6 train_loss=0.19998 val_loss=0.27364
+epoch=7 train_loss=0.15621 val_loss=0.60633
+epoch=8 train_loss=0.14778 val_loss=0.24515
+epoch=9 train_loss=0.13066 val_loss=0.65566
+epoch=10 train_loss=0.13311 val_loss=0.75819
+epoch=11 train_loss=0.10912 val_loss=0.11391
+epoch=12 train_loss=0.11027 val_loss=0.84501
+epoch=13 train_loss=0.09951 val_loss=0.11903
+epoch=14 train_loss=0.09461 val_loss=0.29331
+epoch=15 train_loss=0.08468 val_loss=0.76219
+epoch=16 train_loss=0.09692 val_loss=0.15603
+epoch=17 train_loss=0.07997 val_loss=0.51229
+epoch=18 train_loss=0.06153 val_loss=0.36244
+epoch=19 train_loss=0.05889 val_loss=0.21341
+epoch=20 train_loss=0.04754 val_loss=0.25570
+epoch=21 train_loss=0.04270 val_loss=0.39451
+epoch=22 train_loss=0.04309 val_loss=0.51773
+epoch=23 train_loss=0.06915 val_loss=0.20327
+Early stopping at epoch=23
+Predicted raw_eeg: n=6228
+Predicted phase_sham: n=6228
+Predicted phase_aperiodic: n=6228
+Predicted phase_flattened: n=6228
+     test_input  balanced_accuracy  macro_f1  accuracy
+        raw_eeg           0.756762  0.738065  0.738279
+     phase_sham           0.756762  0.738065  0.738279
+phase_aperiodic           0.711340  0.716182  0.737155
+phase_flattened           0.553226  0.437617  0.484907
+Wrote outputs to: /mnt/data/aperiodic_confounds/results/tuab_subset_200/multiseed_neural/deep4_seed42
+=== seed 43: TUAB deep MLP PSD ===
+TUAB deep MLP: train_epochs=10230 eval_epochs=6228 train_subjects=120 eval_subjects=80
+epoch=0 train_loss=0.48192 val_loss=0.37617
+epoch=1 train_loss=0.37153 val_loss=0.30491
+epoch=2 train_loss=0.29808 val_loss=0.23128
+epoch=3 train_loss=0.22997 val_loss=0.15635
+epoch=4 train_loss=0.17841 val_loss=0.12237
+epoch=5 train_loss=0.13983 val_loss=0.08754
+epoch=6 train_loss=0.12167 val_loss=0.08517
+epoch=7 train_loss=0.10797 val_loss=0.06842
+epoch=8 train_loss=0.09314 val_loss=0.05825
+epoch=9 train_loss=0.08486 val_loss=0.06924
+epoch=10 train_loss=0.08244 val_loss=0.05458
+epoch=11 train_loss=0.07301 val_loss=0.04210
+epoch=12 train_loss=0.07192 val_loss=0.04140
+epoch=13 train_loss=0.06778 val_loss=0.03583
+epoch=14 train_loss=0.05663 val_loss=0.03366
+epoch=15 train_loss=0.04570 val_loss=0.02961
+epoch=16 train_loss=0.05152 val_loss=0.02921
+epoch=17 train_loss=0.05227 val_loss=0.03534
+epoch=18 train_loss=0.04643 val_loss=0.03620
+epoch=19 train_loss=0.04730 val_loss=0.04523
+epoch=20 train_loss=0.04779 val_loss=0.03294
+epoch=21 train_loss=0.04368 val_loss=0.03504
+epoch=22 train_loss=0.04198 val_loss=0.02566
+epoch=23 train_loss=0.04255 val_loss=0.02271
+epoch=24 train_loss=0.03720 val_loss=0.02193
+epoch=25 train_loss=0.03535 val_loss=0.02507
+epoch=26 train_loss=0.03177 val_loss=0.01970
+epoch=27 train_loss=0.04545 val_loss=0.02673
+epoch=28 train_loss=0.03423 val_loss=0.02088
+epoch=29 train_loss=0.03102 val_loss=0.02174
+epoch=30 train_loss=0.02969 val_loss=0.02427
+epoch=31 train_loss=0.02918 val_loss=0.02004
+epoch=32 train_loss=0.03088 val_loss=0.02077
+epoch=33 train_loss=0.02544 val_loss=0.02515
+epoch=34 train_loss=0.03249 val_loss=0.02496
+epoch=35 train_loss=0.02591 val_loss=0.02150
+epoch=36 train_loss=0.02723 val_loss=0.02368
+epoch=37 train_loss=0.02895 val_loss=0.04723
+epoch=38 train_loss=0.02598 val_loss=0.01796
+epoch=39 train_loss=0.02781 val_loss=0.02340
+epoch=40 train_loss=0.02093 val_loss=0.02018
+epoch=41 train_loss=0.01928 val_loss=0.02012
+epoch=42 train_loss=0.02112 val_loss=0.02261
+epoch=43 train_loss=0.01922 val_loss=0.01997
+epoch=44 train_loss=0.02072 val_loss=0.02546
+epoch=45 train_loss=0.01736 val_loss=0.02104
+epoch=46 train_loss=0.01668 val_loss=0.01427
+epoch=47 train_loss=0.01514 val_loss=0.01993
+epoch=48 train_loss=0.01647 val_loss=0.01515
+epoch=49 train_loss=0.01863 val_loss=0.01691
+epoch=50 train_loss=0.01958 val_loss=0.02432
+epoch=51 train_loss=0.01490 val_loss=0.01516
+epoch=52 train_loss=0.01429 val_loss=0.01914
+epoch=53 train_loss=0.01495 val_loss=0.01707
+epoch=54 train_loss=0.01854 val_loss=0.02519
+epoch=55 train_loss=0.01474 val_loss=0.01474
+epoch=56 train_loss=0.01200 val_loss=0.02093
+epoch=57 train_loss=0.01737 val_loss=0.02297
+epoch=58 train_loss=0.01585 val_loss=0.02035
+Early stopping at epoch=58
+        test_input  balanced_accuracy  macro_f1  accuracy
+      full_log_psd           0.737089  0.732810  0.737476
+aperiodic_spectrum           0.560114  0.497543  0.634875
+ flattened_log_psd           0.590192  0.527671  0.541586
+Wrote outputs to: /mnt/data/aperiodic_confounds/results/tuab_subset_200/multiseed_neural/deep_mlp_seed43
+=== seed 43: TUAB raw_cnn raw intervention ===
+TUAB raw neural run: train_epochs=10230 eval_epochs=6228 train_subjects=120 eval_subjects=80 model=raw_cnn classes=['abnormal', 'normal']
+epoch=0 train_loss=0.43346 val_loss=0.38856
+epoch=1 train_loss=0.27527 val_loss=0.23545
+epoch=2 train_loss=0.20458 val_loss=0.27082
+epoch=3 train_loss=0.17059 val_loss=0.28278
+epoch=4 train_loss=0.15496 val_loss=0.30057
+epoch=5 train_loss=0.12463 val_loss=0.23520
+epoch=6 train_loss=0.09701 val_loss=0.15629
+epoch=7 train_loss=0.11063 val_loss=0.13315
+epoch=8 train_loss=0.06534 val_loss=0.19620
+epoch=9 train_loss=0.08091 val_loss=0.22362
+epoch=10 train_loss=0.06842 val_loss=0.17928
+epoch=11 train_loss=0.07392 val_loss=0.34202
+epoch=12 train_loss=0.06958 val_loss=0.20901
+epoch=13 train_loss=0.04493 val_loss=0.52607
+epoch=14 train_loss=0.04472 val_loss=0.19177
+epoch=15 train_loss=0.03403 val_loss=0.24210
+epoch=16 train_loss=0.02917 val_loss=0.28537
+epoch=17 train_loss=0.04348 val_loss=0.21257
+epoch=18 train_loss=0.05710 val_loss=0.10922
+epoch=19 train_loss=0.02490 val_loss=0.45035
+epoch=20 train_loss=0.06865 val_loss=0.14974
+epoch=21 train_loss=0.04466 val_loss=0.90535
+epoch=22 train_loss=0.02147 val_loss=0.17371
+epoch=23 train_loss=0.01642 val_loss=0.07150
+epoch=24 train_loss=0.01872 val_loss=0.06861
+epoch=25 train_loss=0.01889 val_loss=0.13383
+epoch=26 train_loss=0.03445 val_loss=0.10424
+epoch=27 train_loss=0.03242 val_loss=0.19089
+epoch=28 train_loss=0.03824 val_loss=0.20777
+epoch=29 train_loss=0.01931 val_loss=0.49193
+epoch=30 train_loss=0.01241 val_loss=0.10776
+epoch=31 train_loss=0.01682 val_loss=0.49432
+epoch=32 train_loss=0.01586 val_loss=0.48999
+epoch=33 train_loss=0.01374 val_loss=0.19119
+epoch=34 train_loss=0.04013 val_loss=0.57910
+epoch=35 train_loss=0.02838 val_loss=0.31460
+epoch=36 train_loss=0.02944 val_loss=0.78254
+Early stopping at epoch=36
+Predicted raw_eeg: n=6228
+Predicted phase_sham: n=6228
+Predicted phase_aperiodic: n=6228
+Predicted phase_flattened: n=6228
+     test_input  balanced_accuracy  macro_f1  accuracy
+        raw_eeg           0.778505  0.763805  0.764611
+     phase_sham           0.778505  0.763805  0.764611
+phase_aperiodic           0.760148  0.763767  0.775048
+phase_flattened           0.634429  0.573056  0.585100
+Wrote outputs to: /mnt/data/aperiodic_confounds/results/tuab_subset_200/multiseed_neural/raw_cnn_seed43
+=== seed 43: TUAB eegnet raw intervention ===
+TUAB raw neural run: train_epochs=10230 eval_epochs=6228 train_subjects=120 eval_subjects=80 model=eegnet classes=['abnormal', 'normal']
+epoch=0 train_loss=0.58286 val_loss=0.69903
+epoch=1 train_loss=0.45492 val_loss=0.71148
+epoch=2 train_loss=0.41926 val_loss=0.61545
+epoch=3 train_loss=0.39833 val_loss=0.60064
+epoch=4 train_loss=0.38101 val_loss=0.47656
+epoch=5 train_loss=0.36676 val_loss=0.51655
+epoch=6 train_loss=0.35963 val_loss=0.44158
+epoch=7 train_loss=0.35037 val_loss=0.36499
+epoch=8 train_loss=0.34036 val_loss=0.44526
+epoch=9 train_loss=0.32903 val_loss=0.36752
+epoch=10 train_loss=0.32107 val_loss=0.44170
+epoch=11 train_loss=0.31670 val_loss=0.34392
+epoch=12 train_loss=0.31938 val_loss=0.39545
+epoch=13 train_loss=0.31567 val_loss=0.34244
+epoch=14 train_loss=0.30397 val_loss=0.41847
+epoch=15 train_loss=0.28923 val_loss=0.31992
+epoch=16 train_loss=0.30115 val_loss=0.32107
+epoch=17 train_loss=0.28593 val_loss=0.36090
+epoch=18 train_loss=0.28193 val_loss=0.43459
+epoch=19 train_loss=0.29324 val_loss=0.78494
+epoch=20 train_loss=0.28206 val_loss=0.47060
+epoch=21 train_loss=0.28299 val_loss=0.38386
+epoch=22 train_loss=0.27501 val_loss=0.30540
+epoch=23 train_loss=0.27033 val_loss=0.32479
+epoch=24 train_loss=0.26192 val_loss=0.29116
+epoch=25 train_loss=0.26781 val_loss=0.32234
+epoch=26 train_loss=0.26192 val_loss=0.42245
+epoch=27 train_loss=0.26048 val_loss=0.61004
+epoch=28 train_loss=0.26150 val_loss=0.50412
+epoch=29 train_loss=0.25603 val_loss=0.38092
+epoch=30 train_loss=0.26093 val_loss=0.29513
+epoch=31 train_loss=0.24894 val_loss=0.37311
+epoch=32 train_loss=0.24872 val_loss=0.29333
+epoch=33 train_loss=0.25248 val_loss=0.38486
+epoch=34 train_loss=0.25904 val_loss=0.28445
+epoch=35 train_loss=0.24372 val_loss=0.27876
+epoch=36 train_loss=0.23754 val_loss=0.55546
+epoch=37 train_loss=0.25517 val_loss=0.30541
+epoch=38 train_loss=0.24256 val_loss=0.34463
+epoch=39 train_loss=0.23337 val_loss=0.27895
+epoch=40 train_loss=0.24152 val_loss=0.62153
+epoch=41 train_loss=0.22552 val_loss=0.34653
+epoch=42 train_loss=0.23885 val_loss=0.45500
+epoch=43 train_loss=0.24654 val_loss=0.31438
+epoch=44 train_loss=0.21904 val_loss=0.33521
+epoch=45 train_loss=0.22518 val_loss=0.24390
+epoch=46 train_loss=0.21629 val_loss=0.25785
+epoch=47 train_loss=0.21556 val_loss=0.59935
+epoch=48 train_loss=0.23022 val_loss=0.33816
+epoch=49 train_loss=0.21891 val_loss=0.24683
+epoch=50 train_loss=0.22478 val_loss=0.27869
+epoch=51 train_loss=0.22118 val_loss=0.24824
+epoch=52 train_loss=0.21741 val_loss=0.49126
+epoch=53 train_loss=0.21908 val_loss=0.46567
+epoch=54 train_loss=0.21056 val_loss=0.38084
+epoch=55 train_loss=0.21778 val_loss=0.52960
+epoch=56 train_loss=0.20745 val_loss=0.24557
+epoch=57 train_loss=0.19731 val_loss=0.21722
+epoch=58 train_loss=0.20334 val_loss=0.22330
+epoch=59 train_loss=0.20014 val_loss=0.33152
+epoch=60 train_loss=0.20551 val_loss=0.48903
+epoch=61 train_loss=0.20444 val_loss=0.37556
+epoch=62 train_loss=0.19103 val_loss=0.27360
+epoch=63 train_loss=0.19362 val_loss=0.42159
+epoch=64 train_loss=0.21204 val_loss=0.26794
+epoch=65 train_loss=0.19078 val_loss=0.21905
+epoch=66 train_loss=0.18350 val_loss=0.57321
+epoch=67 train_loss=0.19163 val_loss=0.41765
+epoch=68 train_loss=0.18944 val_loss=0.33814
+epoch=69 train_loss=0.21008 val_loss=0.24878
+Early stopping at epoch=69
+Predicted raw_eeg: n=6228
+Predicted phase_sham: n=6228
+Predicted phase_aperiodic: n=6228
+Predicted phase_flattened: n=6228
+     test_input  balanced_accuracy  macro_f1  accuracy
+        raw_eeg           0.763258  0.748169  0.748876
+     phase_sham           0.763258  0.748169  0.748876
+phase_aperiodic           0.713894  0.718890  0.739884
+phase_flattened           0.640778  0.565951  0.584457
+Wrote outputs to: /mnt/data/aperiodic_confounds/results/tuab_subset_200/multiseed_neural/eegnet_seed43
+=== seed 43: TUAB shallow_fbcsp raw intervention ===
+TUAB raw neural run: train_epochs=10230 eval_epochs=6228 train_subjects=120 eval_subjects=80 model=shallow_fbcsp classes=['abnormal', 'normal']
+epoch=0 train_loss=2.27412 val_loss=0.72700
+epoch=1 train_loss=1.24698 val_loss=0.50078
+epoch=2 train_loss=1.38667 val_loss=0.38464
+epoch=3 train_loss=1.20254 val_loss=0.72992
+epoch=4 train_loss=1.09884 val_loss=0.44762
+epoch=5 train_loss=0.70130 val_loss=1.40776
+epoch=6 train_loss=0.87426 val_loss=0.46462
+epoch=7 train_loss=1.31752 val_loss=0.34084
+epoch=8 train_loss=0.83808 val_loss=1.99946
+epoch=9 train_loss=0.69158 val_loss=1.57312
+epoch=10 train_loss=0.65536 val_loss=1.95968
+epoch=11 train_loss=0.99905 val_loss=0.53049
+epoch=12 train_loss=1.15674 val_loss=0.98154
+epoch=13 train_loss=0.62789 val_loss=0.25910
+epoch=14 train_loss=0.49494 val_loss=0.50293
+epoch=15 train_loss=0.73290 val_loss=0.38501
+epoch=16 train_loss=0.51723 val_loss=0.59578
+epoch=17 train_loss=0.46819 val_loss=0.34761
+epoch=18 train_loss=0.75817 val_loss=0.47861
+epoch=19 train_loss=0.99079 val_loss=0.49071
+epoch=20 train_loss=1.86910 val_loss=0.90463
+epoch=21 train_loss=1.15920 val_loss=0.89249
+epoch=22 train_loss=0.82599 val_loss=0.31725
+epoch=23 train_loss=1.49187 val_loss=0.30149
+epoch=24 train_loss=0.49832 val_loss=0.22608
+epoch=25 train_loss=0.54389 val_loss=0.40964
+epoch=26 train_loss=0.52546 val_loss=0.51933
+epoch=27 train_loss=0.35500 val_loss=0.21924
+epoch=28 train_loss=0.65514 val_loss=0.53260
+epoch=29 train_loss=0.41392 val_loss=0.19697
+epoch=30 train_loss=0.30751 val_loss=0.18610
+epoch=31 train_loss=0.35993 val_loss=0.32264
+epoch=32 train_loss=0.39736 val_loss=1.08023
+epoch=33 train_loss=0.77307 val_loss=0.20122
+epoch=34 train_loss=0.44081 val_loss=0.25536
+epoch=35 train_loss=0.87454 val_loss=0.37275
+epoch=36 train_loss=0.43903 val_loss=0.25702
+epoch=37 train_loss=0.34038 val_loss=0.33719
+epoch=38 train_loss=0.51795 val_loss=0.14202
+epoch=39 train_loss=0.42336 val_loss=0.16232
+epoch=40 train_loss=0.32259 val_loss=0.15068
+epoch=41 train_loss=0.32032 val_loss=0.16244
+epoch=42 train_loss=0.71556 val_loss=0.29837
+epoch=43 train_loss=0.51251 val_loss=1.30912
+epoch=44 train_loss=0.66751 val_loss=0.28697
+epoch=45 train_loss=0.41586 val_loss=0.44953
+epoch=46 train_loss=0.50524 val_loss=0.29637
+epoch=47 train_loss=0.29162 val_loss=0.16385
+epoch=48 train_loss=0.31166 val_loss=0.21824
+epoch=49 train_loss=0.23247 val_loss=0.25800
+epoch=50 train_loss=0.65837 val_loss=1.42081
+Early stopping at epoch=50
+Predicted raw_eeg: n=6228
+Predicted phase_sham: n=6228
+Predicted phase_aperiodic: n=6228
+Predicted phase_flattened: n=6228
+     test_input  balanced_accuracy  macro_f1  accuracy
+        raw_eeg           0.732678  0.725544  0.728645
+     phase_sham           0.732678  0.725544  0.728645
+phase_aperiodic           0.665611  0.667110  0.701991
+phase_flattened           0.566416  0.480615  0.508189
+Wrote outputs to: /mnt/data/aperiodic_confounds/results/tuab_subset_200/multiseed_neural/shallow_fbcsp_seed43
+=== seed 43: TUAB deep4 raw intervention ===
+TUAB raw neural run: train_epochs=10230 eval_epochs=6228 train_subjects=120 eval_subjects=80 model=deep4 classes=['abnormal', 'normal']
+epoch=0 train_loss=0.58867 val_loss=0.52013
+epoch=1 train_loss=0.36433 val_loss=0.40360
+epoch=2 train_loss=0.32046 val_loss=0.31119
+epoch=3 train_loss=0.25369 val_loss=0.23423
+epoch=4 train_loss=0.22493 val_loss=0.30333
+epoch=5 train_loss=0.21141 val_loss=0.38587
+epoch=6 train_loss=0.18330 val_loss=0.29011
+epoch=7 train_loss=0.20979 val_loss=0.27547
+epoch=8 train_loss=0.15634 val_loss=0.16078
+epoch=9 train_loss=0.13402 val_loss=0.44903
+epoch=10 train_loss=0.12767 val_loss=0.11196
+epoch=11 train_loss=0.09762 val_loss=0.10891
+epoch=12 train_loss=0.09750 val_loss=0.63199
+epoch=13 train_loss=0.10113 val_loss=0.30369
+epoch=14 train_loss=0.08921 val_loss=0.14098
+epoch=15 train_loss=0.09087 val_loss=0.18214
+epoch=16 train_loss=0.09521 val_loss=0.33464
+epoch=17 train_loss=0.06638 val_loss=0.23180
+epoch=18 train_loss=0.07200 val_loss=0.60635
+epoch=19 train_loss=0.07744 val_loss=0.51313
+epoch=20 train_loss=0.05139 val_loss=0.57398
+epoch=21 train_loss=0.04922 val_loss=0.30354
+epoch=22 train_loss=0.03697 val_loss=0.18540
+epoch=23 train_loss=0.05371 val_loss=0.09214
+epoch=24 train_loss=0.05166 val_loss=0.97237
+epoch=25 train_loss=0.07252 val_loss=0.44936
+epoch=26 train_loss=0.03524 val_loss=0.44491
+epoch=27 train_loss=0.04472 val_loss=0.21479
+epoch=28 train_loss=0.04484 val_loss=0.27177
+epoch=29 train_loss=0.03343 val_loss=0.44361
+epoch=30 train_loss=0.02279 val_loss=0.59114
+epoch=31 train_loss=0.01939 val_loss=0.52311
+epoch=32 train_loss=0.02586 val_loss=0.11548
+epoch=33 train_loss=0.03496 val_loss=0.50925
+epoch=34 train_loss=0.03417 val_loss=0.55566
+epoch=35 train_loss=0.04026 val_loss=0.08797
+epoch=36 train_loss=0.04048 val_loss=0.72585
+epoch=37 train_loss=0.04455 val_loss=0.14461
+epoch=38 train_loss=0.05840 val_loss=1.47372
+epoch=39 train_loss=0.03406 val_loss=0.31698
+epoch=40 train_loss=0.04374 val_loss=0.64010
+epoch=41 train_loss=0.02422 val_loss=0.08124
+epoch=42 train_loss=0.02594 val_loss=0.12557
+epoch=43 train_loss=0.02180 val_loss=0.06541
+epoch=44 train_loss=0.02659 val_loss=0.29469
+epoch=45 train_loss=0.05407 val_loss=0.63306
+epoch=46 train_loss=0.03752 val_loss=0.44771
+epoch=47 train_loss=0.04965 val_loss=0.23623
+epoch=48 train_loss=0.04149 val_loss=1.48836
+epoch=49 train_loss=0.02113 val_loss=0.42832
+epoch=50 train_loss=0.02402 val_loss=0.41411
+epoch=51 train_loss=0.03613 val_loss=0.08266
+epoch=52 train_loss=0.01802 val_loss=0.37535
+epoch=53 train_loss=0.01730 val_loss=0.22574
+epoch=54 train_loss=0.02233 val_loss=0.11783
+epoch=55 train_loss=0.02335 val_loss=0.20166
+Early stopping at epoch=55
+Predicted raw_eeg: n=6228
+Predicted phase_sham: n=6228
+Predicted phase_aperiodic: n=6228
+Predicted phase_flattened: n=6228
+     test_input  balanced_accuracy  macro_f1  accuracy
+        raw_eeg           0.763879  0.746428  0.746789
+     phase_sham           0.763879  0.746428  0.746789
+phase_aperiodic           0.683172  0.686691  0.713712
+phase_flattened           0.543124  0.416999  0.472062
+Wrote outputs to: /mnt/data/aperiodic_confounds/results/tuab_subset_200/multiseed_neural/deep4_seed43
+=== seed 44: TUAB deep MLP PSD ===
+TUAB deep MLP: train_epochs=10230 eval_epochs=6228 train_subjects=120 eval_subjects=80
+epoch=0 train_loss=0.49390 val_loss=0.38489
+epoch=1 train_loss=0.37687 val_loss=0.31779
+epoch=2 train_loss=0.31860 val_loss=0.25835
+epoch=3 train_loss=0.25239 val_loss=0.20881
+epoch=4 train_loss=0.20430 val_loss=0.15347
+epoch=5 train_loss=0.16338 val_loss=0.12070
+epoch=6 train_loss=0.13243 val_loss=0.09090
+epoch=7 train_loss=0.11938 val_loss=0.07901
+epoch=8 train_loss=0.09907 val_loss=0.07056
+epoch=9 train_loss=0.08687 val_loss=0.06416
+epoch=10 train_loss=0.08315 val_loss=0.05287
+epoch=11 train_loss=0.07773 val_loss=0.05964
+epoch=12 train_loss=0.07974 val_loss=0.06528
+epoch=13 train_loss=0.06363 val_loss=0.04112
+epoch=14 train_loss=0.05372 val_loss=0.05081
+epoch=15 train_loss=0.05440 val_loss=0.04657
+epoch=16 train_loss=0.05815 val_loss=0.04363
+epoch=17 train_loss=0.05167 val_loss=0.04099
+epoch=18 train_loss=0.04618 val_loss=0.03182
+epoch=19 train_loss=0.04630 val_loss=0.03904
+epoch=20 train_loss=0.04629 val_loss=0.03810
+epoch=21 train_loss=0.04530 val_loss=0.03227
+epoch=22 train_loss=0.04184 val_loss=0.03393
+epoch=23 train_loss=0.03640 val_loss=0.03713
+epoch=24 train_loss=0.03552 val_loss=0.04500
+epoch=25 train_loss=0.03594 val_loss=0.02545
+epoch=26 train_loss=0.03078 val_loss=0.02878
+epoch=27 train_loss=0.02981 val_loss=0.02382
+epoch=28 train_loss=0.02801 val_loss=0.02290
+epoch=29 train_loss=0.02475 val_loss=0.02672
+epoch=30 train_loss=0.02991 val_loss=0.03780
+epoch=31 train_loss=0.03055 val_loss=0.04186
+epoch=32 train_loss=0.02746 val_loss=0.04205
+epoch=33 train_loss=0.02646 val_loss=0.02716
+epoch=34 train_loss=0.02602 val_loss=0.02650
+epoch=35 train_loss=0.02484 val_loss=0.03458
+epoch=36 train_loss=0.02749 val_loss=0.02898
+epoch=37 train_loss=0.02332 val_loss=0.02414
+epoch=38 train_loss=0.02240 val_loss=0.02197
+epoch=39 train_loss=0.01805 val_loss=0.02410
+epoch=40 train_loss=0.01860 val_loss=0.02255
+epoch=41 train_loss=0.01575 val_loss=0.02081
+epoch=42 train_loss=0.02127 val_loss=0.02625
+epoch=43 train_loss=0.02331 val_loss=0.01952
+epoch=44 train_loss=0.02434 val_loss=0.02354
+epoch=45 train_loss=0.02100 val_loss=0.02393
+epoch=46 train_loss=0.02033 val_loss=0.02404
+epoch=47 train_loss=0.01906 val_loss=0.02562
+epoch=48 train_loss=0.03022 val_loss=0.03251
+epoch=49 train_loss=0.02664 val_loss=0.02766
+epoch=50 train_loss=0.02380 val_loss=0.02629
+epoch=51 train_loss=0.01733 val_loss=0.02357
+epoch=52 train_loss=0.01974 val_loss=0.01994
+epoch=53 train_loss=0.01521 val_loss=0.03099
+epoch=54 train_loss=0.01907 val_loss=0.02604
+epoch=55 train_loss=0.01680 val_loss=0.02006
+Early stopping at epoch=55
+        test_input  balanced_accuracy  macro_f1  accuracy
+      full_log_psd           0.723988  0.719991  0.724952
+aperiodic_spectrum           0.556937  0.491889  0.632306
+ flattened_log_psd           0.588534  0.526016  0.539981
+Wrote outputs to: /mnt/data/aperiodic_confounds/results/tuab_subset_200/multiseed_neural/deep_mlp_seed44
+=== seed 44: TUAB raw_cnn raw intervention ===
+TUAB raw neural run: train_epochs=10230 eval_epochs=6228 train_subjects=120 eval_subjects=80 model=raw_cnn classes=['abnormal', 'normal']
+epoch=0 train_loss=0.43681 val_loss=0.31019
+epoch=1 train_loss=0.25593 val_loss=0.21967
+epoch=2 train_loss=0.19207 val_loss=0.37999
+epoch=3 train_loss=0.16811 val_loss=0.26439
+epoch=4 train_loss=0.12304 val_loss=0.27413
+epoch=5 train_loss=0.11255 val_loss=0.30781
+epoch=6 train_loss=0.09231 val_loss=0.26925
+epoch=7 train_loss=0.08358 val_loss=0.13719
+epoch=8 train_loss=0.07959 val_loss=0.16857
+epoch=9 train_loss=0.06474 val_loss=0.22024
+epoch=10 train_loss=0.05371 val_loss=0.52470
+epoch=11 train_loss=0.05390 val_loss=0.48030
+epoch=12 train_loss=0.05523 val_loss=0.50523
+epoch=13 train_loss=0.04908 val_loss=0.32015
+epoch=14 train_loss=0.03257 val_loss=0.20769
+epoch=15 train_loss=0.04111 val_loss=0.19659
+epoch=16 train_loss=0.05606 val_loss=0.24708
+epoch=17 train_loss=0.04398 val_loss=0.32909
+epoch=18 train_loss=0.05306 val_loss=0.11809
+epoch=19 train_loss=0.04141 val_loss=0.14054
+epoch=20 train_loss=0.01904 val_loss=0.42258
+epoch=21 train_loss=0.01846 val_loss=0.06758
+epoch=22 train_loss=0.01194 val_loss=0.27484
+epoch=23 train_loss=0.02642 val_loss=0.13215
+epoch=24 train_loss=0.03271 val_loss=0.45581
+epoch=25 train_loss=0.03535 val_loss=0.25642
+epoch=26 train_loss=0.05186 val_loss=0.26008
+epoch=27 train_loss=0.05248 val_loss=0.25222
+epoch=28 train_loss=0.03766 val_loss=0.14835
+epoch=29 train_loss=0.03032 val_loss=0.39335
+epoch=30 train_loss=0.01907 val_loss=1.05152
+epoch=31 train_loss=0.02492 val_loss=0.13671
+epoch=32 train_loss=0.03953 val_loss=0.24757
+epoch=33 train_loss=0.01588 val_loss=0.31101
+Early stopping at epoch=33
+Predicted raw_eeg: n=6228
+Predicted phase_sham: n=6228
+Predicted phase_aperiodic: n=6228
+Predicted phase_flattened: n=6228
+     test_input  balanced_accuracy  macro_f1  accuracy
+        raw_eeg           0.764609  0.754261  0.756101
+     phase_sham           0.764609  0.754261  0.756101
+phase_aperiodic           0.704307  0.709130  0.736031
+phase_flattened           0.634721  0.572818  0.585100
+Wrote outputs to: /mnt/data/aperiodic_confounds/results/tuab_subset_200/multiseed_neural/raw_cnn_seed44
+=== seed 44: TUAB eegnet raw intervention ===
+TUAB raw neural run: train_epochs=10230 eval_epochs=6228 train_subjects=120 eval_subjects=80 model=eegnet classes=['abnormal', 'normal']
+epoch=0 train_loss=0.63401 val_loss=0.70836
+epoch=1 train_loss=0.50237 val_loss=0.69428
+epoch=2 train_loss=0.44691 val_loss=0.65217
+epoch=3 train_loss=0.42356 val_loss=0.72840
+epoch=4 train_loss=0.39103 val_loss=0.53210
+epoch=5 train_loss=0.36519 val_loss=0.57340
+epoch=6 train_loss=0.35934 val_loss=0.53097
+epoch=7 train_loss=0.33969 val_loss=0.40086
+epoch=8 train_loss=0.33373 val_loss=0.56034
+epoch=9 train_loss=0.33414 val_loss=0.38242
+epoch=10 train_loss=0.31897 val_loss=0.64546
+epoch=11 train_loss=0.31964 val_loss=0.50171
+epoch=12 train_loss=0.30609 val_loss=0.42546
+epoch=13 train_loss=0.29113 val_loss=0.34445
+epoch=14 train_loss=0.30058 val_loss=0.42376
+epoch=15 train_loss=0.28873 val_loss=0.33699
+epoch=16 train_loss=0.29336 val_loss=0.35947
+epoch=17 train_loss=0.28026 val_loss=0.36656
+epoch=18 train_loss=0.27828 val_loss=0.38186
+epoch=19 train_loss=0.26947 val_loss=0.65480
+epoch=20 train_loss=0.27520 val_loss=0.76926
+epoch=21 train_loss=0.28598 val_loss=0.58588
+epoch=22 train_loss=0.27665 val_loss=0.85472
+epoch=23 train_loss=0.27100 val_loss=0.38761
+epoch=24 train_loss=0.26458 val_loss=0.70201
+epoch=25 train_loss=0.25717 val_loss=0.36275
+epoch=26 train_loss=0.24460 val_loss=0.32850
+epoch=27 train_loss=0.26777 val_loss=0.54668
+epoch=28 train_loss=0.25891 val_loss=0.30835
+epoch=29 train_loss=0.24431 val_loss=0.50552
+epoch=30 train_loss=0.24948 val_loss=0.41908
+epoch=31 train_loss=0.24929 val_loss=0.82030
+epoch=32 train_loss=0.25216 val_loss=0.38953
+epoch=33 train_loss=0.23487 val_loss=0.67770
+epoch=34 train_loss=0.25672 val_loss=0.31237
+epoch=35 train_loss=0.23481 val_loss=0.71466
+epoch=36 train_loss=0.23751 val_loss=0.45700
+epoch=37 train_loss=0.25168 val_loss=0.48543
+epoch=38 train_loss=0.23788 val_loss=0.39233
+epoch=39 train_loss=0.24221 val_loss=0.43838
+epoch=40 train_loss=0.23005 val_loss=0.30564
+epoch=41 train_loss=0.23546 val_loss=0.43927
+epoch=42 train_loss=0.23008 val_loss=0.34189
+epoch=43 train_loss=0.23908 val_loss=0.70256
+epoch=44 train_loss=0.23691 val_loss=0.27210
+epoch=45 train_loss=0.22650 val_loss=0.37801
+epoch=46 train_loss=0.22414 val_loss=0.28113
+epoch=47 train_loss=0.21831 val_loss=0.44236
+epoch=48 train_loss=0.21793 val_loss=0.56827
+epoch=49 train_loss=0.21673 val_loss=0.42041
+epoch=50 train_loss=0.21557 val_loss=0.35250
+epoch=51 train_loss=0.21802 val_loss=0.40429
+epoch=52 train_loss=0.22179 val_loss=0.53999
+epoch=53 train_loss=0.21798 val_loss=0.52193
+epoch=54 train_loss=0.23347 val_loss=0.31186
+epoch=55 train_loss=0.20986 val_loss=0.56264
+epoch=56 train_loss=0.21189 val_loss=0.26533
+epoch=57 train_loss=0.21472 val_loss=0.63144
+epoch=58 train_loss=0.21146 val_loss=0.29466
+epoch=59 train_loss=0.21748 val_loss=0.62572
+epoch=60 train_loss=0.21641 val_loss=0.33090
+epoch=61 train_loss=0.19280 val_loss=0.46338
+epoch=62 train_loss=0.20345 val_loss=0.25654
+epoch=63 train_loss=0.20568 val_loss=0.35427
+epoch=64 train_loss=0.20419 val_loss=0.46478
+epoch=65 train_loss=0.21020 val_loss=0.29105
+epoch=66 train_loss=0.20382 val_loss=0.35831
+epoch=67 train_loss=0.20024 val_loss=0.29107
+epoch=68 train_loss=0.19827 val_loss=0.27839
+epoch=69 train_loss=0.20206 val_loss=0.26134
+epoch=70 train_loss=0.19428 val_loss=0.27567
+epoch=71 train_loss=0.20086 val_loss=0.24545
+epoch=72 train_loss=0.19949 val_loss=0.28508
+epoch=73 train_loss=0.20293 val_loss=0.29388
+epoch=74 train_loss=0.19581 val_loss=0.31886
+epoch=75 train_loss=0.19942 val_loss=0.25419
+epoch=76 train_loss=0.19541 val_loss=0.39319
+epoch=77 train_loss=0.19691 val_loss=0.58461
+epoch=78 train_loss=0.19598 val_loss=0.30420
+epoch=79 train_loss=0.20163 val_loss=0.30481
+Predicted raw_eeg: n=6228
+Predicted phase_sham: n=6228
+Predicted phase_aperiodic: n=6228
+Predicted phase_flattened: n=6228
+     test_input  balanced_accuracy  macro_f1  accuracy
+        raw_eeg           0.757110  0.751950  0.755941
+     phase_sham           0.757110  0.751950  0.755941
+phase_aperiodic           0.650138  0.647458  0.693963
+phase_flattened           0.649401  0.586094  0.598587
+Wrote outputs to: /mnt/data/aperiodic_confounds/results/tuab_subset_200/multiseed_neural/eegnet_seed44
+=== seed 44: TUAB shallow_fbcsp raw intervention ===
+TUAB raw neural run: train_epochs=10230 eval_epochs=6228 train_subjects=120 eval_subjects=80 model=shallow_fbcsp classes=['abnormal', 'normal']
+epoch=0 train_loss=2.05194 val_loss=0.59032
+epoch=1 train_loss=0.91623 val_loss=0.66927
+epoch=2 train_loss=1.69634 val_loss=1.23960
+epoch=3 train_loss=1.86832 val_loss=2.71448
+epoch=4 train_loss=0.91110 val_loss=1.00625
+epoch=5 train_loss=0.79096 val_loss=0.65556
+epoch=6 train_loss=0.98783 val_loss=1.27465
+epoch=7 train_loss=1.06068 val_loss=0.42056
+epoch=8 train_loss=0.77616 val_loss=0.58354
+epoch=9 train_loss=0.97607 val_loss=0.76508
+epoch=10 train_loss=0.58127 val_loss=0.24710
+epoch=11 train_loss=0.77482 val_loss=0.39521
+epoch=12 train_loss=0.57629 val_loss=2.96635
+epoch=13 train_loss=0.52324 val_loss=0.29786
+epoch=14 train_loss=1.44617 val_loss=0.40339
+epoch=15 train_loss=1.07580 val_loss=0.85902
+epoch=16 train_loss=0.73976 val_loss=0.51726
+epoch=17 train_loss=0.62161 val_loss=2.24370
+epoch=18 train_loss=0.77987 val_loss=0.97345
+epoch=19 train_loss=0.90169 val_loss=1.79788
+epoch=20 train_loss=1.26324 val_loss=0.67579
+epoch=21 train_loss=0.97367 val_loss=0.57558
+epoch=22 train_loss=0.76148 val_loss=0.39478
+Early stopping at epoch=22
+Predicted raw_eeg: n=6228
+Predicted phase_sham: n=6228
+Predicted phase_aperiodic: n=6228
+Predicted phase_flattened: n=6228
+     test_input  balanced_accuracy  macro_f1  accuracy
+        raw_eeg           0.759003  0.754602  0.758992
+     phase_sham           0.759003  0.754602  0.758992
+phase_aperiodic           0.681344  0.684272  0.716442
+phase_flattened           0.627973  0.562605  0.576750
+Wrote outputs to: /mnt/data/aperiodic_confounds/results/tuab_subset_200/multiseed_neural/shallow_fbcsp_seed44
+=== seed 44: TUAB deep4 raw intervention ===
+TUAB raw neural run: train_epochs=10230 eval_epochs=6228 train_subjects=120 eval_subjects=80 model=deep4 classes=['abnormal', 'normal']
+epoch=0 train_loss=0.62595 val_loss=0.71800
+epoch=1 train_loss=0.37924 val_loss=0.81860
+epoch=2 train_loss=0.34884 val_loss=0.36583
+epoch=3 train_loss=0.26281 val_loss=0.48288
+epoch=4 train_loss=0.23614 val_loss=0.80318
+epoch=5 train_loss=0.18633 val_loss=0.29693
+epoch=6 train_loss=0.16640 val_loss=0.56880
+epoch=7 train_loss=0.16800 val_loss=0.35455
+epoch=8 train_loss=0.13773 val_loss=0.26017
+epoch=9 train_loss=0.11048 val_loss=0.23605
+epoch=10 train_loss=0.10943 val_loss=0.22836
+epoch=11 train_loss=0.12537 val_loss=0.61061
+epoch=12 train_loss=0.09153 val_loss=0.50980
+epoch=13 train_loss=0.10721 val_loss=1.42894
+epoch=14 train_loss=0.10234 val_loss=0.45568
+epoch=15 train_loss=0.07662 val_loss=1.09677
+epoch=16 train_loss=0.05915 val_loss=1.31726
+epoch=17 train_loss=0.05838 val_loss=0.84866
+epoch=18 train_loss=0.06167 val_loss=0.99690
+epoch=19 train_loss=0.05245 val_loss=0.64756
+epoch=20 train_loss=0.07483 val_loss=1.35945
+epoch=21 train_loss=0.06772 val_loss=0.24952
+epoch=22 train_loss=0.04406 val_loss=0.48114
+Early stopping at epoch=22
+Predicted raw_eeg: n=6228
+Predicted phase_sham: n=6228
+Predicted phase_aperiodic: n=6228
+Predicted phase_flattened: n=6228
+     test_input  balanced_accuracy  macro_f1  accuracy
+        raw_eeg           0.739188  0.712979  0.713070
+     phase_sham           0.739188  0.712979  0.713070
+phase_aperiodic           0.724152  0.724703  0.733943
+phase_flattened           0.510169  0.354522  0.432884
+Wrote outputs to: /mnt/data/aperiodic_confounds/results/tuab_subset_200/multiseed_neural/deep4_seed44
+/mnt/data/aperiodic_confounds/code/scripts/aggregate_multiseed_subject_bootstrap.py:182: RuntimeWarning: Mean of empty slice
+  point = estimates_from_means(np.nanmean(values, axis=(0, 1)))
+/mnt/data/aperiodic_confounds/code/scripts/aggregate_multiseed_subject_bootstrap.py:192: RuntimeWarning: Mean of empty slice
+  means = np.nanmean(sampled, axis=(1, 2))
+/mnt/data/aperiodic_confounds/code/scripts/aggregate_multiseed_subject_bootstrap.py:182: RuntimeWarning: Mean of empty slice
+  point = estimates_from_means(np.nanmean(values, axis=(0, 1)))
+/mnt/data/aperiodic_confounds/code/scripts/aggregate_multiseed_subject_bootstrap.py:192: RuntimeWarning: Mean of empty slice
+  means = np.nanmean(sampled, axis=(1, 2))
+/mnt/data/aperiodic_confounds/code/scripts/aggregate_multiseed_subject_bootstrap.py:182: RuntimeWarning: Mean of empty slice
+  point = estimates_from_means(np.nanmean(values, axis=(0, 1)))
+/mnt/data/aperiodic_confounds/code/scripts/aggregate_multiseed_subject_bootstrap.py:192: RuntimeWarning: Mean of empty slice
+  means = np.nanmean(sampled, axis=(1, 2))
+Wrote: /mnt/data/aperiodic_confounds/reports/tables/tuab_multiseed_neural_subject_bootstrap.csv
+Wrote: /mnt/data/aperiodic_confounds/reports/tables/tuab_multiseed_neural_subject_bootstrap.md
+        model                    task       estimate    point  ci_lower  ci_upper  n_seeds  n_subjects
+     deep_mlp tuab_normal_vs_abnormal       baseline 0.738510  0.661167  0.812272        3          80
+     deep_mlp tuab_normal_vs_abnormal      aperiodic 0.560345  0.460457  0.657852        3          80
+     deep_mlp tuab_normal_vs_abnormal      flattened 0.607297  0.523932  0.691042        3          80
+     deep_mlp tuab_normal_vs_abnormal drop_flattened 0.131213  0.034563  0.230901        3          80
+      raw_cnn tuab_normal_vs_abnormal       baseline 0.782133  0.712468  0.847086        3          80
+      raw_cnn tuab_normal_vs_abnormal           sham 0.782133  0.712468  0.847086        3          80
+      raw_cnn tuab_normal_vs_abnormal      aperiodic 0.716883  0.629918  0.800670        3          80
+      raw_cnn tuab_normal_vs_abnormal      flattened 0.613928  0.522655  0.705616        3          80
+      raw_cnn tuab_normal_vs_abnormal      drop_sham 0.000000  0.000000  0.000000        3          80
+      raw_cnn tuab_normal_vs_abnormal drop_flattened 0.168205  0.081791  0.255689        3          80
+       eegnet tuab_normal_vs_abnormal       baseline 0.763132  0.688279  0.832124        3          80
+       eegnet tuab_normal_vs_abnormal           sham 0.763132  0.688279  0.832124        3          80
+       eegnet tuab_normal_vs_abnormal      aperiodic 0.702145  0.619153  0.776206        3          80
+       eegnet tuab_normal_vs_abnormal      flattened 0.604596  0.493222  0.704284        3          80
+       eegnet tuab_normal_vs_abnormal      drop_sham 0.000000  0.000000  0.000000        3          80
+       eegnet tuab_normal_vs_abnormal drop_flattened 0.158536  0.061905  0.261070        3          80
+shallow_fbcsp tuab_normal_vs_abnormal       baseline 0.754152  0.681298  0.824603        3          80
+shallow_fbcsp tuab_normal_vs_abnormal           sham 0.754152  0.681298  0.824603        3          80
+shallow_fbcsp tuab_normal_vs_abnormal      aperiodic 0.702220  0.620525  0.783108        3          80
+shallow_fbcsp tuab_normal_vs_abnormal      flattened 0.589154  0.494339  0.682474        3          80
+shallow_fbcsp tuab_normal_vs_abnormal      drop_sham 0.000000  0.000000  0.000000        3          80
+shallow_fbcsp tuab_normal_vs_abnormal drop_flattened 0.164999  0.075369  0.258153        3          80
+        deep4 tuab_normal_vs_abnormal       baseline 0.759456  0.679295  0.834632        3          80
+        deep4 tuab_normal_vs_abnormal           sham 0.759456  0.679295  0.834632        3          80
+        deep4 tuab_normal_vs_abnormal      aperiodic 0.713145  0.641421  0.779456        3          80
+        deep4 tuab_normal_vs_abnormal      flattened 0.528510  0.426649  0.629532        3          80
+        deep4 tuab_normal_vs_abnormal      drop_sham 0.000000  0.000000  0.000000        3          80
+        deep4 tuab_normal_vs_abnormal drop_flattened 0.230946  0.139753  0.322711        3          80
+TUAB multiseed neural runs complete: /mnt/data/aperiodic_confounds/results/tuab_subset_200/multiseed_neural

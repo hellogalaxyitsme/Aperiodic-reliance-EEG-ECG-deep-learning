@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# OS/editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Raw data and heavy generated caches
+data/
+external/
+results/**/*.npz
+results/**/*.npy
+results/**/*.pt
+results/**/*.pth
+results/**/*.ckpt
+results/**/predictions.csv
+results/**/raw_*.csv
+!results/tables/raw_intervention_diagnostics/raw_intervention_distribution_diagnostics.csv
+*.edf
+*.hea
+*.dat
+*.zip
+
+# LaTeX build outputs
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+!run_logs/*.log
+*.out
+*.synctex.gz

@@ -1,0 +1,8 @@
+model,checkpoint_or_source,input_window,channels_or_montage,model_specific_preprocessing,audit_note
+BIOT,PREST-16 pretrained encoder,10 s at 200 Hz,16 TCP-style bipolar channels,Fine-tuned binary head; BIOT-style window normalization,"Raw, sham, aperiodic-shaped and flattened inputs evaluated over three seeds"
+LaBraM,labram-base.pth,10 s at 200 Hz,23 referential TUAB channels,0.1-75 Hz bandpass; 50 Hz notch; shared LaBraM-style cache,"Raw, sham, aperiodic-shaped and flattened inputs evaluated over three seeds"
+EEGPT,Braindecode EEGPT pretrained checkpoint,10 s at 200 Hz,23 referential TUAB channels,0.1-75 Hz bandpass; 50 Hz notch; fine-tuned downstream projection/head,"Raw, sham, aperiodic-shaped and flattened inputs evaluated over three seeds"
+CBraMod,cbramod-pretrained,10 s at 200 Hz,16 longitudinal bipolar channels derived from the 23-channel cache,Inputs divided by 100 before the encoder,"Raw, sham, aperiodic-shaped and flattened inputs evaluated over three seeds"
+REVE,brain-bzh/reve-base,10 s at 200 Hz,21 TUAB channels recognized by the REVE position bank,Z-scored inputs clipped to +/-15,"Raw, sham, aperiodic-shaped and flattened inputs evaluated over three seeds"
+EEGMamba,weighting666/EEGMamba,10 s at 200 Hz,16 longitudinal bipolar channels derived from the 23-channel cache,Inputs divided by 100; run in the isolated SSM-compatible environment,"Raw, sham, aperiodic-shaped and flattened inputs evaluated over three seeds"
+BENDR,Braindecode BENDR checkpoint,10 s at 200 Hz,23 referential TUAB channels,0.1-75 Hz bandpass; 50 Hz notch; encoder-only mode; +/-500 uV clip followed by 1e-6 volt scaling,Reported separately as intervention fragility because the sham condition collapsed to chance

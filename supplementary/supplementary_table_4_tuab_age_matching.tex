@@ -1,0 +1,23 @@
+\begin{longtable}{p{0.10\linewidth}p{0.10\linewidth}p{0.10\linewidth}p{0.10\linewidth}p{0.10\linewidth}p{0.10\linewidth}p{0.10\linewidth}p{0.10\linewidth}p{0.10\linewidth}}
+\caption{TUAB age metadata and age/sex matching details.}\label{tab:supp_tuab_age_matching}\\
+\toprule
+cohort & official\_split & label & n\_subjects & n\_valid\_age & mean\_age & n\_female & n\_male & matching\_detail\\
+\midrule
+\endfirsthead
+\toprule
+cohort & official\_split & label & n\_subjects & n\_valid\_age & mean\_age & n\_female & n\_male & matching\_detail\\
+\midrule
+\endhead
+full TUAB v3.0.1 corpus with usable header metadata & eval & abnormal & 105 & 104 & 56.55 & 51 & 54 & \\
+full TUAB v3.0.1 corpus with usable header metadata & eval & normal & 148 & 147 & 44.54 & 84 & 64 & \\
+full TUAB v3.0.1 corpus with usable header metadata & train & abnormal & 893 & 887 & 53.79 & 454 & 437 & \\
+full TUAB v3.0.1 corpus with usable header metadata & train & normal & 1237 & 1233 & 44.09 & 691 & 546 & \\
+full TUAB age/sex-matched caliper-5 subset & eval & abnormal & 87 & 87 & 53.22 & 42 & 45 & \\
+full TUAB age/sex-matched caliper-5 subset & eval & normal & 87 & 87 & 52.47 & 42 & 45 & \\
+full TUAB age/sex-matched caliper-5 subset & train & abnormal & 834 & 834 & 52.20 & 413 & 421 & \\
+full TUAB age/sex-matched caliper-5 subset & train & normal & 834 & 834 & 50.26 & 413 & 421 & \\
+matching pairs & eval & abnormal-normal pairs & 174 & 174 &  &  &  & 87 same-sex pairs; mean absolute age difference 1.32 years; maximum 5.00 years\\
+matching pairs & train & abnormal-normal pairs & 1668 & 1668 &  &  &  & 834 same-sex pairs; mean absolute age difference 1.97 years; maximum 5.00 years\\
+matching summary & all & metadata availability & 2383 & 2371 &  &  &  & caliper=5.0 years; same\_sex=True; matched\_pairs=921; matched\_subject\_rows=1842\\
+\bottomrule
+\end{longtable}

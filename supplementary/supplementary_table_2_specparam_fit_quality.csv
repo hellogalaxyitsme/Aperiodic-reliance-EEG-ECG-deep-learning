@@ -1,0 +1,4 @@
+dataset,scope,method,frequency_range_hz,n_epochs_or_trials,n_channels,n_spectra,ok_fraction,mean_r2,median_r2,p10_r2,mean_mae,median_mae,mean_n_peaks,provenance
+Sleep-EDF,full 78-subject cohort,SpecParam fixed aperiodic mode,1-45,195469,2,390938,1.000,0.910,0.968,,,,5.457,Logged Sleep-EDF full-cohort SpecParam summary in experiments.md/summary.md
+TUAB,"full v3.0.1 corpus, 20-s epochs",SpecParam fixed aperiodic mode,1.0-45.0,204122,21,4286562,1.000,0.956,0.971,0.924,0.081,0.076,4.989,results/tuab_full_v3_0_1/preprocess_20s_100hz/specparam/specparam_fixed_20s.summary.json
+PhysioNet MI,"imagined left-vs-right fist, cue-locked trials",SpecParam fixed aperiodic mode on multitaper PSD,2.0-45.0,4917,64,314688,1.000,0.952,0.971,0.907,0.077,,3.529,results/physionet_mi/specparam/imagined_fists_specparam_fixed.summary.json

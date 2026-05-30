@@ -1,0 +1,52 @@
+dataset:
+  name: sleep_edf_expanded_sleep_cassette_subset
+  source: https://physionet.org/content/sleep-edfx/1.0.0/
+  remote_data_root: /mnt/data/aperiodic_confounds/data/sleep-edf/sleep-cassette
+  subset:
+    first_subject: 400
+    last_subject: 409
+    expected_recording_pairs: 20
+
+signals:
+  eeg_channels:
+    - Fpz-Cz
+    - Pz-Oz
+  primary_channel: Fpz-Cz
+  sample_rate_hz: 100
+
+sleep_stages:
+  epoch_seconds: 30.0
+  wake_trim_minutes: 30.0
+  include:
+    - W
+    - N1
+    - N2
+    - N3
+    - REM
+  merge:
+    "3": N3
+    "4": N3
+    Sleep stage 3: N3
+    Sleep stage 4: N3
+    Sleep stage R: REM
+    Sleep stage 1: N1
+    Sleep stage 2: N2
+    Sleep stage W: W
+  exclude:
+    - Movement time
+    - Sleep stage ?
+
+psd:
+  freq_min_hz: 1.0
+  freq_max_hz: 45.0
+  method: welch
+  window_seconds: 4.0
+  overlap_fraction: 0.5
+
+aperiodic:
+  method: specparam
+  aperiodic_mode: fixed
+  fit_range_hz:
+    - 1.0
+    - 45.0
+  min_r_squared: 0.9

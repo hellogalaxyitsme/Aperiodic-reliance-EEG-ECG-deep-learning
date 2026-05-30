@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eeg-ecg-aperiodic-audit"
+version = "0.1.0"
+description = "Spectral audit tools for aperiodic reliance in EEG and ECG machine learning."
+requires-python = ">=3.10"
+dependencies = [
+  "numpy",
+  "scipy",
+  "pandas",
+  "scikit-learn",
+  "mne",
+  "specparam",
+  "matplotlib",
+  "seaborn",
+  "pyyaml",
+  "tqdm",
+  "joblib",
+  "statsmodels",
+  "torch",
+  "braindecode",
+  "wfdb",
+  "huggingface-hub",
+  "safetensors",
+  "transformers",
+]
+
+[tool.setuptools.packages.find]
+where = ["code/src"]
