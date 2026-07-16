@@ -103,7 +103,7 @@ def main() -> int:
         },
         "remote_base": "nedc-tuh-eeg@www.isip.piconepress.com:data/tuh_eeg/tuh_eeg_abnormal/v3.0.1/",
         "download_note": (
-            "Use code/scripts/download_tuab_full_resumable.sh from H200 with SSH agent "
+            "Use code/scripts/download_tuab_full_resumable.sh from GPU with SSH agent "
             "forwarding. The script uses rsync without --delete and is safe to rerun."
         ),
     }

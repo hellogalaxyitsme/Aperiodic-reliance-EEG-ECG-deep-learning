@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="${ROOT:-/mnt/data/aperiodic_confounds}"
+ROOT="${ROOT:-.}"
 PYTHON="${PYTHON:-$ROOT/.venv/bin/python}"
 DATA_ROOT="${DATA_ROOT:-$ROOT/data/tuab/v3.0.1_random_stratified_200}"
 SELECTED_FILES_CSV="${SELECTED_FILES_CSV:-$ROOT/results/tuab_full_v3_0_1/tuab_v3_0_1_full_edf_files.csv}"

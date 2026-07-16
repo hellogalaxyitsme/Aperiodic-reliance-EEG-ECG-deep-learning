@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 DATA_ROOT="${DATA_ROOT:-${PROJECT_ROOT}/data/ptbxl/1.0.3}"
 ZIP_URL="${PTBXL_ZIP_URL:-https://physionet.org/content/ptb-xl/get-zip/1.0.3/}"
 ZIP_DIR="${PTBXL_ZIP_DIR:-${PROJECT_ROOT}/data/ptbxl/bulk_zip}"

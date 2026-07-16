@@ -6,7 +6,7 @@ Raw recordings are not distributed in this repository.
 
 Dataset: Sleep-EDF Expanded Sleep Cassette, available through PhysioNet.
 
-Expected local location in the original runs:
+Expected local location:
 
 ```text
 data/sleep-edf/sleep-cassette/
@@ -28,7 +28,7 @@ Dataset: TUH Abnormal EEG Corpus v3.0.1. Access requires the Temple University
 Hospital EEG Corpus data-use agreement. The repository includes code and
 aggregate outputs, but not EDF files, per-EDF restricted manifests or raw caches.
 
-Expected local location in the original runs:
+Expected local location:
 
 ```text
 data/tuh_eeg_abnormal/v3.0.1/edf/

@@ -4,13 +4,13 @@ set -euo pipefail
 # Full-TUAB multiseed raw neural intervention run. This uses the streamed
 # full-cache runner and mirrors the TUAB-200 neural architecture set.
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 RESULT_ROOT="${PROJECT_ROOT}/results/tuab_full_v3_0_1"
 PREPROCESS_DIR="${RESULT_ROOT}/preprocess_20s_100hz"
 RUN_ROOT="${RESULT_ROOT}/multiseed_neural"
 SINGLE_SEED_ROOT="${RESULT_ROOT}/single_seed_neural"
 REPORT_ROOT="${PROJECT_ROOT}/reports/tables"
-TORCH_PY="${TORCH_PY:-/mnt/data/.venvs/ml/bin/python3}"
+TORCH_PY="${TORCH_PY:-python}"
 PROJECT_PY="${PROJECT_ROOT}/.venv/bin/python"
 BRAIND_DEPS="${PROJECT_ROOT}/.python_deps"
 

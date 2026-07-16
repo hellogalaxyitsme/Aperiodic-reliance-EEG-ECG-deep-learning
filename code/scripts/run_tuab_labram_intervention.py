@@ -189,13 +189,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--data-root",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/data/tuab/v3.0.1_random_stratified_200"),
+        default=Path("data/tuab/v3.0.1_random_stratified_200"),
     )
     parser.add_argument(
         "--selected-files-csv",
         type=Path,
         default=Path(
-            "/mnt/data/aperiodic_confounds/results/tuab_subset_200/"
+            "results/tuab_subset_200/"
             "tuab_v3_0_1_random_stratified_200_files.csv"
         ),
     )
@@ -208,7 +208,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--cache-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/labram_10s_200hz_cache.npz"),
+        default=Path("results/tuab_subset_200/labram_10s_200hz_cache.npz"),
     )
     parser.add_argument(
         "--cache-format",
@@ -222,17 +222,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/labram_interventions_base"),
+        default=Path("results/tuab_subset_200/labram_interventions_base"),
     )
     parser.add_argument(
         "--labram-repo",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/external/LaBraM"),
+        default=Path("external/LaBraM"),
     )
     parser.add_argument(
         "--checkpoint-path",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/external/LaBraM/checkpoints/labram-base.pth"),
+        default=Path("external/LaBraM/checkpoints/labram-base.pth"),
     )
     parser.add_argument("--sampling-rate", type=int, default=200)
     parser.add_argument("--sample-length-sec", type=float, default=10.0)

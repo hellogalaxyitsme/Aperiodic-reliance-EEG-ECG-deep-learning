@@ -14,12 +14,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--psd-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/psd_20s_multitaper.npz"),
+        default=Path("results/tuab_subset_200/psd_20s_multitaper.npz"),
     )
     parser.add_argument(
         "--output-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/specparam/specparam_fixed_20s.npz"),
+        default=Path("results/tuab_subset_200/specparam/specparam_fixed_20s.npz"),
     )
     parser.add_argument("--freq-min", type=float, default=1.0)
     parser.add_argument("--freq-max", type=float, default=45.0)

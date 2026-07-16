@@ -16,14 +16,14 @@ def parse_args() -> argparse.Namespace:
         "--metadata-subjects-csv",
         type=Path,
         default=Path(
-            "/mnt/data/aperiodic_confounds/results/tuab_subset_200/"
+            "results/tuab_subset_200/"
             "tuab_v3_0_1_random_stratified_200_header_metadata_subjects.csv"
         ),
     )
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/age_matched"),
+        default=Path("results/tuab_subset_200/age_matched"),
     )
     parser.add_argument("--caliper-years", type=float, default=5.0)
     parser.add_argument("--same-sex", action="store_true", default=True)

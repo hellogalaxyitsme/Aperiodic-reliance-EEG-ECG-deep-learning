@@ -28,25 +28,25 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--data-root",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/data/tuab/v3.0.1_random_stratified_200"),
+        default=Path("data/tuab/v3.0.1_random_stratified_200"),
     )
     parser.add_argument(
         "--selected-files-csv",
         type=Path,
         default=Path(
-            "/mnt/data/aperiodic_confounds/results/tuab_subset_200/"
+            "results/tuab_subset_200/"
             "tuab_v3_0_1_random_stratified_200_files.csv"
         ),
     )
     parser.add_argument(
         "--output-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/epochs_20s.csv"),
+        default=Path("results/tuab_subset_200/epochs_20s.csv"),
     )
     parser.add_argument(
         "--output-summary-json",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/epochs_20s_summary.json"),
+        default=Path("results/tuab_subset_200/epochs_20s_summary.json"),
     )
     parser.add_argument("--channels", nargs="+", default=TUAB_STANDARD_CHANNELS)
     parser.add_argument("--epoch-seconds", type=float, default=20.0)

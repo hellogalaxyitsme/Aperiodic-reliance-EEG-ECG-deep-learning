@@ -4,7 +4,7 @@ set -euo pipefail
 # Additive preprocessing only. This script writes new outputs and never deletes
 # datasets or previous result folders.
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 DATA_ROOT="${PROJECT_ROOT}/data/sleep-edf/sleep-cassette"
 RESULT_ROOT="${PROJECT_ROOT}/results/sleep_edf_full"
 PY="${PROJECT_ROOT}/.venv/bin/python"

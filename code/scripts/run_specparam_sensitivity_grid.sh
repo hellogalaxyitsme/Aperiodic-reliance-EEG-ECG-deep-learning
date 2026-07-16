@@ -4,7 +4,7 @@ set -euo pipefail
 # Runs conservative specparam peak-constraint sensitivities.
 # Writes only under the project results directory.
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 PY="${PROJECT_ROOT}/.venv/bin/python"
 CODE_ROOT="${PROJECT_ROOT}/code"
 RESULT_ROOT="${PROJECT_ROOT}/results/sleep_edf_subset"

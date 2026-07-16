@@ -26,7 +26,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/simulations/aperiodic_validation"),
+        default=Path("results/simulations/aperiodic_validation"),
     )
     parser.add_argument("--n-subjects", type=int, default=40)
     parser.add_argument("--epochs-per-subject", type=int, default=120)

@@ -4,13 +4,13 @@ set -euo pipefail
 # Full-TUAB age/sex-matched raw neural intervention control. This mirrors the
 # TUAB-200 age-matched neural workflow but uses the full-TUAB 20s/100Hz cache.
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 RESULT_ROOT="${PROJECT_ROOT}/results/tuab_full_v3_0_1"
 PREPROCESS_DIR="${RESULT_ROOT}/preprocess_20s_100hz"
 MATCH_ROOT="${RESULT_ROOT}/age_matched"
 RUN_ROOT="${MATCH_ROOT}/multiseed_neural"
 REPORT_ROOT="${PROJECT_ROOT}/reports/tables"
-TORCH_PY="${TORCH_PY:-/mnt/data/.venvs/ml/bin/python3}"
+TORCH_PY="${TORCH_PY:-python}"
 PROJECT_PY="${PROJECT_ROOT}/.venv/bin/python"
 BRAIND_DEPS="${PROJECT_ROOT}/.python_deps"
 

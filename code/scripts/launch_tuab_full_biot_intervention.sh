@@ -5,13 +5,13 @@ set -euo pipefail
 # protocol while using a memmap-backed cache so the full dataset does not need
 # to be duplicated in host memory.
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 RESULT_ROOT="${PROJECT_ROOT}/results/tuab_full_v3_0_1"
 DATA_ROOT="${PROJECT_ROOT}/data/tuab/v3.0.1_random_stratified_200"
 SELECTED_FILES_CSV="${RESULT_ROOT}/tuab_v3_0_1_full_edf_files.csv"
 RUN_ROOT="${RUN_ROOT:-${RESULT_ROOT}/biot_interventions_prest_full}"
 CACHE_NPZ="${RESULT_ROOT}/biot_10s_200hz_cache.npz"
-TORCH_PY="${TORCH_PY:-/mnt/data/.venvs/ml/bin/python3}"
+TORCH_PY="${TORCH_PY:-python}"
 BIOT_REPO="${PROJECT_ROOT}/external/BIOT"
 BIOT_CKPT="${BIOT_REPO}/pretrained-models/EEG-PREST-16-channels.ckpt"
 

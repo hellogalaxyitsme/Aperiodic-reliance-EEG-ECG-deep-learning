@@ -5,7 +5,7 @@ set -euo pipefail
 # saved subject metrics/predictions, extracts bootstrap p-values, and applies
 # Benjamini-Hochberg FDR correction. It does not train or evaluate any model.
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 RESULT_ROOT="${PROJECT_ROOT}/results"
 REPORT_ROOT="${PROJECT_ROOT}/reports/tables"
 PROJECT_PY="${PROJECT_ROOT}/.venv/bin/python"
@@ -34,25 +34,25 @@ echo "=== Re-aggregating Sleep-EDF full MLP/CNN/EEGNet table ==="
   --output-md "${REPORT_ROOT}/full_sleep_edf_multiseed_subject_bootstrap.md" \
   --n-bootstrap "${N_BOOTSTRAP}"
 
-echo "=== Re-aggregating Sleep-EDF reviewer-resistance neural table ==="
+echo "=== Re-aggregating Sleep-EDF validation neural table ==="
 "${PROJECT_PY}" scripts/aggregate_multiseed_subject_bootstrap.py \
-  --input "psd_train_control=${RESULT_ROOT}/sleep_edf_full/reviewer_resistance_controls/psd_train_input_controls_seed42/psd_train_input_control_subject_metrics.csv" \
-  --input "raw_cnn_sham=${RESULT_ROOT}/sleep_edf_full/reviewer_resistance_controls/raw_cnn_sham_seed42/raw_cnn_intervention_subject_metrics.csv" \
-  --input "braindecode_eegnet=${RESULT_ROOT}/sleep_edf_full/reviewer_resistance_controls/braindecode_eegnet_seed42/braindecode_eegnet_intervention_subject_metrics.csv" \
-  --input "braindecode_shallow_fbcsp=${RESULT_ROOT}/sleep_edf_full/reviewer_resistance_controls/braindecode_shallow_fbcsp_seed42/braindecode_shallow_fbcsp_intervention_subject_metrics.csv" \
-  --input "braindecode_deep4=${RESULT_ROOT}/sleep_edf_full/reviewer_resistance_controls/braindecode_deep4_seed42/braindecode_deep4_intervention_subject_metrics.csv" \
-  --input "psd_train_control=${RESULT_ROOT}/sleep_edf_full/reviewer_resistance_controls/psd_train_input_controls_seed43/psd_train_input_control_subject_metrics.csv" \
-  --input "raw_cnn_sham=${RESULT_ROOT}/sleep_edf_full/reviewer_resistance_controls/raw_cnn_sham_seed43/raw_cnn_intervention_subject_metrics.csv" \
-  --input "braindecode_eegnet=${RESULT_ROOT}/sleep_edf_full/reviewer_resistance_controls/braindecode_eegnet_seed43/braindecode_eegnet_intervention_subject_metrics.csv" \
-  --input "braindecode_shallow_fbcsp=${RESULT_ROOT}/sleep_edf_full/reviewer_resistance_controls/braindecode_shallow_fbcsp_seed43/braindecode_shallow_fbcsp_intervention_subject_metrics.csv" \
-  --input "braindecode_deep4=${RESULT_ROOT}/sleep_edf_full/reviewer_resistance_controls/braindecode_deep4_seed43/braindecode_deep4_intervention_subject_metrics.csv" \
-  --input "psd_train_control=${RESULT_ROOT}/sleep_edf_full/reviewer_resistance_controls/psd_train_input_controls_seed44/psd_train_input_control_subject_metrics.csv" \
-  --input "raw_cnn_sham=${RESULT_ROOT}/sleep_edf_full/reviewer_resistance_controls/raw_cnn_sham_seed44/raw_cnn_intervention_subject_metrics.csv" \
-  --input "braindecode_eegnet=${RESULT_ROOT}/sleep_edf_full/reviewer_resistance_controls/braindecode_eegnet_seed44/braindecode_eegnet_intervention_subject_metrics.csv" \
-  --input "braindecode_shallow_fbcsp=${RESULT_ROOT}/sleep_edf_full/reviewer_resistance_controls/braindecode_shallow_fbcsp_seed44/braindecode_shallow_fbcsp_intervention_subject_metrics.csv" \
-  --input "braindecode_deep4=${RESULT_ROOT}/sleep_edf_full/reviewer_resistance_controls/braindecode_deep4_seed44/braindecode_deep4_intervention_subject_metrics.csv" \
-  --output-csv "${REPORT_ROOT}/sleep_edf_reviewer_resistance_bootstrap.csv" \
-  --output-md "${REPORT_ROOT}/sleep_edf_reviewer_resistance_bootstrap.md" \
+  --input "psd_train_control=${RESULT_ROOT}/sleep_edf_full/validation_controls/psd_train_input_controls_seed42/psd_train_input_control_subject_metrics.csv" \
+  --input "raw_cnn_sham=${RESULT_ROOT}/sleep_edf_full/validation_controls/raw_cnn_sham_seed42/raw_cnn_intervention_subject_metrics.csv" \
+  --input "braindecode_eegnet=${RESULT_ROOT}/sleep_edf_full/validation_controls/braindecode_eegnet_seed42/braindecode_eegnet_intervention_subject_metrics.csv" \
+  --input "braindecode_shallow_fbcsp=${RESULT_ROOT}/sleep_edf_full/validation_controls/braindecode_shallow_fbcsp_seed42/braindecode_shallow_fbcsp_intervention_subject_metrics.csv" \
+  --input "braindecode_deep4=${RESULT_ROOT}/sleep_edf_full/validation_controls/braindecode_deep4_seed42/braindecode_deep4_intervention_subject_metrics.csv" \
+  --input "psd_train_control=${RESULT_ROOT}/sleep_edf_full/validation_controls/psd_train_input_controls_seed43/psd_train_input_control_subject_metrics.csv" \
+  --input "raw_cnn_sham=${RESULT_ROOT}/sleep_edf_full/validation_controls/raw_cnn_sham_seed43/raw_cnn_intervention_subject_metrics.csv" \
+  --input "braindecode_eegnet=${RESULT_ROOT}/sleep_edf_full/validation_controls/braindecode_eegnet_seed43/braindecode_eegnet_intervention_subject_metrics.csv" \
+  --input "braindecode_shallow_fbcsp=${RESULT_ROOT}/sleep_edf_full/validation_controls/braindecode_shallow_fbcsp_seed43/braindecode_shallow_fbcsp_intervention_subject_metrics.csv" \
+  --input "braindecode_deep4=${RESULT_ROOT}/sleep_edf_full/validation_controls/braindecode_deep4_seed43/braindecode_deep4_intervention_subject_metrics.csv" \
+  --input "psd_train_control=${RESULT_ROOT}/sleep_edf_full/validation_controls/psd_train_input_controls_seed44/psd_train_input_control_subject_metrics.csv" \
+  --input "raw_cnn_sham=${RESULT_ROOT}/sleep_edf_full/validation_controls/raw_cnn_sham_seed44/raw_cnn_intervention_subject_metrics.csv" \
+  --input "braindecode_eegnet=${RESULT_ROOT}/sleep_edf_full/validation_controls/braindecode_eegnet_seed44/braindecode_eegnet_intervention_subject_metrics.csv" \
+  --input "braindecode_shallow_fbcsp=${RESULT_ROOT}/sleep_edf_full/validation_controls/braindecode_shallow_fbcsp_seed44/braindecode_shallow_fbcsp_intervention_subject_metrics.csv" \
+  --input "braindecode_deep4=${RESULT_ROOT}/sleep_edf_full/validation_controls/braindecode_deep4_seed44/braindecode_deep4_intervention_subject_metrics.csv" \
+  --output-csv "${REPORT_ROOT}/sleep_edf_validation_controls_bootstrap.csv" \
+  --output-md "${REPORT_ROOT}/sleep_edf_validation_controls_bootstrap.md" \
   --n-bootstrap "${N_BOOTSTRAP}"
 
 echo "=== Re-aggregating full-TUAB neural table ==="

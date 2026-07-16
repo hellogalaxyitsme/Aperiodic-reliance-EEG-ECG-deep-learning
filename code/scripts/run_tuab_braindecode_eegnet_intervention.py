@@ -23,22 +23,22 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--raw-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/raw_epochs_20s_100hz.npz"),
+        default=Path("results/tuab_subset_200/raw_epochs_20s_100hz.npz"),
     )
     parser.add_argument(
         "--index-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/raw_epochs_20s_100hz_index.csv"),
+        default=Path("results/tuab_subset_200/raw_epochs_20s_100hz_index.csv"),
     )
     parser.add_argument(
         "--decomp-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/specparam/specparam_fixed_20s.npz"),
+        default=Path("results/tuab_subset_200/specparam/specparam_fixed_20s.npz"),
     )
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/braindecode_eegnet_interventions_specparam"),
+        default=Path("results/tuab_subset_200/braindecode_eegnet_interventions_specparam"),
     )
     parser.add_argument(
         "--subject-filter-csv",

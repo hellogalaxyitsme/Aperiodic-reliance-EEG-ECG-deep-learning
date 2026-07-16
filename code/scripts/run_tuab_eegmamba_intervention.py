@@ -31,7 +31,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--cache-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/labram_10s_200hz_cache.npz"),
+        default=Path("results/tuab_subset_200/labram_10s_200hz_cache.npz"),
         help="TUAB 23-channel 10s/200Hz cache; same cache used for LaBraM.",
     )
     parser.add_argument(
@@ -46,7 +46,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/eegmamba_interventions_official"),
+        default=Path("results/tuab_subset_200/eegmamba_interventions_official"),
     )
     parser.add_argument(
         "--checkpoint-path",
@@ -58,7 +58,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--eegmamba-repo",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/external/EEGMamba"),
+        default=Path("external/EEGMamba"),
         help="Path to the official EEGMamba GitHub checkout.",
     )
     parser.add_argument("--dropout", type=float, default=0.1)
@@ -214,7 +214,7 @@ def load_eegmamba_model(args: argparse.Namespace, n_chans: int, n_times: int, de
     except ModuleNotFoundError as exc:
         if exc.name == "mamba_ssm":
             raise ModuleNotFoundError(
-                "EEGMamba requires the `mamba_ssm` package. The current H200 "
+                "EEGMamba requires the `mamba_ssm` package. The current GPU "
                 "environment does not provide it, and pip installation failed "
                 "without a compatible prebuilt wheel or nvcc compiler."
             ) from exc

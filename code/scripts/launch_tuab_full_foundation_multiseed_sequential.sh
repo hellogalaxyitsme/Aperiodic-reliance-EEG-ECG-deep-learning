@@ -5,7 +5,7 @@ set -uo pipefail
 # requested seeds before the next FM starts. Failures are recorded and the
 # launcher continues so already-completed outputs remain usable overnight.
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 RESULT_ROOT="${PROJECT_ROOT}/results/tuab_full_v3_0_1"
 RUN_ROOT="${RESULT_ROOT}/foundation_multiseed"
 REPORT_ROOT="${PROJECT_ROOT}/reports/tables"

@@ -5,14 +5,14 @@ set -euo pipefail
 # BENDR run: encoder-only downstream mode, clipped/scaled 23-channel TUAB input,
 # and the standard raw/sham/aperiodic/flattened intervention audit.
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 RESULT_ROOT="${PROJECT_ROOT}/results/tuab_full_v3_0_1"
 RUN_ROOT="${RUN_ROOT:-${RESULT_ROOT}/bendr_interventions_braindecode_encoder_only_full}"
 CACHE_NPZ="${RESULT_ROOT}/labram_10s_200hz_cache.npz"
-TORCH_PY="${TORCH_PY:-/mnt/data/.venvs/ml/bin/python3}"
+TORCH_PY="${TORCH_PY:-python}"
 BRAIND_DEPS="${PROJECT_ROOT}/.python_deps"
 BENDR_REPO="${BENDR_REPO:-braindecode/braindecode-bendr}"
-BENDR_CKPT="${BENDR_CKPT:-/home/vinay/.cache/huggingface/hub/models--braindecode--braindecode-bendr/snapshots/191f221cd56de8203899ea9a8d0f43238724f8b6/model.safetensors}"
+BENDR_CKPT="${BENDR_CKPT:-external/checkpoints/models--braindecode--braindecode-bendr/snapshots/191f221cd56de8203899ea9a8d0f43238724f8b6/model.safetensors}"
 
 EPOCHS="${EPOCHS:-30}"
 BATCH_SIZE="${BATCH_SIZE:-128}"

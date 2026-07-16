@@ -28,12 +28,12 @@ def parse_args():
     parser.add_argument(
         "--psd-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/ptbxl_1f_demo/ptbxl_records100_normal_abnormal_psd_fixed.npz"),
+        default=Path("results/ptbxl_1f_demo/ptbxl_records100_normal_abnormal_psd_fixed.npz"),
     )
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/ptbxl_1f_demo/psd_interventions"),
+        default=Path("results/ptbxl_1f_demo/psd_interventions"),
     )
     parser.add_argument("--ridge-alpha", type=float, default=1.0)
     parser.add_argument("--n-bootstrap", type=int, default=10000)

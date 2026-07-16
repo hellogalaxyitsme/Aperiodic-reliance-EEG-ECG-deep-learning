@@ -24,12 +24,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--data-root",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/data/physionet-eegmmidb"),
+        default=Path("data/physionet-eegmmidb"),
     )
     parser.add_argument(
         "--output-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/physionet_mi/imagined_fists_trials.csv"),
+        default=Path("results/physionet_mi/imagined_fists_trials.csv"),
     )
     parser.add_argument(
         "--task",

@@ -5,11 +5,11 @@ set -euo pipefail
 # Sleep-EDF preprocessing outputs. This script writes additive result folders
 # only and never deletes existing outputs.
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 RESULT_ROOT="${PROJECT_ROOT}/results/sleep_edf_full"
 RUN_ROOT="${RESULT_ROOT}/multiseed_neural"
 REPORT_ROOT="${PROJECT_ROOT}/reports/tables"
-TORCH_PY="${TORCH_PY:-/mnt/data/.venvs/ml/bin/python3}"
+TORCH_PY="${TORCH_PY:-python}"
 PROJECT_PY="${PROJECT_ROOT}/.venv/bin/python"
 SEEDS="${SEEDS:-42 43 44}"
 N_SPLITS="${N_SPLITS:-5}"

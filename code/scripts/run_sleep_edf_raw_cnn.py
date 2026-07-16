@@ -16,17 +16,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--raw-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/raw_epochs_fpz_pz_100hz.npz"),
+        default=Path("results/sleep_edf_subset/raw_epochs_fpz_pz_100hz.npz"),
     )
     parser.add_argument(
         "--index-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/raw_epochs_index.csv"),
+        default=Path("results/sleep_edf_subset/raw_epochs_index.csv"),
     )
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/raw_cnn"),
+        default=Path("results/sleep_edf_subset/raw_cnn"),
     )
     parser.add_argument("--n-splits", type=int, default=5)
     parser.add_argument("--seed", type=int, default=42)

@@ -46,12 +46,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/reports/tables/full_sleep_edf_multiseed_subject_bootstrap.csv"),
+        default=Path("reports/tables/full_sleep_edf_multiseed_subject_bootstrap.csv"),
     )
     parser.add_argument(
         "--output-md",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/reports/tables/full_sleep_edf_multiseed_subject_bootstrap.md"),
+        default=Path("reports/tables/full_sleep_edf_multiseed_subject_bootstrap.md"),
     )
     parser.add_argument("--n-bootstrap", type=int, default=10000)
     parser.add_argument(

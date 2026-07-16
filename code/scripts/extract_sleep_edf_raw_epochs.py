@@ -19,17 +19,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--epochs-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/epochs.csv"),
+        default=Path("results/sleep_edf_subset/epochs.csv"),
     )
     parser.add_argument(
         "--output-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/raw_epochs_fpz_pz_100hz.npz"),
+        default=Path("results/sleep_edf_subset/raw_epochs_fpz_pz_100hz.npz"),
     )
     parser.add_argument(
         "--output-index-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/raw_epochs_index.csv"),
+        default=Path("results/sleep_edf_subset/raw_epochs_index.csv"),
     )
     parser.add_argument("--channels", nargs="+", default=["Fpz-Cz", "Pz-Oz"])
     parser.add_argument("--target-sfreq", type=float, default=100.0)

@@ -19,7 +19,7 @@ def parse_args():
     parser.add_argument(
         "--project-root",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds"),
+        default=Path("."),
     )
     parser.add_argument("--q", type=float, default=Q_DEFAULT)
     parser.add_argument(
@@ -161,7 +161,7 @@ def append_test(rows, frame, *, family, domain, task, model, display_model, esti
 def collect_primary_and_sham(project_root: Path):
     tables = {
         "sleep_full": read_table(project_root, "reports/tables/full_sleep_edf_multiseed_subject_bootstrap.csv"),
-        "sleep_reviewer": read_table(project_root, "reports/tables/sleep_edf_reviewer_resistance_bootstrap.csv"),
+        "sleep_validation": read_table(project_root, "reports/tables/sleep_edf_validation_controls_bootstrap.csv"),
         "tuab_neural": read_table(project_root, "reports/tables/tuab_full_multiseed_neural_subject_bootstrap.csv"),
         "tuab_matched": read_table(project_root, "reports/tables/tuab_full_age_matched_multiseed_neural_subject_bootstrap.csv"),
         "tuab_fm": read_table(project_root, "reports/tables/tuab_full_foundation_multiseed_subject_bootstrap.csv"),
@@ -194,7 +194,7 @@ def collect_primary_and_sham(project_root: Path):
         ]:
             append_test(
                 rows,
-                tables["sleep_reviewer"],
+                tables["sleep_validation"],
                 family="primary_flattening",
                 domain="Sleep-EDF",
                 task=task,
@@ -206,7 +206,7 @@ def collect_primary_and_sham(project_root: Path):
             )
             append_test(
                 rows,
-                tables["sleep_reviewer"],
+                tables["sleep_validation"],
                 family="sham_controls",
                 domain="Sleep-EDF",
                 task=task,

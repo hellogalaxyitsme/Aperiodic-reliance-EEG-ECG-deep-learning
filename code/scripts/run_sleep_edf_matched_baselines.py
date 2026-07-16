@@ -20,27 +20,27 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--psd-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/psd_welch_fpz_pz.npz"),
+        default=Path("results/sleep_edf_subset/psd_welch_fpz_pz.npz"),
     )
     parser.add_argument(
         "--index-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/psd_index.csv"),
+        default=Path("results/sleep_edf_subset/psd_index.csv"),
     )
     parser.add_argument(
         "--decomp-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/specparam/specparam_fixed.npz"),
+        default=Path("results/sleep_edf_subset/specparam/specparam_fixed.npz"),
     )
     parser.add_argument(
         "--reference-summary-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/baselines_specparam/summary_metrics.csv"),
+        default=Path("results/sleep_edf_subset/baselines_specparam/summary_metrics.csv"),
     )
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/matched_specparam"),
+        default=Path("results/sleep_edf_subset/matched_specparam"),
     )
     parser.add_argument("--n-bins", type=int, default=4)
     parser.add_argument("--n-splits", type=int, default=5)

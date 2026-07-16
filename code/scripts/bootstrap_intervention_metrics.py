@@ -7,10 +7,10 @@ from pathlib import Path
 
 
 DEFAULT_INPUTS = {
-    "linear_ridge": "/mnt/data/aperiodic_confounds/results/sleep_edf_subset/interventions_specparam_flattening/intervention_fold_metrics.csv",
-    "deep_mlp": "/mnt/data/aperiodic_confounds/results/sleep_edf_subset/deep_mlp_interventions_specparam/deep_mlp_intervention_fold_metrics.csv",
-    "raw_cnn": "/mnt/data/aperiodic_confounds/results/sleep_edf_subset/raw_cnn_interventions/raw_cnn_intervention_fold_metrics.csv",
-    "braindecode_eegnet": "/mnt/data/aperiodic_confounds/results/sleep_edf_subset/braindecode_eegnet_interventions/braindecode_eegnet_intervention_fold_metrics.csv",
+    "linear_ridge": "results/sleep_edf_subset/interventions_specparam_flattening/intervention_fold_metrics.csv",
+    "deep_mlp": "results/sleep_edf_subset/deep_mlp_interventions_specparam/deep_mlp_intervention_fold_metrics.csv",
+    "raw_cnn": "results/sleep_edf_subset/raw_cnn_interventions/raw_cnn_intervention_fold_metrics.csv",
+    "braindecode_eegnet": "results/sleep_edf_subset/braindecode_eegnet_interventions/braindecode_eegnet_intervention_fold_metrics.csv",
 }
 
 MODEL_INPUTS = {
@@ -50,12 +50,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/reports/tables/intervention_bootstrap_ci.csv"),
+        default=Path("reports/tables/intervention_bootstrap_ci.csv"),
     )
     parser.add_argument(
         "--output-md",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/reports/tables/intervention_bootstrap_ci.md"),
+        default=Path("reports/tables/intervention_bootstrap_ci.md"),
     )
     parser.add_argument("--n-bootstrap", type=int, default=10000)
     parser.add_argument("--seed", type=int, default=42)

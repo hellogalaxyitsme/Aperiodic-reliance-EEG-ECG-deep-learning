@@ -17,12 +17,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--psd-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/psd_welch_fpz_pz.npz"),
+        default=Path("results/sleep_edf_subset/psd_welch_fpz_pz.npz"),
     )
     parser.add_argument(
         "--output-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/specparam/specparam_fixed.npz"),
+        default=Path("results/sleep_edf_subset/specparam/specparam_fixed.npz"),
     )
     parser.add_argument("--freq-min", type=float, default=1.0)
     parser.add_argument("--freq-max", type=float, default=45.0)

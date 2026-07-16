@@ -28,7 +28,7 @@ def parse_args() -> argparse.Namespace:
         "--irasa-npz",
         type=Path,
         default=Path(
-            "/mnt/data/aperiodic_confounds/results/sleep_edf_full/irasa/"
+            "results/sleep_edf_full/irasa/"
             "irasa_aperiodic_stage_balanced_5k_volts.npz"
         ),
     )
@@ -36,7 +36,7 @@ def parse_args() -> argparse.Namespace:
         "--irasa-index-csv",
         type=Path,
         default=Path(
-            "/mnt/data/aperiodic_confounds/results/sleep_edf_full/irasa/"
+            "results/sleep_edf_full/irasa/"
             "irasa_aperiodic_stage_balanced_5k_volts.index.csv"
         ),
     )
@@ -44,7 +44,7 @@ def parse_args() -> argparse.Namespace:
         "--output-dir",
         type=Path,
         default=Path(
-            "/mnt/data/aperiodic_confounds/results/sleep_edf_full/irasa/"
+            "results/sleep_edf_full/irasa/"
             "irasa_ridge_interventions_stage_balanced_5k"
         ),
     )

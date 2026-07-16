@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Additive download only. This script never deletes or moves existing data.
 
-DATA_ROOT="${APERIODIC_DATA_ROOT:-/mnt/data/aperiodic_confounds/data}"
+DATA_ROOT="${APERIODIC_DATA_ROOT:-data}"
 SLEEP_EDF_ROOT="${DATA_ROOT}/sleep-edf"
 DEST="${SLEEP_EDF_ROOT}/sleep-cassette"
 BASE="https://physionet-open.s3.amazonaws.com/sleep-edfx/1.0.0"
@@ -88,6 +88,6 @@ print(len(psg_keys & hyp_keys))
 PY
 )"
 
-python3 /mnt/data/aperiodic_confounds/code/scripts/verify_sleep_edf.py \
+python3 code/scripts/verify_sleep_edf.py \
   --data-root "${DEST}" \
   --expected-pairs "${EXPECTED_PAIRS}"

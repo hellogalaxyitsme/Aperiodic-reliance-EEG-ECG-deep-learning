@@ -4,13 +4,13 @@ set -euo pipefail
 # Full-TUAB LaBraM foundation-model audit. This mirrors the TUAB-200 LaBraM
 # protocol while using a memmap-backed cache for the full dataset.
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 RESULT_ROOT="${PROJECT_ROOT}/results/tuab_full_v3_0_1"
 DATA_ROOT="${PROJECT_ROOT}/data/tuab/v3.0.1_random_stratified_200"
 SELECTED_FILES_CSV="${RESULT_ROOT}/tuab_v3_0_1_full_edf_files.csv"
 RUN_ROOT="${RUN_ROOT:-${RESULT_ROOT}/labram_interventions_base_full}"
 CACHE_NPZ="${RESULT_ROOT}/labram_10s_200hz_cache.npz"
-TORCH_PY="${TORCH_PY:-/mnt/data/.venvs/ml/bin/python3}"
+TORCH_PY="${TORCH_PY:-python}"
 LABRAM_REPO="${PROJECT_ROOT}/external/LaBraM"
 LABRAM_CKPT="${LABRAM_REPO}/checkpoints/labram-base.pth"
 

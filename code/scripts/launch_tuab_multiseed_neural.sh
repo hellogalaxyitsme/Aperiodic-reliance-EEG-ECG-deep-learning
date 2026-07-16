@@ -4,11 +4,11 @@ set -euo pipefail
 # Run TUAB neural intervention models across multiple seeds using the official
 # train/eval split. This script only writes additive result folders.
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 RESULT_ROOT="${PROJECT_ROOT}/results/tuab_subset_200"
 RUN_ROOT="${RESULT_ROOT}/multiseed_neural"
 REPORT_ROOT="${PROJECT_ROOT}/reports/tables"
-TORCH_PY="${TORCH_PY:-/mnt/data/.venvs/ml/bin/python3}"
+TORCH_PY="${TORCH_PY:-python}"
 PROJECT_PY="${PROJECT_ROOT}/.venv/bin/python"
 SEEDS="${SEEDS:-42 43 44}"
 DEVICE="${DEVICE:-cuda}"

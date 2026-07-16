@@ -4,11 +4,11 @@ set -euo pipefail
 # Full-TUAB EEGPT foundation-model audit. EEGPT uses the same 23-channel
 # LaBraM-style TUAB cache, so this launcher reuses the full-TUAB LaBraM cache.
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 RESULT_ROOT="${PROJECT_ROOT}/results/tuab_full_v3_0_1"
 RUN_ROOT="${RUN_ROOT:-${RESULT_ROOT}/eegpt_interventions_braindecode_full}"
 CACHE_NPZ="${RESULT_ROOT}/labram_10s_200hz_cache.npz"
-TORCH_PY="${TORCH_PY:-/mnt/data/.venvs/ml/bin/python3}"
+TORCH_PY="${TORCH_PY:-python}"
 BRAIND_DEPS="${PROJECT_ROOT}/.python_deps"
 EEGPT_CKPT="${PROJECT_ROOT}/external/EEGPT/checkpoint/braindecode_eegpt_pretrained_pytorch_model.bin"
 

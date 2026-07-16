@@ -30,7 +30,7 @@ def parse_args() -> argparse.Namespace:
         "--index-csv",
         type=Path,
         default=Path(
-            "/mnt/data/aperiodic_confounds/results/tuab_full_v3_0_1/"
+            "results/tuab_full_v3_0_1/"
             "preprocess_20s_100hz/psd_20s_multitaper_index.csv"
         ),
     )
@@ -38,7 +38,7 @@ def parse_args() -> argparse.Namespace:
         "--decomp-npz",
         type=Path,
         default=Path(
-            "/mnt/data/aperiodic_confounds/results/tuab_full_v3_0_1/"
+            "results/tuab_full_v3_0_1/"
             "preprocess_20s_100hz/specparam/specparam_fixed_20s.npz"
         ),
     )
@@ -46,7 +46,7 @@ def parse_args() -> argparse.Namespace:
         "--metadata-csv",
         type=Path,
         default=Path(
-            "/mnt/data/aperiodic_confounds/results/tuab_full_v3_0_1/age_matched/"
+            "results/tuab_full_v3_0_1/age_matched/"
             "tuab_full_age_sex_matched_caliper5_header_metadata_files.csv"
         ),
     )
@@ -54,7 +54,7 @@ def parse_args() -> argparse.Namespace:
         "--output-dir",
         type=Path,
         default=Path(
-            "/mnt/data/aperiodic_confounds/results/tuab_full_v3_0_1/"
+            "results/tuab_full_v3_0_1/"
             "site_temporal_psd_audit"
         ),
     )

@@ -5,14 +5,14 @@ set -euo pipefail
 # LaBraM-style TUAB cache, then derives its official 16-channel bipolar montage
 # batch-by-batch inside the runner.
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 RESULT_ROOT="${PROJECT_ROOT}/results/tuab_full_v3_0_1"
 RUN_ROOT="${RUN_ROOT:-${RESULT_ROOT}/cbramod_interventions_braindecode_full}"
 CACHE_NPZ="${RESULT_ROOT}/labram_10s_200hz_cache.npz"
-TORCH_PY="${TORCH_PY:-/mnt/data/.venvs/ml/bin/python3}"
+TORCH_PY="${TORCH_PY:-python}"
 BRAIND_DEPS="${PROJECT_ROOT}/.python_deps"
 CBRAMOD_REPO="${CBRAMOD_REPO:-braindecode/cbramod-pretrained}"
-CBRAMOD_CKPT="${CBRAMOD_CKPT:-/home/vinay/.cache/huggingface/hub/models--braindecode--cbramod-pretrained/snapshots/584cdc415913739a05d84bf0c1cb3db397764507/model.safetensors}"
+CBRAMOD_CKPT="${CBRAMOD_CKPT:-external/checkpoints/models--braindecode--cbramod-pretrained/snapshots/584cdc415913739a05d84bf0c1cb3db397764507/model.safetensors}"
 
 EPOCHS="${EPOCHS:-30}"
 BATCH_SIZE="${BATCH_SIZE:-64}"

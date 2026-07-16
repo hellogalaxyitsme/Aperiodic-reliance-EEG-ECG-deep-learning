@@ -26,17 +26,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--psd-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/psd_welch_fpz_pz.npz"),
+        default=Path("results/sleep_edf_subset/psd_welch_fpz_pz.npz"),
     )
     parser.add_argument(
         "--index-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/psd_index.csv"),
+        default=Path("results/sleep_edf_subset/psd_index.csv"),
     )
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/baselines"),
+        default=Path("results/sleep_edf_subset/baselines"),
     )
     parser.add_argument(
         "--decomposition",

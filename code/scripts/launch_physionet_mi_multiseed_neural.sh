@@ -4,11 +4,11 @@ set -euo pipefail
 # Run PhysioNet MI raw neural intervention models across multiple seeds.
 # This script only writes additive result folders and report tables.
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 RESULT_ROOT="${PROJECT_ROOT}/results/physionet_mi"
 RUN_ROOT="${RESULT_ROOT}/multiseed_neural"
 REPORT_ROOT="${PROJECT_ROOT}/reports/tables"
-TORCH_PY="${TORCH_PY:-/mnt/data/.venvs/ml/bin/python3}"
+TORCH_PY="${TORCH_PY:-python}"
 PROJECT_PY="${PROJECT_ROOT}/.venv/bin/python"
 SEEDS="${SEEDS:-42 43 44}"
 DEVICE="${DEVICE:-cuda}"

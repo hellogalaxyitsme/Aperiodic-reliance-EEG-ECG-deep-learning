@@ -34,22 +34,22 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--raw-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/physionet_mi/imagined_fists_raw_160hz.npz"),
+        default=Path("results/physionet_mi/imagined_fists_raw_160hz.npz"),
     )
     parser.add_argument(
         "--index-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/physionet_mi/imagined_fists_raw_index.csv"),
+        default=Path("results/physionet_mi/imagined_fists_raw_index.csv"),
     )
     parser.add_argument(
         "--decomp-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/physionet_mi/specparam/imagined_fists_specparam_fixed.npz"),
+        default=Path("results/physionet_mi/specparam/imagined_fists_specparam_fixed.npz"),
     )
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/physionet_mi/raw_braindecode_interventions"),
+        default=Path("results/physionet_mi/raw_braindecode_interventions"),
     )
     parser.add_argument("--label-column", default="condition")
     parser.add_argument("--group-column", default="subject")

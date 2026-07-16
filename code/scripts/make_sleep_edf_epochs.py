@@ -24,12 +24,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--data-root",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/data/sleep-edf/sleep-cassette"),
+        default=Path("data/sleep-edf/sleep-cassette"),
     )
     parser.add_argument(
         "--output-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/epochs.csv"),
+        default=Path("results/sleep_edf_subset/epochs.csv"),
     )
     parser.add_argument("--epoch-seconds", type=float, default=30.0)
     parser.add_argument(

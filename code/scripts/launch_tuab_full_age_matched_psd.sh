@@ -5,7 +5,7 @@ set -euo pipefail
 # TUAB-200 age-matched PSD workflow, preserving the official train/eval
 # boundary and writing only additive result artifacts.
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 RESULT_ROOT="${PROJECT_ROOT}/results/tuab_full_v3_0_1"
 PREPROCESS_DIR="${RESULT_ROOT}/preprocess_20s_100hz"
 MATCH_ROOT="${RESULT_ROOT}/age_matched"

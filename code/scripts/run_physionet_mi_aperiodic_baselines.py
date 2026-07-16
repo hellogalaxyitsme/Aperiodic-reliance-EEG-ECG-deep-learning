@@ -19,17 +19,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--index-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/physionet_mi/imagined_fists_psd_index.csv"),
+        default=Path("results/physionet_mi/imagined_fists_psd_index.csv"),
     )
     parser.add_argument(
         "--decomp-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/physionet_mi/specparam/imagined_fists_specparam_fixed.npz"),
+        default=Path("results/physionet_mi/specparam/imagined_fists_specparam_fixed.npz"),
     )
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/physionet_mi/baselines_specparam"),
+        default=Path("results/physionet_mi/baselines_specparam"),
     )
     parser.add_argument("--label-column", default="condition")
     parser.add_argument("--group-column", default="subject")

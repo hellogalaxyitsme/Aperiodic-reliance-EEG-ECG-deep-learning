@@ -29,12 +29,12 @@ def parse_args():
     parser.add_argument(
         "--data-root",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/data/ptbxl/1.0.3"),
+        default=Path("data/ptbxl/1.0.3"),
     )
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/ptbxl_1f_demo"),
+        default=Path("results/ptbxl_1f_demo"),
     )
     parser.add_argument("--sfreq", type=float, default=100.0)
     parser.add_argument("--low-hz", type=float, default=0.5)

@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Additive download only. This script never deletes, moves, or overwrites datasets.
 
-DATA_ROOT="${APERIODIC_DATA_ROOT:-/mnt/data/aperiodic_confounds/data}"
+DATA_ROOT="${APERIODIC_DATA_ROOT:-data}"
 MI_ROOT="${DATA_ROOT}/physionet-eegmmidb"
 BASE="${PHYSIONET_MI_BASE:-https://physionet.org/files/eegmmidb/1.0.0}"
 RECORDS="${MI_ROOT}/RECORDS"

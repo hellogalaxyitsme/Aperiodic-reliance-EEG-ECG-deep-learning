@@ -11,17 +11,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--sensitivity-root",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/specparam_sensitivity"),
+        default=Path("results/sleep_edf_subset/specparam_sensitivity"),
     )
     parser.add_argument(
         "--main-baseline-dir",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/baselines_specparam"),
+        default=Path("results/sleep_edf_subset/baselines_specparam"),
     )
     parser.add_argument(
         "--output-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/specparam_sensitivity/sensitivity_summary.csv"),
+        default=Path("results/sleep_edf_subset/specparam_sensitivity/sensitivity_summary.csv"),
     )
     return parser.parse_args()
 
@@ -83,7 +83,7 @@ def main() -> int:
     args = parse_args()
     rows = []
 
-    main_diag = Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/specparam/diagnostics/specparam_diagnostics_summary.json")
+    main_diag = Path("results/sleep_edf_subset/specparam/diagnostics/specparam_diagnostics_summary.json")
     rows.extend(load_setting_rows("main_p6_h010", args.main_baseline_dir, main_diag))
 
     for setting_dir in sorted(args.sensitivity_root.iterdir() if args.sensitivity_root.exists() else []):

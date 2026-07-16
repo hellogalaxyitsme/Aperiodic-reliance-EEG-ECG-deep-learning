@@ -14,17 +14,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--epochs-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/epochs_20s.csv"),
+        default=Path("results/tuab_subset_200/epochs_20s.csv"),
     )
     parser.add_argument(
         "--output-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/raw_epochs_20s_100hz.npz"),
+        default=Path("results/tuab_subset_200/raw_epochs_20s_100hz.npz"),
     )
     parser.add_argument(
         "--output-index-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/raw_epochs_20s_100hz_index.csv"),
+        default=Path("results/tuab_subset_200/raw_epochs_20s_100hz_index.csv"),
     )
     parser.add_argument("--target-sfreq", type=float, default=100.0)
     parser.add_argument("--scale", type=float, default=1e6, help="Scale EDF volts to microvolts.")

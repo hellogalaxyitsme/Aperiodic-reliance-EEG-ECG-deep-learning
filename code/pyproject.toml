@@ -5,10 +5,9 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "aperiodic-eeg"
 version = "0.1.0"
-description = "Aperiodic confound audit tools for EEG machine learning experiments."
+description = "Aperiodic spectral audit tools for physiological time-series experiments."
 requires-python = ">=3.10"
 dependencies = []
 
 [tool.setuptools.packages.find]
 where = ["src"]
-

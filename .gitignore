@@ -11,6 +11,9 @@ venv/
 .DS_Store
 .vscode/
 .idea/
+.env
+logs/
+run_logs/
 
 # Raw data and heavy generated caches
 data/
@@ -28,13 +31,6 @@ results/**/raw_*.csv
 *.dat
 *.zip
 
-# LaTeX build outputs
-*.aux
-*.bbl
-*.blg
-*.fdb_latexmk
-*.fls
+# Generated local reports
 *.log
-!run_logs/*.log
-*.out
-*.synctex.gz
+*.tmp

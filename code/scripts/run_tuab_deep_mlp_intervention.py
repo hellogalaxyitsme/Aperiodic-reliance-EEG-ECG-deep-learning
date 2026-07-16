@@ -19,17 +19,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--index-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/psd_20s_multitaper_index.csv"),
+        default=Path("results/tuab_subset_200/psd_20s_multitaper_index.csv"),
     )
     parser.add_argument(
         "--decomp-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/specparam/specparam_fixed_20s.npz"),
+        default=Path("results/tuab_subset_200/specparam/specparam_fixed_20s.npz"),
     )
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/deep_mlp_interventions_specparam"),
+        default=Path("results/tuab_subset_200/deep_mlp_interventions_specparam"),
     )
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--epochs", type=int, default=80)

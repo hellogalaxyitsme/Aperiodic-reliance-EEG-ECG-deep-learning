@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT=${ROOT:-/mnt/data/aperiodic_confounds}
+ROOT=${ROOT:-.}
 REMOTE_BASE=${REMOTE_BASE:-nedc-tuh-eeg@www.isip.piconepress.com:data/tuh_eeg/tuh_eeg_abnormal/v3.0.1/}
 DATA_ROOT=${DATA_ROOT:-$ROOT/data/tuab/v3.0.1_random_stratified_200}
 FILES_FROM=${FILES_FROM:-$ROOT/results/tuab_full_v3_0_1/tuab_v3_0_1_full_files_from.txt}
@@ -16,8 +16,8 @@ fi
 
 if [[ -z "${SSH_AUTH_SOCK:-}" ]]; then
   cat >&2 <<'MSG'
-SSH_AUTH_SOCK is empty. Run this script from the Mac with agent forwarding, e.g.
-  ssh -A h200 'cd /mnt/data/aperiodic_confounds && bash code/scripts/download_tuab_full_resumable.sh'
+SSH_AUTH_SOCK is empty. Run this script from a shell with SSH agent forwarding
+enabled, or configure direct key-based access to the authorized TUAB host.
 MSG
   exit 3
 fi

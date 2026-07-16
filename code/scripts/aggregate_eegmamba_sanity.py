@@ -17,7 +17,7 @@ def main() -> int:
     parser.add_argument(
         "--root",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/eegmamba_sanity_checks"),
+        default=Path("results/tuab_subset_200/eegmamba_sanity_checks"),
     )
     args = parser.parse_args()
 

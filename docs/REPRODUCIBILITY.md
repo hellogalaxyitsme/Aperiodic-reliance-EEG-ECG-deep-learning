@@ -1,9 +1,8 @@
-# Reproducibility Notes
+# Reproducibility Guide
 
-The original full experiments were run on an H200 server because the full TUAB
-and foundation-model audits require GPU acceleration and large local datasets.
-The commands below describe the intended order of execution. Paths can be
-changed through the command-line arguments in each script.
+The workflow has four stages: obtain datasets, build preprocessing caches, run
+audits and aggregate results. Full neural and foundation-model experiments are
+GPU intensive; PSD and aggregation stages can usually run on CPU.
 
 ## 1. Environment
 
@@ -14,12 +13,13 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-Foundation-model audits may require additional model-specific dependencies and
-downloaded checkpoints. See `supplementary/supplementary_table_6_*`.
+Foundation models may require additional dependencies or local checkouts. See
+[`FOUNDATION_MODEL_CONFIGS.md`](FOUNDATION_MODEL_CONFIGS.md).
 
 ## 2. Dataset Preparation
 
-Run the relevant download scripts after obtaining dataset access:
+Download public datasets directly from their official sources and place them
+under `data/`. TUAB requires authorized access from the TUH EEG Corpus.
 
 ```bash
 bash code/scripts/download_sleep_edf_all_sleep_cassette.sh
@@ -28,8 +28,8 @@ bash code/scripts/download_ptbxl_records100.sh
 bash code/scripts/download_tuab_full_resumable.sh
 ```
 
-TUAB requires authorized credentials and is not public-downloadable from this
-repository.
+Expected dataset locations are listed in
+[`DATA_ACCESS.md`](DATA_ACCESS.md).
 
 ## 3. Preprocessing
 
@@ -42,12 +42,14 @@ python code/scripts/prepare_ptbxl_1f_demo.py --help
 python code/scripts/make_physionet_mi_trials.py --help
 ```
 
-## 4. Main Audits
+The preprocessing choices used in the experiments are summarized in
+[`PREPROCESSING.md`](PREPROCESSING.md).
 
-Run dataset/model families:
+## 4. Main Audits
 
 ```bash
 bash code/scripts/launch_sleep_edf_full_multiseed_neural.sh
+bash code/scripts/launch_sleep_edf_validation_controls.sh
 bash code/scripts/launch_tuab_full_multiseed_neural.sh
 bash code/scripts/launch_tuab_full_foundation_multiseed_sequential.sh
 bash code/scripts/launch_physionet_mi_multiseed_neural.sh
@@ -56,23 +58,19 @@ bash code/scripts/launch_ptbxl_age_sex_matched_neural.sh
 python code/scripts/run_tuab_site_temporal_psd_audit.py --help
 ```
 
-The launch scripts record the exact H200-style commands used during the project;
-reviewers can adapt paths and resource settings for their own environment.
+The launch scripts save model outputs under `results/`. If running on another
+cluster, set `PROJECT_ROOT`, `PYTHON`, dataset roots and checkpoint paths
+explicitly.
 
-## 5. Aggregation, Hypothesis Tests and Figures
-
-After model outputs are available:
+## 5. Aggregation and Statistical Testing
 
 ```bash
 python code/scripts/aggregate_multiseed_subject_bootstrap.py --help
 python code/scripts/aggregate_foundation_multiseed_predictions.py --help
 python code/scripts/aggregate_ptbxl_prediction_bootstrap.py --help
 bash code/scripts/run_formal_hypothesis_tests_from_saved_outputs.sh
-python code/scripts/generate_nmi_journal_images.py
-python code/scripts/generate_nmi_extended_data_figures.py
-python code/scripts/generate_nmi_update_assets.py
-python code/scripts/generate_nmi_update_figures_matplotlib.py
 ```
 
-The submitted aggregate outputs are already present under `results/tables/`,
-`figures/` and `supplementary/`.
+The repository includes aggregate outputs under `results/tables/` so that the
+reported numerical summaries and hypothesis-test tables can be inspected
+without rerunning the full GPU workloads.

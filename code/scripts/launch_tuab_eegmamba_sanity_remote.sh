@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT=${ROOT:-/mnt/data/aperiodic_confounds}
+ROOT=${ROOT:-.}
 PYTHON=${PYTHON:-$ROOT/.venvs/eegmamba/bin/python}
 RUNNER=${RUNNER:-$ROOT/code/scripts/run_tuab_eegmamba_intervention.py}
 OUT_ROOT=${OUT_ROOT:-$ROOT/results/tuab_subset_200/eegmamba_sanity_checks}

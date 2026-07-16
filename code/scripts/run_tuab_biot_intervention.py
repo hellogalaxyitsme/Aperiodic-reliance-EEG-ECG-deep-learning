@@ -42,13 +42,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--data-root",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/data/tuab/v3.0.1_random_stratified_200"),
+        default=Path("data/tuab/v3.0.1_random_stratified_200"),
     )
     parser.add_argument(
         "--selected-files-csv",
         type=Path,
         default=Path(
-            "/mnt/data/aperiodic_confounds/results/tuab_subset_200/"
+            "results/tuab_subset_200/"
             "tuab_v3_0_1_random_stratified_200_files.csv"
         ),
     )
@@ -61,7 +61,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--cache-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/biot_10s_200hz_cache.npz"),
+        default=Path("results/tuab_subset_200/biot_10s_200hz_cache.npz"),
     )
     parser.add_argument(
         "--cache-format",
@@ -75,18 +75,18 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/biot_interventions_prest"),
+        default=Path("results/tuab_subset_200/biot_interventions_prest"),
     )
     parser.add_argument(
         "--biot-repo",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/external/BIOT"),
+        default=Path("external/BIOT"),
     )
     parser.add_argument(
         "--pretrain-model-path",
         type=Path,
         default=Path(
-            "/mnt/data/aperiodic_confounds/external/BIOT/pretrained-models/"
+            "external/BIOT/pretrained-models/"
             "EEG-PREST-16-channels.ckpt"
         ),
     )

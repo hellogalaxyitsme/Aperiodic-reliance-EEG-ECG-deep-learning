@@ -31,7 +31,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--cache-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/labram_10s_200hz_cache.npz"),
+        default=Path("results/tuab_subset_200/labram_10s_200hz_cache.npz"),
         help="TUAB 23-channel 10s/200Hz cache; same cache used for LaBraM.",
     )
     parser.add_argument(
@@ -46,13 +46,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/eegpt_interventions_braindecode"),
+        default=Path("results/tuab_subset_200/eegpt_interventions_braindecode"),
     )
     parser.add_argument(
         "--checkpoint-path",
         type=Path,
         default=Path(
-            "/mnt/data/aperiodic_confounds/external/EEGPT/checkpoint/"
+            "external/EEGPT/checkpoint/"
             "braindecode_eegpt_pretrained_pytorch_model.bin"
         ),
     )

@@ -26,9 +26,9 @@ METRICS = ["balanced_accuracy", "macro_f1", "accuracy"]
 
 def parse_args():
     parser = argparse.ArgumentParser(description="PTB-XL age/sex-matched PSD intervention control.")
-    parser.add_argument("--index-csv", type=Path, default=Path("/mnt/data/aperiodic_confounds/results/ptbxl_1f_demo/ptbxl_records100_normal_abnormal_index.csv"))
-    parser.add_argument("--psd-npz", type=Path, default=Path("/mnt/data/aperiodic_confounds/results/ptbxl_1f_demo/ptbxl_records100_normal_abnormal_psd_fixed.npz"))
-    parser.add_argument("--output-dir", type=Path, default=Path("/mnt/data/aperiodic_confounds/results/ptbxl_1f_demo/age_sex_matched_psd"))
+    parser.add_argument("--index-csv", type=Path, default=Path("results/ptbxl_1f_demo/ptbxl_records100_normal_abnormal_index.csv"))
+    parser.add_argument("--psd-npz", type=Path, default=Path("results/ptbxl_1f_demo/ptbxl_records100_normal_abnormal_psd_fixed.npz"))
+    parser.add_argument("--output-dir", type=Path, default=Path("results/ptbxl_1f_demo/age_sex_matched_psd"))
     parser.add_argument("--caliper-years", type=float, default=5.0)
     parser.add_argument("--max-age", type=float, default=90.0, help="Exclude PTB-XL de-identified oldest-age bucket, encoded as 300.")
     parser.add_argument("--ridge-alpha", type=float, default=1.0)

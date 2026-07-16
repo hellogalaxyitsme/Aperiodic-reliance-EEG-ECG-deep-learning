@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 set -u -o pipefail
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 RESULT_ROOT="${PROJECT_ROOT}/results/ptbxl_1f_demo"
 MATCH_ROOT="${RESULT_ROOT}/age_sex_matched_psd"
 RUN_ROOT="${RESULT_ROOT}/age_sex_matched_neural"
 REPORT_ROOT="${PROJECT_ROOT}/reports/tables"
 PROJECT_PY="${PROJECT_ROOT}/.venv/bin/python"
-TORCH_PY="${TORCH_PY:-/mnt/data/.venvs/ml/bin/python3}"
+TORCH_PY="${TORCH_PY:-python}"
 RAW_NPZ="${RESULT_ROOT}/ptbxl_records100_normal_abnormal_raw.npz"
 RECORD_FILTER_CSV="${RECORD_FILTER_CSV:-${MATCH_ROOT}/ptbxl_age_sex_matched_records.csv}"
 MODELS="${MODELS:-resnet1d_wang inception1d xresnet1d101}"

@@ -1,60 +1,58 @@
-# EEG-ECG Aperiodic Spectral Audit
+# Deep learning models for physiological time series exploit broadband aperiodic spectral structure
 
-Code and aggregate outputs for the Nature Machine Intelligence submission:
+This repository contains code and aggregate numerical outputs for auditing
+whether physiological time-series models rely on broadband aperiodic
+(`1/f`-like) spectral structure. The experiments cover EEG sleep staging,
+clinical EEG abnormality detection, EEG motor imagery, and ECG abnormality
+detection.
 
-**A spectral audit reveals task-dependent aperiodic reliance in EEG deep learning**
-
-This repository contains the analysis code used to audit whether EEG and ECG
-machine-learning models rely on broadband aperiodic, 1/f-like spectral
-structure. The package is organized for reviewer inspection: raw datasets,
-intermediate caches, pretrained checkpoints and subject-level restricted TUAB
-files are not included.
+Raw recordings, restricted datasets, downloaded pretrained checkpoints, and
+large intermediate caches are not distributed here. The included scripts and
+tables are intended to make the analysis workflow transparent and reproducible
+after the required datasets and model checkpoints have been obtained from their
+original sources.
 
 ## Repository Layout
 
 ```text
 code/src/                    Reusable Python utilities
-code/scripts/                Dataset preparation, interventions, models, tables and figures
+code/scripts/                Download, preprocessing, audit, model and aggregation scripts
 code/configs/                Small configuration files
-results/tables/              Aggregate result tables used in the manuscript
-figures/                     Main and Extended Data figure PDFs/PNGs
-supplementary/               Supplementary tables and notes
-paper/                       Current LaTeX manuscript, bibliography and Nature template files
-docs/                        Experiment log and project notes
-run_logs/                    Selected run logs for the newest ECG/TUAB audit blocks
+docs/                        Dataset, preprocessing and reproducibility notes
+results/tables/              Aggregate result tables and statistical-test outputs
+reports/tables               Symlink to results/tables for script compatibility
 ```
 
-For compatibility with the original project scripts, the repository also keeps
-lightweight symlinks named `reports/tables`, `Journal Images` and
-`Supplementary Information` pointing to the cleaner reviewer-facing folders.
+## Included Analyses
 
-## What Is Included
+- Spectral decomposition and intervention audits for full, sham,
+  aperiodic-shaped and flattened representations.
+- Sleep-EDF EEG audits across wake-versus-sleep, five-stage sleep staging and
+  N2-versus-N3 classification.
+- TUAB v3.0.1 normal-versus-abnormal EEG audits, including full-corpus neural
+  models, age/sex-matched controls, temporal acquisition-proxy controls and
+  seven pretrained foundation models.
+- PhysioNet EEG Motor Movement/Imagery audits.
+- PTB-XL ECG normal-versus-abnormal audits with unmatched and age/sex-matched
+  controls.
+- Subject-level and hierarchical bootstrap aggregation, including formal
+  bootstrap p-values and Benjamini-Hochberg FDR correction.
 
-- Sleep-EDF, TUAB, PhysioNet MI and PTB-XL preprocessing scripts.
-- PSD aperiodic decomposition and intervention pipelines.
-- Raw-signal Fourier intervention pipelines.
-- Neural model audits for EEGNet, ShallowFBCSPNet, Deep4Net, CNN and MLP.
-- TUAB foundation-model audit scripts for BIOT, LaBraM, EEGPT, CBraMod, REVE,
-  EEGMamba and BENDR.
-- PTB-XL ECG audit scripts for ResNet1D-Wang, Inception1D and XResNet1D101.
-- Bootstrap aggregation and BH-FDR hypothesis-testing scripts.
-- Figure and supplementary table generation scripts.
-- Aggregate numerical tables corresponding to the submitted manuscript.
+## Not Included
 
-## What Is Not Included
+- Raw Sleep-EDF, TUAB, PhysioNet MI or PTB-XL recordings.
+- TUAB restricted EDF files, restricted file manifests or raw subject caches.
+- Downloaded third-party pretrained model checkpoints.
+- Large intermediate arrays, window-level caches and per-record prediction
+  files.
 
-- Raw Sleep-EDF, PhysioNet MI, PTB-XL or TUAB recordings.
-- TUAB restricted EDF files or subject/file-level raw caches.
-- Model checkpoint weights downloaded from third-party repositories.
-- Large intermediate NumPy caches and per-record prediction files.
-
-See [docs/DATA_ACCESS.md](docs/DATA_ACCESS.md) for dataset access and expected
-local directory conventions.
+Dataset access and expected directory conventions are described in
+[`docs/DATA_ACCESS.md`](docs/DATA_ACCESS.md).
 
 ## Environment
 
-The core analysis was run with Python 3.10+ on Linux/H200. A minimal environment
-can be created with:
+The core scripts target Python 3.10 or newer on Linux. GPU acceleration is
+recommended for neural and foundation-model runs.
 
 ```bash
 python -m venv .venv
@@ -63,29 +61,22 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-Some foundation models require their original repositories/checkpoints and, in
-the case of EEGMamba, an isolated environment. The exact configurations are
-summarized in `supplementary/supplementary_table_6_foundation_model_config.*`
-and in the model-specific scripts under `scripts/`.
+Some foundation models require their original repositories or isolated
+dependency environments. See
+[`docs/FOUNDATION_MODEL_CONFIGS.md`](docs/FOUNDATION_MODEL_CONFIGS.md).
 
-## Quick Verification
-
-These commands check the importable package, regenerate manuscript summary
-tables from saved aggregate outputs, and regenerate the two newest Extended Data
-figures:
+## Quick Checks
 
 ```bash
 python -m compileall code/src code/scripts
 python code/scripts/collect_formal_hypothesis_tests.py --help
-python code/scripts/generate_nmi_update_assets.py
-python code/scripts/generate_nmi_update_figures_matplotlib.py
+python code/scripts/run_aperiodic_simulation_validation.py --help
+python code/scripts/run_tuab_site_temporal_psd_audit.py --help
 ```
 
-The complete end-to-end experiments require downloading the datasets and, for
-TUAB, approved access from the Temple University Hospital EEG Corpus.
+## Reproducibility
 
-## Reproducibility Map
-
-For a paper-section-to-code mapping, see
-[docs/MANUSCRIPT_CODE_MAP.md](docs/MANUSCRIPT_CODE_MAP.md). For the practical
-run order, see [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md).
+Start with [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md) for the
+recommended execution order. Aggregate output files are indexed in
+[`docs/RESULTS_INDEX.md`](docs/RESULTS_INDEX.md), and preprocessing details are
+summarized in [`docs/PREPROCESSING.md`](docs/PREPROCESSING.md).

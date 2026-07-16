@@ -56,7 +56,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--cache-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/labram_10s_200hz_cache.npz"),
+        default=Path("results/tuab_subset_200/labram_10s_200hz_cache.npz"),
         help="TUAB 23-channel 10s/200Hz cache; same cache used for LaBraM/EEGPT/CBraMod.",
     )
     parser.add_argument(
@@ -71,7 +71,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/reve_base_interventions"),
+        default=Path("results/tuab_subset_200/reve_base_interventions"),
     )
     parser.add_argument("--pretrained-repo", default="brain-bzh/reve-base")
     parser.add_argument("--positions-repo", default="brain-bzh/reve-positions")

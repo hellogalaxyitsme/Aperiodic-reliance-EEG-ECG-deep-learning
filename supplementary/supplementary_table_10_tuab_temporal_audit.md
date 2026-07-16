@@ -1,6 +1,0 @@
-| Scenario | Recording era | Flattening drop [95% CI] | Evaluation subjects |
-| --- | --- | --- | --- |
-| Within early | 2009--2011 | 0.118 [0.068, 0.165] | 137 |
-| Within late | 2012--2013 | 0.204 [0.153, 0.253] | 120 |
-| Train early to eval late | 2009--2011 to 2012--2013 | 0.146 [0.107, 0.184] | 120 |
-| Train late to eval early | 2012--2013 to 2009--2011 | 0.164 [0.105, 0.221] | 137 |

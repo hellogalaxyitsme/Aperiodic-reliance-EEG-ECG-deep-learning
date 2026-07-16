@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 DATA_ROOT="${DATA_ROOT:-${PROJECT_ROOT}/data/ptbxl/1.0.3}"
 S3_BASE_URL="${PTBXL_S3_BASE_URL:-https://physionet-open.s3.amazonaws.com/ptb-xl/1.0.3}"
 ARIA2_INPUT="${DATA_ROOT}/records100_s3_aria2.input"

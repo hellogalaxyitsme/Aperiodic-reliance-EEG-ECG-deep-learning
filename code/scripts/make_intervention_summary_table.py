@@ -13,14 +13,14 @@ def parse_args() -> argparse.Namespace:
         "--summary-csv",
         type=Path,
         default=Path(
-            "/mnt/data/aperiodic_confounds/results/sleep_edf_subset/interventions_specparam_flattening/intervention_summary_metrics.csv"
+            "results/sleep_edf_subset/interventions_specparam_flattening/intervention_summary_metrics.csv"
         ),
     )
     parser.add_argument(
         "--output-md",
         type=Path,
         default=Path(
-            "/mnt/data/aperiodic_confounds/results/sleep_edf_subset/interventions_specparam_flattening/intervention_summary_table.md"
+            "results/sleep_edf_subset/interventions_specparam_flattening/intervention_summary_table.md"
         ),
     )
     return parser.parse_args()

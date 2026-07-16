@@ -5,13 +5,13 @@ set -euo pipefail
 # SSM-capable environment created for the TUAB-200 run; the shared ML venv does
 # not provide the compiled mamba_ssm/causal-conv1d stack.
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 RESULT_ROOT="${PROJECT_ROOT}/results/tuab_full_v3_0_1"
 RUN_ROOT="${RUN_ROOT:-${RESULT_ROOT}/eegmamba_interventions_official_full}"
 CACHE_NPZ="${RESULT_ROOT}/labram_10s_200hz_cache.npz"
 EEGMAMBA_PY="${EEGMAMBA_PY:-${PROJECT_ROOT}/.venvs/eegmamba/bin/python}"
 EEGMAMBA_REPO="${EEGMAMBA_REPO:-${PROJECT_ROOT}/external/EEGMamba}"
-EEGMAMBA_CKPT="${EEGMAMBA_CKPT:-/home/vinay/.cache/huggingface/hub/models--weighting666--EEGMamba/snapshots/0b060d87acd6f23bf1d0b852bf1726064f335f97/pretrained_EEGMamba.pth}"
+EEGMAMBA_CKPT="${EEGMAMBA_CKPT:-external/checkpoints/models--weighting666--EEGMamba/snapshots/0b060d87acd6f23bf1d0b852bf1726064f335f97/pretrained_EEGMamba.pth}"
 
 EPOCHS="${EPOCHS:-30}"
 BATCH_SIZE="${BATCH_SIZE:-64}"

@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Reviewer-resistance package for the full Sleep-EDF run. This script is
+# Validation package for the full Sleep-EDF run. This script is
 # additive only: it creates new result/report folders and never deletes data.
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 RESULT_ROOT="${PROJECT_ROOT}/results/sleep_edf_full"
-RUN_ROOT="${RESULT_ROOT}/reviewer_resistance_controls"
+RUN_ROOT="${RESULT_ROOT}/validation_controls"
 REPORT_ROOT="${PROJECT_ROOT}/reports/tables"
-TORCH_PY="${TORCH_PY:-/mnt/data/.venvs/ml/bin/python3}"
+TORCH_PY="${TORCH_PY:-python}"
 PROJECT_PY="${PROJECT_ROOT}/.venv/bin/python"
 SEEDS="${SEEDS:-42 43 44}"
 N_SPLITS="${N_SPLITS:-5}"
@@ -122,10 +122,10 @@ if [[ "${RUN_AGGREGATION}" == "1" ]]; then
   if [[ "${#AGG_INPUTS[@]}" -gt 0 ]]; then
     "${PROJECT_PY}" scripts/aggregate_multiseed_subject_bootstrap.py \
       "${AGG_INPUTS[@]}" \
-      --output-csv "${REPORT_ROOT}/sleep_edf_reviewer_resistance_bootstrap.csv" \
-      --output-md "${REPORT_ROOT}/sleep_edf_reviewer_resistance_bootstrap.md" \
+      --output-csv "${REPORT_ROOT}/sleep_edf_validation_controls_bootstrap.csv" \
+      --output-md "${REPORT_ROOT}/sleep_edf_validation_controls_bootstrap.md" \
       --n-bootstrap "${N_BOOTSTRAP}"
   fi
 fi
 
-echo "Reviewer-resistance controls complete: ${RUN_ROOT}"
+echo "Validation controls complete: ${RUN_ROOT}"

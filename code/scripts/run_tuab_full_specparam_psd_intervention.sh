@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="${ROOT:-/mnt/data/aperiodic_confounds}"
+ROOT="${ROOT:-.}"
 PYTHON="${PYTHON:-$ROOT/.venv/bin/python}"
 PREPROCESS_DIR="${PREPROCESS_DIR:-$ROOT/results/tuab_full_v3_0_1/preprocess_20s_100hz}"
 PSD_NPZ="${PSD_NPZ:-$PREPROCESS_DIR/psd_20s_multitaper.npz}"

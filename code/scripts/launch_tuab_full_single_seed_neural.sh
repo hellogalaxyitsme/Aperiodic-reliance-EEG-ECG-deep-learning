@@ -4,12 +4,12 @@ set -euo pipefail
 # One-seed full-TUAB raw neural intervention run. This mirrors the TUAB-200
 # raw-neural pipeline, changing only paths/batch sizing for the full cache.
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 RESULT_ROOT="${PROJECT_ROOT}/results/tuab_full_v3_0_1"
 PREPROCESS_DIR="${RESULT_ROOT}/preprocess_20s_100hz"
 RUN_ROOT="${RESULT_ROOT}/single_seed_neural"
 REPORT_ROOT="${PROJECT_ROOT}/reports/tables"
-TORCH_PY="${TORCH_PY:-/mnt/data/.venvs/ml/bin/python3}"
+TORCH_PY="${TORCH_PY:-python}"
 PROJECT_PY="${PROJECT_ROOT}/.venv/bin/python"
 BRAIND_DEPS="${PROJECT_ROOT}/.python_deps"
 

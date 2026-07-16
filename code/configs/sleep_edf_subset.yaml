@@ -1,7 +1,7 @@
 dataset:
   name: sleep_edf_expanded_sleep_cassette_subset
   source: https://physionet.org/content/sleep-edfx/1.0.0/
-  remote_data_root: /mnt/data/aperiodic_confounds/data/sleep-edf/sleep-cassette
+  remote_data_root: data/sleep-edf/sleep-cassette
   subset:
     first_subject: 400
     last_subject: 409

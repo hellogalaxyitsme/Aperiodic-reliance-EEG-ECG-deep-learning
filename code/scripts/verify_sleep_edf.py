@@ -21,7 +21,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--data-root",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/data/sleep-edf/sleep-cassette"),
+        default=Path("data/sleep-edf/sleep-cassette"),
         help="Directory containing Sleep-EDF Sleep-Cassette EDF files.",
     )
     parser.add_argument(

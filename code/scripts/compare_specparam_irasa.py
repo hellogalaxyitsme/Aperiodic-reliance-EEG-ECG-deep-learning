@@ -14,12 +14,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--specparam-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_full/specparam/specparam_fixed.npz"),
+        default=Path("results/sleep_edf_full/specparam/specparam_fixed.npz"),
     )
     parser.add_argument(
         "--irasa-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_full/irasa/irasa_aperiodic.npz"),
+        default=Path("results/sleep_edf_full/irasa/irasa_aperiodic.npz"),
     )
     parser.add_argument(
         "--irasa-index-csv",
@@ -30,7 +30,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/reports/tables/irasa_specparam_agreement"),
+        default=Path("reports/tables/irasa_specparam_agreement"),
     )
     parser.add_argument("--max-epochs", type=int, default=None)
     return parser.parse_args()

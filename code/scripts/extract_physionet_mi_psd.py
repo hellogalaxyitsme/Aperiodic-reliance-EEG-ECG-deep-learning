@@ -14,22 +14,22 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--raw-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/physionet_mi/imagined_fists_raw_160hz.npz"),
+        default=Path("results/physionet_mi/imagined_fists_raw_160hz.npz"),
     )
     parser.add_argument(
         "--raw-index-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/physionet_mi/imagined_fists_raw_index.csv"),
+        default=Path("results/physionet_mi/imagined_fists_raw_index.csv"),
     )
     parser.add_argument(
         "--output-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/physionet_mi/imagined_fists_psd_multitaper.npz"),
+        default=Path("results/physionet_mi/imagined_fists_psd_multitaper.npz"),
     )
     parser.add_argument(
         "--output-index-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/physionet_mi/imagined_fists_psd_index.csv"),
+        default=Path("results/physionet_mi/imagined_fists_psd_index.csv"),
     )
     parser.add_argument("--freq-min", type=float, default=2.0)
     parser.add_argument("--freq-max", type=float, default=45.0)

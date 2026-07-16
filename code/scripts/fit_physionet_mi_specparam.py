@@ -14,12 +14,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--psd-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/physionet_mi/imagined_fists_psd_multitaper.npz"),
+        default=Path("results/physionet_mi/imagined_fists_psd_multitaper.npz"),
     )
     parser.add_argument(
         "--output-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/physionet_mi/specparam/imagined_fists_specparam_fixed.npz"),
+        default=Path("results/physionet_mi/specparam/imagined_fists_specparam_fixed.npz"),
     )
     parser.add_argument("--freq-min", type=float, default=2.0)
     parser.add_argument("--freq-max", type=float, default=45.0)

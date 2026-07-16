@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Creates a project-local Python environment on H200.
-# This writes only inside /mnt/data/aperiodic_confounds.
+# Creates a project-local Python environment.
+# This writes only inside PROJECT_ROOT.
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 VENV_PATH="${PROJECT_ROOT}/.venv"
 CODE_ROOT="${PROJECT_ROOT}/code"
 
@@ -22,4 +22,3 @@ print("numpy", numpy.__version__)
 print("pandas", pandas.__version__)
 print("scipy", scipy.__version__)
 PY
-

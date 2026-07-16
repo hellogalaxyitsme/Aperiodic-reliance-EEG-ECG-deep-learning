@@ -19,17 +19,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--trials-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/physionet_mi/imagined_fists_trials.csv"),
+        default=Path("results/physionet_mi/imagined_fists_trials.csv"),
     )
     parser.add_argument(
         "--output-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/physionet_mi/imagined_fists_raw_160hz.npz"),
+        default=Path("results/physionet_mi/imagined_fists_raw_160hz.npz"),
     )
     parser.add_argument(
         "--output-index-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/physionet_mi/imagined_fists_raw_index.csv"),
+        default=Path("results/physionet_mi/imagined_fists_raw_index.csv"),
     )
     parser.add_argument("--channels", nargs="+", default=["all"])
     parser.add_argument("--target-sfreq", type=float, default=160.0)

@@ -1,7 +1,7 @@
 {
-  "raw_npz": "/mnt/data/aperiodic_confounds/results/sleep_edf_full/raw_epochs_fpz_pz_100hz.npz",
-  "index_csv": "/mnt/data/aperiodic_confounds/results/sleep_edf_full/raw_epochs_index.csv",
-  "decomp_npz": "/mnt/data/aperiodic_confounds/results/sleep_edf_full/specparam/specparam_fixed.npz",
+  "raw_npz": "results/sleep_edf_full/raw_epochs_fpz_pz_100hz.npz",
+  "index_csv": "results/sleep_edf_full/raw_epochs_index.csv",
+  "decomp_npz": "results/sleep_edf_full/specparam/specparam_fixed.npz",
   "n_available": 195469,
   "n_analyzed": 195469,
   "seed": 42,

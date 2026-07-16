@@ -11,17 +11,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--decomp-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/specparam/specparam_fixed.npz"),
+        default=Path("results/sleep_edf_subset/specparam/specparam_fixed.npz"),
     )
     parser.add_argument(
         "--index-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/psd_index.csv"),
+        default=Path("results/sleep_edf_subset/psd_index.csv"),
     )
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/sleep_edf_subset/specparam/diagnostics"),
+        default=Path("results/sleep_edf_subset/specparam/diagnostics"),
     )
     parser.add_argument("--r2-threshold", type=float, default=0.90)
     parser.add_argument("--exponent-min", type=float, default=0.0)

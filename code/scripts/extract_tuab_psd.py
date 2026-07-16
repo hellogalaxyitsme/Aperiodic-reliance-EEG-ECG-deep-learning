@@ -13,22 +13,22 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--raw-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/raw_epochs_20s_100hz.npz"),
+        default=Path("results/tuab_subset_200/raw_epochs_20s_100hz.npz"),
     )
     parser.add_argument(
         "--raw-index-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/raw_epochs_20s_100hz_index.csv"),
+        default=Path("results/tuab_subset_200/raw_epochs_20s_100hz_index.csv"),
     )
     parser.add_argument(
         "--output-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/psd_20s_multitaper.npz"),
+        default=Path("results/tuab_subset_200/psd_20s_multitaper.npz"),
     )
     parser.add_argument(
         "--output-index-csv",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/tuab_subset_200/psd_20s_multitaper_index.csv"),
+        default=Path("results/tuab_subset_200/psd_20s_multitaper_index.csv"),
     )
     parser.add_argument("--freq-min", type=float, default=1.0)
     parser.add_argument("--freq-max", type=float, default=45.0)

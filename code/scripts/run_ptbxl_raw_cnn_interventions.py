@@ -22,7 +22,7 @@ def parse_args():
     parser.add_argument(
         "--raw-npz",
         type=Path,
-        default=Path("/mnt/data/aperiodic_confounds/results/ptbxl_1f_demo/ptbxl_records100_normal_abnormal_raw.npz"),
+        default=Path("results/ptbxl_1f_demo/ptbxl_records100_normal_abnormal_raw.npz"),
     )
     parser.add_argument(
         "--output-dir",

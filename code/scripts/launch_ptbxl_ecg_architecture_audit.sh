@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 set -u -o pipefail
 
-PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-/mnt/data/aperiodic_confounds}"
+PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 RESULT_ROOT="${PROJECT_ROOT}/results/ptbxl_1f_demo"
 REPORT_ROOT="${PROJECT_ROOT}/reports/tables"
 PROJECT_PY="${PROJECT_ROOT}/.venv/bin/python"
-TORCH_PY="${TORCH_PY:-/mnt/data/.venvs/ml/bin/python3}"
+TORCH_PY="${TORCH_PY:-python}"
 DEVICE="${DEVICE:-cuda}"
 SEEDS="${SEEDS:-42 43 44}"
 MODELS="${MODELS:-resnet1d_wang inception1d xresnet1d101}"
