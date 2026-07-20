@@ -1,16 +1,13 @@
-# Deep learning models for physiological time series exploit broadband aperiodic spectral structure
+# A spectral audit framework reveals task-dependent aperiodic reliance across EEG and ECG deep learning
 
-This repository contains code and aggregate numerical outputs for auditing
+This repository contains the code and schema for analysing 
 whether physiological time-series models rely on broadband aperiodic
 (`1/f`-like) spectral structure. The experiments cover EEG sleep staging,
 clinical EEG abnormality detection, EEG motor imagery, and ECG abnormality
 detection.
 
 Raw recordings, restricted datasets, downloaded pretrained checkpoints, and
-large intermediate caches are not distributed here. The included scripts and
-tables are intended to make the analysis workflow transparent and reproducible
-after the required datasets and model checkpoints have been obtained from their
-original sources.
+large intermediate caches are not distributed here. 
 
 ## Repository Layout
 
