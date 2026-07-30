@@ -44,7 +44,7 @@ code/scripts/extract_tuab_raw_epochs.py
 code/scripts/extract_tuab_psd.py
 code/scripts/fit_tuab_specparam_full.py
 code/scripts/run_tuab_psd_interventions.py
-code/scripts/run_tuab_site_temporal_psd_audit.py
+code/scripts/run_tuab_temporal_psd_analysis.py
 ```
 
 ## PhysioNet EEG Motor Movement/Imagery

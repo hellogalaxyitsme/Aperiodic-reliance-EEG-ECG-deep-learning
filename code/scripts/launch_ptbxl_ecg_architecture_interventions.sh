@@ -87,4 +87,4 @@ if [[ "${#failures[@]}" -gt 0 ]]; then
   exit 3
 fi
 
-echo "PTB-XL ECG architecture audit complete."
+echo "PTB-XL ECG architecture intervention analysis complete."

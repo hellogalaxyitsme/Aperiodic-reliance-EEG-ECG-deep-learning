@@ -21,7 +21,7 @@ from aperiodic_eeg.tuab import (  # noqa: E402
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Audit TUAB channel availability for the selected EDF subset."
+        description="Summarize TUAB channel availability for the selected EDF subset."
     )
     parser.add_argument(
         "--data-root",
@@ -130,7 +130,7 @@ def main() -> int:
             }
         )
         if (idx + 1) % 25 == 0:
-            print(f"Audited {idx + 1}/{len(selected)} EDF headers", flush=True)
+            print(f"Checked {idx + 1}/{len(selected)} EDF headers", flush=True)
 
     channel_presence = {
         channel: int(normalized_counter[normalize_channel_name(channel)])

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Full-TUAB REVE-base foundation-model audit. REVE uses the same 23-channel
+# Full-TUAB REVE-base foundation-model intervention analysis. REVE uses the same 23-channel
 # LaBraM-style TUAB cache, selecting the 21 channels supported by the REVE
 # position bank batch-by-batch inside the runner.
 

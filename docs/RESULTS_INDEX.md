@@ -12,13 +12,13 @@ enough to track in Git and provide the main numerical record of the analyses.
 - `tuab_full_age_matched_multiseed_neural_subject_bootstrap.*`: full-TUAB
   age/sex-matched neural controls.
 - `tuab_full_foundation_multiseed_subject_bootstrap.*`: seven-model TUAB
-  foundation-model audit.
+  foundation-model evaluation.
 - `physionet_mi_multiseed_neural_subject_bootstrap.*`: PhysioNet MI neural
-  audit.
+  intervention analysis.
 - `ptbxl_ecg_architectures_prediction_bootstrap.*`: PTB-XL ECG architecture
-  audit.
+  intervention analysis.
 - `ptbxl_matched_ecg_architectures_prediction_bootstrap.*`: PTB-XL age/sex-
-  matched neural audit.
+  matched neural analysis.
 - `formal_hypothesis_tests*`: bootstrap p-values and Benjamini-Hochberg FDR
   correction.
 - `aperiodic_simulation_validation/`: synthetic ground-truth validation.

@@ -1,6 +1,6 @@
 # Preprocessing Summary
 
-This file summarizes the main preprocessing settings used by the audit scripts.
+This file summarizes the main preprocessing settings used by the intervention scripts.
 The scripts expose these parameters as command-line options where practical.
 
 ## Sleep-EDF
@@ -22,7 +22,7 @@ The scripts expose these parameters as command-line options where practical.
 - LaBraM/EEGPT/BENDR-style caches: 23-channel referential montage.
 - SpecParam decomposition: 1-45 Hz.
 - Age/sex matching: same sex, within split, with a +/-5 year age caliper.
-- Temporal acquisition-proxy audit: EDF recording years binned into early and
+- Temporal acquisition-proxy analysis: EDF recording years binned into early and
   late recording eras, with year-tercile sensitivity checks.
 
 ## PhysioNet EEG Motor Movement/Imagery

@@ -24,7 +24,7 @@ METRICS = ["balanced_accuracy", "macro_f1", "accuracy"]
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="PTB-XL PSD ridge spectral intervention audit.")
+    parser = argparse.ArgumentParser(description="PTB-XL PSD ridge spectral intervention analysis.")
     parser.add_argument(
         "--psd-npz",
         type=Path,

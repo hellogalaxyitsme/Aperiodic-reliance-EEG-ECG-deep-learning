@@ -264,7 +264,7 @@ def main() -> int:
         },
         "note": (
             "Age/sex matching is not possible from the rsync listing alone. "
-            "Use downloaded EDF headers to audit demographics and build an "
+            "Use downloaded EDF headers to summarize demographics and build an "
             "age-matched follow-up subset if needed."
         ),
     }

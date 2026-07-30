@@ -22,7 +22,7 @@ METRICS = ["balanced_accuracy", "macro_f1", "accuracy"]
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
-            "TUAB temporal acquisition-proxy PSD audit: within-bin and cross-bin "
+            "TUAB temporal acquisition-proxy PSD analysis: within-bin and cross-bin "
             "ridge intervention analyses using cached full-TUAB specparam arrays."
         )
     )
@@ -415,7 +415,7 @@ def write_markdown(path: Path, rows: list[dict[str, object]]) -> None:
         focus[col] = focus[col].map(lambda value: f"{value:.3f}")
 
     lines = [
-        "# TUAB Site-Level Temporal PSD Audit",
+        "# TUAB Site-Level Temporal PSD Analysis",
         "",
         "Recording year is used as an acquisition-condition proxy. Sentinel/outlier "
         "years are excluded unless noted in metadata. Confidence intervals use "

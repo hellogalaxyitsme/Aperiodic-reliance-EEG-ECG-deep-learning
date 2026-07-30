@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Full-TUAB CBraMod foundation-model audit. CBraMod uses the same 23-channel
+# Full-TUAB CBraMod foundation-model intervention analysis. CBraMod uses the same 23-channel
 # LaBraM-style TUAB cache, then derives its official 16-channel bipolar montage
 # batch-by-batch inside the runner.
 

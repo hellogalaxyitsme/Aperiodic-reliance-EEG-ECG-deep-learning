@@ -5,7 +5,7 @@ Scripts are grouped by prefix:
 - `download_*`: dataset download helpers.
 - `make_*` and `extract_*`: manifests, epochs/trials and feature caches.
 - `fit_*`: SpecParam or IRASA decomposition.
-- `run_*`: individual PSD, neural or foundation-model audits.
+- `run_*`: individual PSD, neural or foundation-model intervention analyses.
 - `launch_*`: sequential multi-seed experiment launchers.
 - `aggregate_*`: bootstrap aggregation across subjects and seeds.
 - `analyze_*`, `compare_*` and `summarize_*`: diagnostics and result summaries.

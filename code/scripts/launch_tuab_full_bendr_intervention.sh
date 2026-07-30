@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Full-TUAB BENDR foundation-model audit. This mirrors the TUAB-200 reportable
+# Full-TUAB BENDR foundation-model intervention analysis. This mirrors the TUAB-200 reportable
 # BENDR run: encoder-only downstream mode, clipped/scaled 23-channel TUAB input,
-# and the standard raw/sham/aperiodic/flattened intervention audit.
+# and the standard raw/sham/aperiodic/flattened intervention analysis.
 
 PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"
 RESULT_ROOT="${PROJECT_ROOT}/results/tuab_full_v3_0_1"

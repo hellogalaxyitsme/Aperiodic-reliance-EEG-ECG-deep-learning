@@ -1,6 +1,5 @@
-"""Utilities for the EEG aperiodic-confound audit project."""
+"""Utilities for aperiodic spectral intervention experiments."""
 
 __all__ = ["__version__"]
 
 __version__ = "0.1.0"
-

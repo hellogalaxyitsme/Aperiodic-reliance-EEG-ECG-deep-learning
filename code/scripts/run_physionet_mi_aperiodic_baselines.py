@@ -14,7 +14,7 @@ from aperiodic_eeg.spectral import flatten_param_features, flatten_spectral_feat
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Run subject-held-out PhysioNet MI aperiodic audit baselines."
+        description="Run subject-held-out PhysioNet MI aperiodic intervention baselines."
     )
     parser.add_argument(
         "--index-csv",

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Full-TUAB BIOT foundation-model audit. This mirrors the TUAB-200 BIOT
+# Full-TUAB BIOT foundation-model intervention analysis. This mirrors the TUAB-200 BIOT
 # protocol while using a memmap-backed cache so the full dataset does not need
 # to be duplicated in host memory.
 

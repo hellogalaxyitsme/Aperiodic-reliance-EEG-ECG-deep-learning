@@ -11,14 +11,14 @@ SCENARIOS = [
     "aperiodic_only",
     "oscillatory_only",
     "mixed",
-    "train_confound_test_unconfounded",
+    "train_covariate_shift_test_balanced",
 ]
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
-            "Ground-truth simulation checks for the aperiodic audit pipeline. "
+            "Ground-truth simulation checks for the aperiodic intervention pipeline. "
             "Synthetic PSDs are generated with known aperiodic and oscillatory "
             "label structure."
         )
@@ -104,7 +104,7 @@ def generate_psd(
         offset_effect = 0.14
         exponent_effect = 0.16
         peak_effect = 0.30
-    elif scenario == "train_confound_test_unconfounded":
+    elif scenario == "train_covariate_shift_test_balanced":
         if not unconfounded_test:
             offset_effect = 0.22
             exponent_effect = 0.24
@@ -167,7 +167,7 @@ def run_scenario(scenario: str, args, rng):
             base_subjects=data["subjects"],
             base_y=data["y"],
         )
-        if scenario == "train_confound_test_unconfounded"
+        if scenario == "train_covariate_shift_test_balanced"
         else data
     )
     rows = []

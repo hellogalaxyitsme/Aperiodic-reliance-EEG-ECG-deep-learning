@@ -36,7 +36,7 @@ echo "PSD_BATCH_SIZE=$PSD_BATCH_SIZE"
 echo "SPEC_QC_EPOCHS_PER_SPLIT_LABEL=$SPEC_QC_EPOCHS_PER_SPLIT_LABEL"
 
 run_stage channel_audit \
-  "$PYTHON" code/scripts/audit_tuab_channels.py \
+  "$PYTHON" code/scripts/summarize_tuab_channels.py \
     --data-root "$DATA_ROOT" \
     --selected-files-csv "$SELECTED_FILES_CSV" \
     --output-file-csv "$OUTDIR/tuab_channel_audit_files.csv" \

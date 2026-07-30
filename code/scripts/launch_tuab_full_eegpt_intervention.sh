@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Full-TUAB EEGPT foundation-model audit. EEGPT uses the same 23-channel
+# Full-TUAB EEGPT foundation-model intervention analysis. EEGPT uses the same 23-channel
 # LaBraM-style TUAB cache, so this launcher reuses the full-TUAB LaBraM cache.
 
 PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"

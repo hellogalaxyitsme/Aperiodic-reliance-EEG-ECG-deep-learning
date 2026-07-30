@@ -18,7 +18,7 @@ METRICS = ["balanced_accuracy", "macro_f1", "accuracy"]
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="PTB-XL raw ECG architecture Fourier intervention audit.")
+    parser = argparse.ArgumentParser(description="PTB-XL raw ECG architecture Fourier intervention analysis.")
     parser.add_argument(
         "--raw-npz",
         type=Path,

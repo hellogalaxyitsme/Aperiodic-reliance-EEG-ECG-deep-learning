@@ -1,6 +1,6 @@
 # Foundation-Model Configuration Summary
 
-The TUAB foundation-model audit fine-tunes a binary classification head on the
+The TUAB foundation-model evaluation fine-tunes a binary classification head on the
 official TUAB training split and evaluates the official TUAB evaluation split
 under raw, sham, aperiodic-shaped and flattened interventions. Interventions are
 applied after model-specific preprocessing and immediately before the forward

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Full-TUAB EEGMamba foundation-model audit. EEGMamba needs the isolated
+# Full-TUAB EEGMamba foundation-model intervention analysis. EEGMamba needs the isolated
 # SSM-capable environment created for the TUAB-200 run; the shared ML venv does
 # not provide the compiled mamba_ssm/causal-conv1d stack.
 

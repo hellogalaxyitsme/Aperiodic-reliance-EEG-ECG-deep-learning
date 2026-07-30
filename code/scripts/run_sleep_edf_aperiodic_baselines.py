@@ -21,7 +21,7 @@ STAGE_ORDER = ["W", "N1", "N2", "N3", "REM"]
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Run subject-level Sleep-EDF aperiodic audit baselines."
+        description="Run subject-level Sleep-EDF aperiodic intervention baselines."
     )
     parser.add_argument(
         "--psd-npz",

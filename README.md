@@ -1,4 +1,4 @@
-# A spectral audit framework reveals task-dependent aperiodic reliance across EEG and ECG deep learning
+# Phase-preserving spectral interventions reveal task-dependent aperiodic reliance in EEG and ECG deep learning
 
 This repository contains the code and schema for analysing 
 whether physiological time-series models rely on broadband aperiodic
@@ -13,7 +13,7 @@ large intermediate caches are not distributed here.
 
 ```text
 code/src/                    Reusable Python utilities
-code/scripts/                Download, preprocessing, audit, model and aggregation scripts
+code/scripts/                Download, preprocessing, intervention, model and aggregation scripts
 code/configs/                Small configuration files
 docs/                        Dataset, preprocessing and reproducibility notes
 results/tables/              Aggregate result tables and statistical-test outputs
@@ -22,15 +22,15 @@ reports/tables               Symlink to results/tables for script compatibility
 
 ## Included Analyses
 
-- Spectral decomposition and intervention audits for full, sham,
+- Spectral decomposition and intervention analyses for full, sham,
   aperiodic-shaped and flattened representations.
-- Sleep-EDF EEG audits across wake-versus-sleep, five-stage sleep staging and
+- Sleep-EDF EEG analyses across wake-versus-sleep, five-stage sleep staging and
   N2-versus-N3 classification.
-- TUAB v3.0.1 normal-versus-abnormal EEG audits, including full-corpus neural
+- TUAB v3.0.1 normal-versus-abnormal EEG analyses, including full-corpus neural
   models, age/sex-matched controls, temporal acquisition-proxy controls and
   seven pretrained foundation models.
-- PhysioNet EEG Motor Movement/Imagery audits.
-- PTB-XL ECG normal-versus-abnormal audits with unmatched and age/sex-matched
+- PhysioNet EEG Motor Movement/Imagery analyses.
+- PTB-XL ECG normal-versus-abnormal analyses with unmatched and age/sex-matched
   controls.
 - Subject-level and hierarchical bootstrap aggregation, including formal
   bootstrap p-values and Benjamini-Hochberg FDR correction.
@@ -68,7 +68,7 @@ dependency environments. See
 python -m compileall code/src code/scripts
 python code/scripts/collect_formal_hypothesis_tests.py --help
 python code/scripts/run_aperiodic_simulation_validation.py --help
-python code/scripts/run_tuab_site_temporal_psd_audit.py --help
+python code/scripts/run_tuab_temporal_psd_analysis.py --help
 ```
 
 ## Reproducibility

@@ -1,7 +1,7 @@
 # Code Overview
 
 The `code/` directory contains the reusable package and executable scripts for
-the aperiodic spectral audit.
+the aperiodic spectral intervention analyses.
 
 ```text
 src/aperiodic_eeg/       Dataset and spectral-processing utilities
@@ -22,7 +22,7 @@ be supplied explicitly for reproducible runs on a new system.
 - `make_*` and `extract_*`: dataset manifests, epoch/trial caches and spectral
   feature extraction.
 - `fit_*`: SpecParam or IRASA spectral decomposition.
-- `run_*`: single audit jobs for PSD, raw neural or foundation-model models.
+- `run_*`: single intervention jobs for PSD, raw neural or foundation-model models.
 - `launch_*`: sequential multi-seed experiment launchers.
 - `aggregate_*`: subject-level or hierarchical bootstrap aggregation.
 - `analyze_*` and `compare_*`: diagnostic analyses and decomposition checks.

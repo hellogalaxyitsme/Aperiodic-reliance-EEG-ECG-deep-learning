@@ -1,7 +1,7 @@
 # Reproducibility Guide
 
 The workflow has four stages: obtain datasets, build preprocessing caches, run
-audits and aggregate results. Full neural and foundation-model experiments are
+intervention analyses and aggregate results. Full neural and foundation-model experiments are
 GPU intensive; PSD and aggregation stages can usually run on CPU.
 
 ## 1. Environment
@@ -45,7 +45,7 @@ python code/scripts/make_physionet_mi_trials.py --help
 The preprocessing choices used in the experiments are summarized in
 [`PREPROCESSING.md`](PREPROCESSING.md).
 
-## 4. Main Audits
+## 4. Main Intervention Analyses
 
 ```bash
 bash code/scripts/launch_sleep_edf_full_multiseed_neural.sh
@@ -53,9 +53,9 @@ bash code/scripts/launch_sleep_edf_validation_controls.sh
 bash code/scripts/launch_tuab_full_multiseed_neural.sh
 bash code/scripts/launch_tuab_full_foundation_multiseed_sequential.sh
 bash code/scripts/launch_physionet_mi_multiseed_neural.sh
-bash code/scripts/launch_ptbxl_ecg_architecture_audit.sh
+bash code/scripts/launch_ptbxl_ecg_architecture_interventions.sh
 bash code/scripts/launch_ptbxl_age_sex_matched_neural.sh
-python code/scripts/run_tuab_site_temporal_psd_audit.py --help
+python code/scripts/run_tuab_temporal_psd_analysis.py --help
 ```
 
 The launch scripts save model outputs under `results/`. If running on another

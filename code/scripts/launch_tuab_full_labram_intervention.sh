@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Full-TUAB LaBraM foundation-model audit. This mirrors the TUAB-200 LaBraM
+# Full-TUAB LaBraM foundation-model intervention analysis. This mirrors the TUAB-200 LaBraM
 # protocol while using a memmap-backed cache for the full dataset.
 
 PROJECT_ROOT="${APERIODIC_PROJECT_ROOT:-.}"

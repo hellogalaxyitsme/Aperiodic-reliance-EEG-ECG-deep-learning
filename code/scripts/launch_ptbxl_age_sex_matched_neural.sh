@@ -115,4 +115,4 @@ if [[ "${#failures[@]}" -gt 0 ]]; then
   exit 3
 fi
 
-echo "PTB-XL age/sex-matched ECG architecture audit complete."
+echo "PTB-XL age/sex-matched ECG architecture intervention analysis complete."
