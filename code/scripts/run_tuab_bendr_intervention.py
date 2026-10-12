@@ -267,18 +267,19 @@ def choose_threshold(prob, y_true):
     return float(sorted_prob[-positives])
 
 
-def make_bendr_input(x, args):
+def make_bendr_input(x, args, clip=True):
+    """Convert cached uV windows to BENDR input units (optional clip, then input_scale), exactly once."""
     import numpy as np
 
     out = np.asarray(x, dtype=np.float32)
-    if args.clip_uv and args.clip_uv > 0:
+    if clip and args.clip_uv and args.clip_uv > 0:
         out = np.clip(out, -float(args.clip_uv), float(args.clip_uv)).astype("float32", copy=False)
     if args.input_scale != 1.0:
         out = (out * float(args.input_scale)).astype("float32", copy=False)
     return out
 
 
-def predict_prob(model, x, args, indices=None):
+def predict_prob(model, x, args, indices=None, clip=True):
     import numpy as np
     import torch
 
@@ -290,7 +291,7 @@ def predict_prob(model, x, args, indices=None):
     with torch.no_grad():
         for start in range(0, len(indices), args.batch_size):
             batch_idx = indices[start : start + args.batch_size]
-            xb_np = make_bendr_input(np.array(x[batch_idx], dtype=np.float32, copy=True), args)
+            xb_np = make_bendr_input(np.array(x[batch_idx], dtype=np.float32, copy=True), args, clip=clip)
             xb = torch.from_numpy(xb_np).to(device)
             logits = model(xb)
             probs.append(torch.sigmoid(logits).detach().cpu().numpy().reshape(-1))
@@ -560,7 +561,11 @@ def main() -> int:
     edited_probs = {key: [] for key in ["phase_sham", "phase_aperiodic", "phase_flattened"]}
     for start in range(0, len(eval_idx), args.intervention_batch_size):
         batch_idx = eval_idx[start : start + args.intervention_batch_size]
-        x_batch = make_bendr_input(np.array(x[batch_idx], dtype=np.float32, copy=True), args)
+        # Interventions operate on clipped uV windows; predict_prob then applies the uV-to-V scaling once,
+        # identically to the raw condition (scaling here as well would apply it twice).
+        x_batch = np.array(x[batch_idx], dtype=np.float32, copy=True)
+        if args.clip_uv and args.clip_uv > 0:
+            x_batch = np.clip(x_batch, -float(args.clip_uv), float(args.clip_uv)).astype("float32", copy=False)
         edited = common.make_phase_preserving_inputs(
             x_batch,
             sfreq=float(args.sampling_rate),
@@ -569,7 +574,7 @@ def main() -> int:
         )
         for test_input, x_test in edited.items():
             edited_probs[test_input].append(
-                predict_prob(model, x_test.astype("float32", copy=False), args)
+                predict_prob(model, x_test.astype("float32", copy=False), args, clip=False)
             )
         print(
             f"Intervention eval chunk {min(start + args.intervention_batch_size, len(eval_idx))}/"

@@ -1,0 +1,6 @@
+model,estimate,condition,point,ci_lower,ci_upper,p_one_sided_positive,p_two_sided_zero,n_seeds,n_units,n_bootstrap,scheme
+sleep_MLP_wake_vs_sleep,performance,full_log_psd,0.9315978466354211,0.9191663668540732,0.9420581000231363,,,3,78,10000,pooled_ptbxl
+sleep_MLP_wake_vs_sleep,performance,aperiodic_spectrum,0.7956602686756056,0.76220981023512,0.8251073750887171,,,3,78,10000,pooled_ptbxl
+sleep_MLP_wake_vs_sleep,drop,aperiodic_spectrum,0.13593757795981554,0.11093620493926026,0.16327204036174034,0.0,0.0,3,78,10000,pooled_ptbxl
+sleep_MLP_wake_vs_sleep,performance,flattened_log_psd,0.5,0.5,0.5,,,3,78,10000,pooled_ptbxl
+sleep_MLP_wake_vs_sleep,drop,flattened_log_psd,0.4315978466354211,0.41916636685407316,0.4420581000231363,0.0,0.0,3,78,10000,pooled_ptbxl

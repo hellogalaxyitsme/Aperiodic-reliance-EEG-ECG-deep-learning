@@ -15,8 +15,10 @@ large intermediate caches are not distributed here.
 code/src/                    Reusable Python utilities
 code/scripts/                Download, preprocessing, intervention, model and aggregation scripts
 code/configs/                Small configuration files
+code/revision/               Analyses added during peer review (docs/REVISION_ANALYSES.md)
 docs/                        Dataset, preprocessing and reproducibility notes
 results/tables/              Aggregate result tables and statistical-test outputs
+results/revision/            Aggregate outputs of the revision analyses
 reports/tables               Symlink to results/tables for script compatibility
 ```
 
@@ -34,6 +36,10 @@ reports/tables               Symlink to results/tables for script compatibility
   controls.
 - Subject-level and hierarchical bootstrap aggregation, including formal
   bootstrap p-values and Benjamini-Hochberg FDR correction.
+- Revision analyses: envelope-estimator sensitivity, ECG envelope estimators
+  and a median-beat morphology baseline, time-domain waveform changes,
+  training-time flattening augmentation, and the corrected BENDR and pooled
+  balanced-accuracy evaluations (see [`docs/REVISION_ANALYSES.md`](docs/REVISION_ANALYSES.md)).
 
 ## Not Included
 

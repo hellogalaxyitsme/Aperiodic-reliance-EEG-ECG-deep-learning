@@ -1,0 +1,8 @@
+model,estimate,condition,point,ci_lower,ci_upper,p_one_sided_positive,p_two_sided_zero,n_seeds,n_units,n_bootstrap,scheme
+mi_Deep4Net_imagined_left_vs_right_fist_variantB,performance,raw_eeg,0.6822471780876179,0.661659968668147,0.7031475434572453,,,3,109,10000,subject_mean
+mi_Deep4Net_imagined_left_vs_right_fist_variantB,performance,phase_sham,0.6822471780876179,0.661659968668147,0.7031475434572453,,,3,109,10000,subject_mean
+mi_Deep4Net_imagined_left_vs_right_fist_variantB,drop,phase_sham,0.0,0.0,0.0,1.0,1.0,3,109,10000,subject_mean
+mi_Deep4Net_imagined_left_vs_right_fist_variantB,performance,phase_aperiodic,0.6837739960295076,0.6630390136245781,0.7043785171026518,,,3,109,10000,subject_mean
+mi_Deep4Net_imagined_left_vs_right_fist_variantB,drop,phase_aperiodic,-0.001526817941889691,-0.009298831779584587,0.006176825350611894,0.6559,0.6882,3,109,10000,subject_mean
+mi_Deep4Net_imagined_left_vs_right_fist_variantB,performance,phase_flattened,0.6918686997587911,0.6693803550858708,0.7146780154936061,,,3,109,10000,subject_mean
+mi_Deep4Net_imagined_left_vs_right_fist_variantB,drop,phase_flattened,-0.009621521671173139,-0.02007773166590868,0.001058379610683629,0.9619,0.0762,3,109,10000,subject_mean

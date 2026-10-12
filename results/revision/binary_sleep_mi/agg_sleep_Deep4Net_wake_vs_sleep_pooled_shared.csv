@@ -1,0 +1,8 @@
+model,estimate,condition,point,ci_lower,ci_upper,p_one_sided_positive,p_two_sided_zero,n_seeds,n_units,n_bootstrap,scheme
+sleep_Deep4Net_wake_vs_sleep,performance,raw_eeg,0.9447030642895393,0.9341663867812908,0.9529756163349116,,,3,78,10000,pooled_ptbxl
+sleep_Deep4Net_wake_vs_sleep,performance,phase_sham,0.9447030642895393,0.9341663867812908,0.9529756163349116,,,3,78,10000,pooled_ptbxl
+sleep_Deep4Net_wake_vs_sleep,drop,phase_sham,0.0,0.0,0.0,1.0,1.0,3,78,10000,pooled_ptbxl
+sleep_Deep4Net_wake_vs_sleep,performance,phase_aperiodic,0.9076659849282678,0.8883846615129939,0.9236722582184687,,,3,78,10000,pooled_ptbxl
+sleep_Deep4Net_wake_vs_sleep,drop,phase_aperiodic,0.03703707936127154,0.025119226966630954,0.05157765807448444,0.0,0.0,3,78,10000,pooled_ptbxl
+sleep_Deep4Net_wake_vs_sleep,performance,phase_flattened,0.506357550167156,0.5031818124803148,0.5100204242434851,,,3,78,10000,pooled_ptbxl
+sleep_Deep4Net_wake_vs_sleep,drop,phase_flattened,0.4383455141223833,0.42753407894087864,0.4472305665223216,0.0,0.0,3,78,10000,pooled_ptbxl

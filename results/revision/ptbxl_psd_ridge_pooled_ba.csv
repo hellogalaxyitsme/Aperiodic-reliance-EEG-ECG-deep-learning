@@ -1,0 +1,6 @@
+model,estimate,condition,point,ci_lower,ci_upper,p_one_sided_positive,p_two_sided_zero,n_seeds,n_units,n_bootstrap,scheme
+ptbxl_psd_ridge,performance,full_log_psd,0.707367720073613,0.6873299645260642,0.7269433552494781,,,1,1876,10000,pooled_ptbxl
+ptbxl_psd_ridge,performance,aperiodic_spectrum,0.5,0.5,0.5,,,1,1876,10000,pooled_ptbxl
+ptbxl_psd_ridge,drop,aperiodic_spectrum,0.20736772007361304,0.18732996452606418,0.2269433552494781,0.0,0.0,1,1876,10000,pooled_ptbxl
+ptbxl_psd_ridge,performance,flattened_log_psd,0.640496729289311,0.623617213481256,0.6573726961092664,,,1,1876,10000,pooled_ptbxl
+ptbxl_psd_ridge,drop,flattened_log_psd,0.06687099078430203,0.04859402385887956,0.08547164240316314,0.0,0.0,1,1876,10000,pooled_ptbxl

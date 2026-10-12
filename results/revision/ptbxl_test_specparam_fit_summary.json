@@ -1,0 +1,23 @@
+{
+  "n_records": 2157,
+  "n_leads": 12,
+  "ok_fraction": 1.0,
+  "median_r_squared": 0.5400292277336121,
+  "p25_r_squared": 0.4207572042942047,
+  "p75_r_squared": 0.6394951343536377,
+  "median_exponent": 2.7374744415283203,
+  "mean_n_peaks": 5.9182891845703125,
+  "published_peak_free_fit_median_r_squared": 0.2701032757759094,
+  "specparam_version": "2.0.0rc6",
+  "settings": {
+    "freq_min": 1.0,
+    "freq_max": 45.0,
+    "max_n_peaks": 6,
+    "min_peak_height": 0.1,
+    "peak_threshold": 2.0,
+    "peak_width_min": 0.5,
+    "peak_width_max": 8.0,
+    "eps": 1e-30
+  },
+  "elapsed_sec": 23.0
+}

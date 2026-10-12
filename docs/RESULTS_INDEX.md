@@ -24,3 +24,9 @@ enough to track in Git and provide the main numerical record of the analyses.
 - `aperiodic_simulation_validation/`: synthetic ground-truth validation.
 - `raw_intervention_diagnostics/`: sham reconstruction and distributional
   diagnostics.
+
+## Revision analyses
+
+Outputs of the analyses added during peer review are stored under
+`results/revision/` and described in
+[`docs/REVISION_ANALYSES.md`](REVISION_ANALYSES.md). The pooled balanced-accuracy and formal test families in that folder supersede the corresponding conventional-model and PTB-XL PSD ridge rows above.

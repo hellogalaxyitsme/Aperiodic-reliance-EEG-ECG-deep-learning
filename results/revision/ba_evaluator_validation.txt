@@ -1,0 +1,42 @@
+PASS point full eegnet raw_eeg  sklearn 0.789002 fm-evaluator 0.789002 independent 0.789002
+PASS point full eegnet phase_sham  sklearn 0.789002 fm-evaluator 0.789002 independent 0.789002
+PASS point full eegnet phase_aperiodic  sklearn 0.622780 fm-evaluator 0.622780 independent 0.622780
+PASS point full eegnet phase_flattened  sklearn 0.656128 fm-evaluator 0.656128 independent 0.656128
+PASS point full shallow_fbcsp raw_eeg  sklearn 0.791811 fm-evaluator 0.791811 independent 0.791811
+PASS point full shallow_fbcsp phase_sham  sklearn 0.791811 fm-evaluator 0.791811 independent 0.791811
+PASS point full shallow_fbcsp phase_aperiodic  sklearn 0.629614 fm-evaluator 0.629614 independent 0.629614
+PASS point full shallow_fbcsp phase_flattened  sklearn 0.681681 fm-evaluator 0.681681 independent 0.681681
+PASS point full deep4 raw_eeg  sklearn 0.812012 fm-evaluator 0.812012 independent 0.812012
+PASS point full deep4 phase_sham  sklearn 0.812012 fm-evaluator 0.812012 independent 0.812012
+PASS point full deep4 phase_aperiodic  sklearn 0.623771 fm-evaluator 0.623771 independent 0.623771
+PASS point full deep4 phase_flattened  sklearn 0.638652 fm-evaluator 0.638652 independent 0.638652
+PASS point matched eegnet raw_eeg  sklearn 0.739210 fm-evaluator 0.739210 independent 0.739210
+PASS point matched eegnet phase_sham  sklearn 0.739210 fm-evaluator 0.739210 independent 0.739210
+PASS point matched eegnet phase_aperiodic  sklearn 0.582535 fm-evaluator 0.582535 independent 0.582535
+PASS point matched eegnet phase_flattened  sklearn 0.657279 fm-evaluator 0.657279 independent 0.657279
+PASS point matched shallow_fbcsp raw_eeg  sklearn 0.758493 fm-evaluator 0.758493 independent 0.758493
+PASS point matched shallow_fbcsp phase_sham  sklearn 0.758493 fm-evaluator 0.758493 independent 0.758493
+PASS point matched shallow_fbcsp phase_aperiodic  sklearn 0.599334 fm-evaluator 0.599334 independent 0.599334
+PASS point matched shallow_fbcsp phase_flattened  sklearn 0.685387 fm-evaluator 0.685387 independent 0.685387
+PASS point matched deep4 raw_eeg  sklearn 0.767375 fm-evaluator 0.767375 independent 0.767375
+PASS point matched deep4 phase_sham  sklearn 0.767347 fm-evaluator 0.767347 independent 0.767347
+PASS point matched deep4 phase_aperiodic  sklearn 0.650713 fm-evaluator 0.650713 independent 0.650713
+PASS point matched deep4 phase_flattened  sklearn 0.557608 fm-evaluator 0.557608 independent 0.557608
+PASS point PTB-XL ridge full_log_psd  sklearn 0.707368 evaluator 0.707368
+PASS point PTB-XL ridge aperiodic_spectrum  sklearn 0.500000 evaluator 0.500000
+PASS point PTB-XL ridge flattened_log_psd  sklearn 0.640497 evaluator 0.640497
+PASS bootstrap CI full eegnet drop_flattened  simple loop [0.107, 0.157] vs evaluator [0.107, 0.157]
+PASS bootstrap CI matched deep4 drop_flattened  simple loop [0.136, 0.273] vs evaluator [0.136, 0.272]
+PASS synthetic subject_mean constant 0 equals class share (not BA)  value 0.4150 = share of subjects in class 0 0.4150
+PASS synthetic subject_mean constant 1 equals class share (not BA)  value 0.5850 = share of subjects in class 1 0.5850
+PASS synthetic subject_mean perfect  point 1.0000, resamples 1.0000-1.0000
+PASS synthetic pooled_fm constant 0  point 0.5000, resamples 0.5000-0.5000
+PASS synthetic pooled_fm constant 1  point 0.5000, resamples 0.5000-0.5000
+PASS synthetic pooled_fm perfect  point 1.0000, resamples 1.0000-1.0000
+PASS synthetic pooled_fm opposite-constant seeds point  point 0.5000
+PASS synthetic pooled_ptbxl constant 0  point 0.5000, resamples 0.5000-0.5000
+PASS synthetic pooled_ptbxl constant 1  point 0.5000, resamples 0.5000-0.5000
+PASS synthetic pooled_ptbxl perfect  point 1.0000, resamples 1.0000-1.0000
+PASS synthetic pooled_ptbxl opposite-constant seeds point  point 0.5000
+
+VALIDATION ALL PASSED

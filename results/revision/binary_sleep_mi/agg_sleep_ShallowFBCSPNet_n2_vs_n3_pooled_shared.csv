@@ -1,0 +1,8 @@
+model,estimate,condition,point,ci_lower,ci_upper,p_one_sided_positive,p_two_sided_zero,n_seeds,n_units,n_bootstrap,scheme
+sleep_ShallowFBCSPNet_n2_vs_n3,performance,raw_eeg,0.9092219467182064,0.8942329754879437,0.921467208391102,,,3,78,10000,pooled_ptbxl
+sleep_ShallowFBCSPNet_n2_vs_n3,performance,phase_sham,0.9092219467182064,0.8942329754879437,0.921467208391102,,,3,78,10000,pooled_ptbxl
+sleep_ShallowFBCSPNet_n2_vs_n3,drop,phase_sham,0.0,0.0,0.0,1.0,1.0,3,78,10000,pooled_ptbxl
+sleep_ShallowFBCSPNet_n2_vs_n3,performance,phase_aperiodic,0.8813559908151286,0.865449892341045,0.8956142690793734,,,3,78,10000,pooled_ptbxl
+sleep_ShallowFBCSPNet_n2_vs_n3,drop,phase_aperiodic,0.027865955903077833,0.010970174259782728,0.043088106495380384,0.001,0.002,3,78,10000,pooled_ptbxl
+sleep_ShallowFBCSPNet_n2_vs_n3,performance,phase_flattened,0.9019861062489254,0.8896743298521801,0.9129281145658942,,,3,78,10000,pooled_ptbxl
+sleep_ShallowFBCSPNet_n2_vs_n3,drop,phase_flattened,0.007235840469281052,-0.006247301442971211,0.020300946926661904,0.1395,0.279,3,78,10000,pooled_ptbxl

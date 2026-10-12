@@ -1,0 +1,8 @@
+model,estimate,condition,point,ci_lower,ci_upper,p_one_sided_positive,p_two_sided_zero,n_seeds,n_units,n_bootstrap,scheme
+mi_ShallowFBCSPNet_imagined_left_vs_right_fist_variantB,performance,raw_eeg,0.6544735140782794,0.6327252074469072,0.6776627695964199,,,3,109,10000,pooled_ptbxl
+mi_ShallowFBCSPNet_imagined_left_vs_right_fist_variantB,performance,phase_sham,0.6544735140782794,0.6327252074469072,0.6776627695964199,,,3,109,10000,pooled_ptbxl
+mi_ShallowFBCSPNet_imagined_left_vs_right_fist_variantB,drop,phase_sham,0.0,0.0,0.0,1.0,1.0,3,109,10000,pooled_ptbxl
+mi_ShallowFBCSPNet_imagined_left_vs_right_fist_variantB,performance,phase_aperiodic,0.6167389611153156,0.5963179932273407,0.6380471213081299,,,3,109,10000,pooled_ptbxl
+mi_ShallowFBCSPNet_imagined_left_vs_right_fist_variantB,drop,phase_aperiodic,0.0377345529629638,0.025164834230949347,0.050788249036251384,0.0,0.0,3,109,10000,pooled_ptbxl
+mi_ShallowFBCSPNet_imagined_left_vs_right_fist_variantB,performance,phase_flattened,0.6403118710154083,0.6173237082842027,0.6647217369660894,,,3,109,10000,pooled_ptbxl
+mi_ShallowFBCSPNet_imagined_left_vs_right_fist_variantB,drop,phase_flattened,0.014161643062871043,0.004478257333311692,0.023583488001630695,0.0029,0.0058,3,109,10000,pooled_ptbxl

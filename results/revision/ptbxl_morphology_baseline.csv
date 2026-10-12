@@ -1,0 +1,10 @@
+model,estimate,condition,point,ci_lower,ci_upper,p_one_sided_positive,p_two_sided_zero,n_seeds,n_units,n_bootstrap,scheme
+morphology_gbm,performance,raw_eeg,0.8570880646330434,0.8422934292999564,0.8717332535182052,,,1,1876,10000,pooled_ptbxl
+morphology_gbm,performance,phase_sham,0.8570880646330434,0.8422934292999564,0.8717332535182052,,,1,1876,10000,pooled_ptbxl
+morphology_gbm,drop,phase_sham,0.0,0.0,0.0,1.0,1.0,1,1876,10000,pooled_ptbxl
+morphology_gbm,performance,phase_flattened,0.550348095809479,0.5392428206259601,0.561806716184109,,,1,1876,10000,pooled_ptbxl
+morphology_gbm,drop,phase_flattened,0.30673996882356447,0.28879553403331204,0.3241075993760712,0.0,0.0,1,1876,10000,pooled_ptbxl
+morphology_gbm,performance,flat_harmonic_masked,0.5905590117844111,0.5759020084804387,0.6051824318539435,,,1,1876,10000,pooled_ptbxl
+morphology_gbm,drop,flat_harmonic_masked,0.2665290528486324,0.24702905635405872,0.2849970479347789,0.0,0.0,1,1876,10000,pooled_ptbxl
+morphology_gbm,performance,flat_filterbank,0.7124127781159721,0.6937210367388683,0.731063837300353,,,1,1876,10000,pooled_ptbxl
+morphology_gbm,drop,flat_filterbank,0.1446752865170713,0.125304922496934,0.16443142662066387,0.0,0.0,1,1876,10000,pooled_ptbxl

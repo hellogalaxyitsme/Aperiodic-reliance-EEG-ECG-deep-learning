@@ -1,0 +1,8 @@
+model,estimate,condition,point,ci_lower,ci_upper,p_one_sided_positive,p_two_sided_zero,n_seeds,n_units,n_bootstrap,scheme
+sleep_CNN_wake_vs_sleep,performance,raw_eeg,0.9400751447169469,0.9320465542708191,0.9476259076802619,,,3,78,10000,subject_mean
+sleep_CNN_wake_vs_sleep,performance,phase_sham,0.9400751447169469,0.9320465542708191,0.9476259076802619,,,3,78,10000,subject_mean
+sleep_CNN_wake_vs_sleep,drop,phase_sham,0.0,0.0,0.0,1.0,1.0,3,78,10000,subject_mean
+sleep_CNN_wake_vs_sleep,performance,phase_aperiodic,0.8713843028960441,0.8526244458213486,0.8885638130615361,,,3,78,10000,subject_mean
+sleep_CNN_wake_vs_sleep,drop,phase_aperiodic,0.06869084182090279,0.054155037421584014,0.08472703245163923,0.0,0.0,3,78,10000,subject_mean
+sleep_CNN_wake_vs_sleep,performance,phase_flattened,0.5110739640898662,0.5049070384111441,0.519597457736754,,,3,78,10000,subject_mean
+sleep_CNN_wake_vs_sleep,drop,phase_flattened,0.4290011806270807,0.4171745258261525,0.43926957384815035,0.0,0.0,3,78,10000,subject_mean

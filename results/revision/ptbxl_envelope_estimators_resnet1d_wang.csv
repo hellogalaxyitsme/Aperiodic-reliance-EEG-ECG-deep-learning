@@ -1,0 +1,17 @@
+model,estimate,condition,point,ci_lower,ci_upper,p_one_sided_positive,p_two_sided_zero,n_seeds,n_units,n_bootstrap,scheme
+resnet1d_wang,performance,raw_eeg,0.8641021761339578,0.8485211920767382,0.8792502878585211,,,3,1876,10000,pooled_ptbxl
+resnet1d_wang,performance,phase_sham,0.8641021761339578,0.8485211920767382,0.8792502878585211,,,3,1876,10000,pooled_ptbxl
+resnet1d_wang,drop,phase_sham,0.0,0.0,0.0,1.0,1.0,3,1876,10000,pooled_ptbxl
+resnet1d_wang,performance,phase_aperiodic,0.6035247083220439,0.5860266020866237,0.6202667831795575,,,3,1876,10000,pooled_ptbxl
+resnet1d_wang,drop,phase_aperiodic,0.26057746781191393,0.23749888791251228,0.28311765115197346,0.0,0.0,3,1876,10000,pooled_ptbxl
+resnet1d_wang,performance,phase_flattened,0.5087855265333985,0.5022308508557459,0.5168179250002592,,,3,1876,10000,pooled_ptbxl
+resnet1d_wang,drop,phase_flattened,0.3553166496005593,0.3404967893149723,0.36937738577665724,0.0,0.0,3,1876,10000,pooled_ptbxl
+resnet1d_wang,performance,flat_harmonic_masked,0.5223234654871699,0.51164997587995,0.5353155566460419,,,3,1876,10000,pooled_ptbxl
+resnet1d_wang,drop,flat_harmonic_masked,0.3417787106467879,0.32572220529629864,0.357052724047684,0.0,0.0,3,1876,10000,pooled_ptbxl
+resnet1d_wang,performance,flat_specparam,0.5073212721111655,0.5022366857943275,0.5134916166954474,,,3,1876,10000,pooled_ptbxl
+resnet1d_wang,drop,flat_specparam,0.3567809040227923,0.34216402237155363,0.3708640142455993,0.0,0.0,3,1876,10000,pooled_ptbxl
+resnet1d_wang,performance,flat_filterbank,0.75693772454247,0.7377989266868066,0.7764866662555188,,,3,1876,10000,pooled_ptbxl
+resnet1d_wang,drop,flat_filterbank,0.1071644515914878,0.08833845555680417,0.12572018165129795,0.0,0.0,3,1876,10000,pooled_ptbxl
+resnet1d_wang,drop_difference,phase_flattened-minus-flat_harmonic_masked,0.013537938953771422,0.007333431926319614,0.020637513023798067,,0.0,3,1876,10000,pooled_ptbxl
+resnet1d_wang,drop_difference,phase_flattened-minus-flat_specparam,-0.001464254422232969,-0.006465543514308594,0.002920827177435306,,0.5414,3,1876,10000,pooled_ptbxl
+resnet1d_wang,drop_difference,phase_flattened-minus-flat_filterbank,0.2481521980090715,0.22818620616742225,0.26822605190605203,,0.0,3,1876,10000,pooled_ptbxl

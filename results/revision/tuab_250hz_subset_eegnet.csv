@@ -1,0 +1,8 @@
+model,estimate,condition,point,ci_lower,ci_upper,p_one_sided_positive,p_two_sided_zero,n_seeds,n_units,n_bootstrap,scheme
+eegnet,performance,raw_eeg,0.7853404587667754,0.758435565014257,0.8124736424877305,,,3,247,10000,pooled_fm
+eegnet,performance,phase_sham,0.7853404587667754,0.758435565014257,0.8124736424877305,,,3,247,10000,pooled_fm
+eegnet,drop,phase_sham,0.0,0.0,0.0,1.0,1.0,3,247,10000,pooled_fm
+eegnet,performance,phase_aperiodic,0.6206873940643665,0.5590087369502541,0.6756193370816133,,,3,247,10000,pooled_fm
+eegnet,drop,phase_aperiodic,0.16465306470240892,0.11520520782450429,0.2193057749618087,0.0,0.0,3,247,10000,pooled_fm
+eegnet,performance,phase_flattened,0.6619499850786986,0.638218241222961,0.6861575705724153,,,3,247,10000,pooled_fm
+eegnet,drop,phase_flattened,0.12339047368807676,0.09680763873888343,0.1487654000515152,0.0,0.0,3,247,10000,pooled_fm

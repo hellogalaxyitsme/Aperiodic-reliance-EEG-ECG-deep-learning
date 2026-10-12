@@ -1,0 +1,12 @@
+rows 251; drop-type rows 117; max CI-limit shift 0.0187; median 0.0057
+performance rows: max CI-limit shift 0.0201; median 0.0090
+CI-EXCLUDES-ZERO CHANGES: s9_mi_Deep4Net_imagined_left_vs_right_fist drop phase_flattened: indep [-0.018, -0.001] shared [-0.020, 0.001]
+CI-EXCLUDES-ZERO CHANGES: s9_mi_Deep4Net_imagined_left_vs_right_fist_variantB drop phase_flattened: indep [-0.018, -0.001] shared [-0.020, 0.001]
+CI-EXCLUDES-ZERO CHANGES: s9_sleep_Deep4Net_n2_vs_n3 drop phase_aperiodic: indep [0.002, 0.020] shared [-0.005, 0.025]
+CI-EXCLUDES-ZERO CHANGES: s9_sleep_Deep4Net_n2_vs_n3 drop phase_flattened: indep [0.002, 0.024] shared [-0.005, 0.030]
+primary: TUAB rows replaced 13; significant 25/31 (reported 25/31); decisions changed: 0; max |p_fdr change| 0.0097
+  p_fdr TUAB full age/sex-matched tuab_normal_vs_abnormal EEGNet: 0.0014 -> 0.0112
+  p_fdr TUAB full age/sex-matched tuab_normal_vs_abnormal ShallowFBCSPNet: 0.0000 -> 0.0026
+  p_fdr TUAB full foundation models tuab_normal_vs_abnormal BENDR: 0.0000 -> 0.0013
+sham: TUAB rows replaced 13; significant 0/28 (reported 0/28); decisions changed: 0; max |p_fdr change| 0.8544
+  p_fdr TUAB full foundation models tuab_normal_vs_abnormal BIOT: 0.1456 -> 1.0000

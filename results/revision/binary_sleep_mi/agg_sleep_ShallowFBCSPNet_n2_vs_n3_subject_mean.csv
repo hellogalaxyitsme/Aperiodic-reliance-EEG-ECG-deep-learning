@@ -1,0 +1,8 @@
+model,estimate,condition,point,ci_lower,ci_upper,p_one_sided_positive,p_two_sided_zero,n_seeds,n_units,n_bootstrap,scheme
+sleep_ShallowFBCSPNet_n2_vs_n3,performance,raw_eeg,0.8712388254108049,0.8464101244725644,0.8943605629271738,,,3,78,10000,subject_mean
+sleep_ShallowFBCSPNet_n2_vs_n3,performance,phase_sham,0.8712388254108049,0.8464101244725644,0.8943605629271738,,,3,78,10000,subject_mean
+sleep_ShallowFBCSPNet_n2_vs_n3,drop,phase_sham,0.0,0.0,0.0,1.0,1.0,3,78,10000,subject_mean
+sleep_ShallowFBCSPNet_n2_vs_n3,performance,phase_aperiodic,0.8576369399557029,0.8394458082423049,0.8746895436112934,,,3,78,10000,subject_mean
+sleep_ShallowFBCSPNet_n2_vs_n3,drop,phase_aperiodic,0.013601885455101992,-0.0076918056954666724,0.033638332932582005,0.1014,0.2028,3,78,10000,subject_mean
+sleep_ShallowFBCSPNet_n2_vs_n3,performance,phase_flattened,0.8761549677225561,0.8569116653870069,0.8933274567417441,,,3,78,10000,subject_mean
+sleep_ShallowFBCSPNet_n2_vs_n3,drop,phase_flattened,-0.004916142311751193,-0.02282819342770713,0.011712934040985647,0.7087,0.5826,3,78,10000,subject_mean
