@@ -1,3 +1,5 @@
+> BENDR rows superseded by [`results/revision/bendr_corrected.csv`](../revision/bendr_corrected.csv) (corrected input scaling); all other rows are current. See [README](README.md).
+
 | model | task | metric | estimate | point | ci_lower | ci_upper | n_seeds | n_subjects |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BIOT | tuab_normal_vs_abnormal | balanced_accuracy | baseline | 0.802 | 0.781 | 0.823 | 3 | 253 |

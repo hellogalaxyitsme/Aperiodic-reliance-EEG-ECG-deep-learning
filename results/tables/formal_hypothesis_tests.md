@@ -1,3 +1,5 @@
+> Superseded by [`results/revision/formal_tests_primary.csv`](../revision/formal_tests_primary.csv) and [`results/revision/formal_tests_sham.csv`](../revision/formal_tests_sham.csv); see [README](README.md).
+
 | family | domain | task | model | estimate | effect_95ci | p_raw_display | p_fdr_display | significance | note |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | primary_flattening | Sleep-EDF | wake_vs_sleep | MLP | drop_flattened | 0.429 [0.418, 0.439] | <0.0001 | <0.0001 | * |  |

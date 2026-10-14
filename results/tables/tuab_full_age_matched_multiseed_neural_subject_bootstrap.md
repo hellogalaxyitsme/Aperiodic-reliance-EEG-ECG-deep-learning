@@ -1,3 +1,5 @@
+> Superseded by [`results/revision/tuab_conventional_matched_pooled_ba.csv`](../revision/tuab_conventional_matched_pooled_ba.csv) (pooled balanced accuracy); see [README](README.md).
+
 | model | task | metric | estimate | point | ci_lower | ci_upper | n_seeds | n_subjects |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | eegnet | tuab_normal_vs_abnormal | balanced_accuracy | baseline | 0.740 | 0.688 | 0.789 | 3 | 174 |

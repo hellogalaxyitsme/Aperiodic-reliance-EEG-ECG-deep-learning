@@ -9,6 +9,12 @@ detection.
 Raw recordings, restricted datasets, downloaded pretrained checkpoints, and
 large intermediate caches are not distributed here. 
 
+> **Corrected results.** The BENDR, TUAB conventional-model, PTB-XL PSD ridge
+> and formal-test values reported in the article are in
+> [`results/revision/`](results/revision/), which supersedes the corresponding
+> files in `results/tables/`; the mapping is listed in
+> [`results/tables/README.md`](results/tables/README.md).
+
 ## Repository Layout
 
 ```text
